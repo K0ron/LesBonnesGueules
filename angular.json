@@ -28,7 +28,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets"
               }
             ],
             "styles": [
@@ -72,7 +72,11 @@
               "buildTarget": "lesBonneGueules:build:production"
             },
             "development": {
-              "buildTarget": "lesBonneGueules:build:development"
+              "buildTarget": "lesBonneGueules:build:development",
+              "ssl": true,
+              "sslKey": "localhost-key.pem",
+              "sslCert": "localhost.pem",
+              "port": 4200
             }
           },
           "defaultConfiguration": "development"
