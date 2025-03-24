@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 0;
+    this.isScrolled = window.scrollY > 150;
   }
 
   private checkIfHome() {

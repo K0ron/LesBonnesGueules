@@ -1,5 +1,5 @@
 <div class="header-container" [class.transparent]="!isScrolled && isHomePage">
-    <div (click)="goHome()" class="goHome">LES BONNES GUEULES</div>
+    <div (click)="goHome()" class="goHome" [class.transparent]="!isScrolled && isHomePage ">LES BONNES GUEULES</div>
     <div class="button-container">
         <button (click)="goToEquipe()" class="button">L'ÉQUIPE</button>
         <button (click)="goToPrestations()" class="button">NOS PRESTATIONS</button>
