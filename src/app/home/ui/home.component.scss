@@ -1,0 +1,28 @@
+.home-container {
+    margin-top: -90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-block {
+    display: flex;
+    flex-direction: row;
+    img {
+        height: 349px;
+        top: 0;
+        left: 475px;
+        position: absolute;
+    }
+
+    .arrow {
+        height: 39px;
+        width: 39px;
+        position: absolute;
+        top: 1133px;
+        left: 630px;
+        z-index: 1;
+    }
+}
+
+
+
