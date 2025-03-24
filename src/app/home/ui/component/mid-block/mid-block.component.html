@@ -1,0 +1,21 @@
+<div class="mid-block-container">
+    <div class="text-container">
+        <div>Nos prestations</div>
+        <button (click)="goToPrestations()">voir toutes nos prestations</button>
+        <p>Un show culinaire, entre flammes, gourmandiSE ET bonne humeur garantie !</p>
+    </div>
+    <div class="grille-container">
+        <img src="grille-claire.svg" alt="Grille">
+    </div>
+    <div class="carousel-fade"></div>
+    <div class="prestation-container">
+        <div (click)="goToPrestations()" *ngFor="let prestation of prestations">
+            <div class="img-container">
+                <img src="{{prestation.img}}" alt="{{prestation.name}}">
+            </div>
+            <div>{{prestation.name}}</div>
+        </div>
+    </div>
+    <button class="prev" (click)="scrollLeft()"><img src="arrow-carou-left.svg" alt="left"></button>
+    <button class="next" (click)="scrollRight()"><img src="arrow-carou-right.svg" alt="right"></button>
+</div>

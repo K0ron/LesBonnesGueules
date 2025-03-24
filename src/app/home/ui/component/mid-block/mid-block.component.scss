@@ -1,0 +1,120 @@
+.mid-block-container {
+    height: 637px ;
+    position: relative;
+    background-color: rgba(241, 235, 222, 1);
+}
+
+.grille-container {
+    height: 350px;
+    width: 846px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    img {
+        height: auto;
+    width: 862px;
+    object-fit: cover;
+    }
+}
+
+
+.text-container {
+    position: absolute;
+    top: 81px;
+    left: 80px;
+    div {
+        width: 200px;
+        font-family: 'Paper Johnny Eins', sans-serif;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+
+    button {
+        width: 283px;
+        height: 45px;
+        background-color: rgba(17, 17, 17, 1);
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        font-family: 'Azeret Mono', monospace;
+        color: rgba(241, 235, 222, 1);
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+
+    p {
+        font-family: 'Azeret Mono', monospace;
+        font-size: 13px;
+        text-transform: uppercase;
+        width: 280px;
+        line-height: 20px;
+    } 
+}
+
+.carousel-fade {
+  position: absolute;
+  height: 450px;
+  width: 108px;
+  background: linear-gradient(to right, rgba(241, 235, 222, 0), rgba(241, 235, 222, 1));
+  right: 0;
+  top: 71px;
+  z-index: 1;
+}
+
+.prestation-container {
+  position: absolute;
+   display: flex;
+   flex-direction: row;
+   gap: 24px;
+   top: 71px;
+   left: 467px; 
+   font-family: 'Azeret Mono', monospace;
+   font-size: 13px;
+   text-transform: uppercase;
+   width: 1030px;
+   overflow-x: auto;
+  }
+
+  .img-container {
+    height: 450px;
+    width: 353px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    img{
+      height: 450px;
+      width: 353px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.02);
+      } 
+
+    }
+  }
+  
+  .prestation-container::-webkit-scrollbar {
+    display: none;
+  }
+  .prev {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    top: 286px;
+    left: 434px; 
+  }
+
+  .next {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    top: 286px;
+    right: 33px;
+    z-index: 2;
+  }
