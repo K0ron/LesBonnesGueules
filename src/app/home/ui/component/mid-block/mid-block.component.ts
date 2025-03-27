@@ -29,16 +29,6 @@ export class MidBlockComponent implements OnInit {
       name: 'Fumoir',
       img: 'Brasero.svg'
     },
-    {
-      id: 4,
-      name: 'Fumoir',
-      img: 'Brasero.svg'
-    },
-    {
-      id: 5,
-      name: 'Fumoir',
-      img: 'Brasero.svg'
-    },
   ]
 
   ngOnInit(): void {}
