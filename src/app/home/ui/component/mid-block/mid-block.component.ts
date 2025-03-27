@@ -22,12 +22,12 @@ export class MidBlockComponent implements OnInit {
     {
       id: 2,
       name: 'Tourne broche',
-      img: 'Brasero.svg'
+      img: 'porc.png'
     },
     {
-      id: 3,
+      id: 3, 
       name: 'Fumoir',
-      img: 'Brasero.svg'
+      img: 'komado.png'
     },
   ]
 
