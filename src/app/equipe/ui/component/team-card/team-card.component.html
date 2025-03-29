@@ -1,0 +1,16 @@
+<div class="card-container" *ngFor="let teammate of teammates">
+    <img [src]="teammate.img" alt="{{teammate.name}}">
+    <div class="name-container">
+        <div class="name">{{teammate.name}} </div>
+        <div class="nickname">{{teammate.nickname}} </div>
+    </div>
+    <div class="text-container">
+        <div>{{teammate.role}}</div>
+        <p>{{teammate.description}} 
+            <br> 
+            <br>
+            devise :
+            <br>
+            {{teammate.devise}}</p>
+    </div>
+</div>
