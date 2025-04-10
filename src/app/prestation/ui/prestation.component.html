@@ -1,1 +1,20 @@
-<p>prestation works!</p>
+<div class="page-container">
+    <div class="prestations-container">
+        <h1>Nos prestations</h1>
+        <img src="Grille.svg" alt="Grille">
+        <app-prestation-card class="card"/>
+    </div>
+    <div class="bottom-container">
+        <img src="grille-zoom.svg" alt="Grille">
+        <div class="text-container">
+            <div class="title">Vous voulez passer <br>un bon repas avec nous ?</div>
+            <div class="button-container">
+                <button (click)="goDevis()"  class="devis-button">Demander un devis</button>
+                <button (click)="goDevis()" class="call-button">Appeler</button>
+            </div>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="bavette.png" alt="Bavette">
+    </div>
+</div> 

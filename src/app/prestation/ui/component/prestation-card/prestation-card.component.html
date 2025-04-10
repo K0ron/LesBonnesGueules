@@ -1,0 +1,9 @@
+<div class="prestations-container">
+    <div class="card-container" *ngFor="let prestation of prestations">
+            <img [src]="prestation.img" alt="{{prestation.name}}">
+            <div class="text-container">
+                <button class="title">{{prestation.name}}</button>
+                <div class="description" [innerHTML]="prestation.description"></div>
+            </div>
+    </div>
+</div>
