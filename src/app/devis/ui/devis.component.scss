@@ -1,0 +1,149 @@
+.page-container {
+  margin-top: 90px;
+  background-color: rgba(241, 235, 222, 1);
+}
+
+.header {
+  display: flex;
+  background-color: rgba(17, 17, 17, 1);
+  height: 211px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  h1 {
+    font-family: 'Paper Johnny Eins', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    align-self: center;
+    color: rgba(241, 235, 222, 1);
+    z-index: 1;
+  }
+  .grille {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+  }
+}
+
+.logo {
+  position: absolute;
+  height: 202px;
+  top: 150px;
+  right: 70px;
+}
+
+.devis-container {
+  height: auto;
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-bottom: 50px;
+  input {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4460aa;
+    color: #fff;
+    border: none;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  gap: 145px;
+
+  .p-divider.p-divider-horizontal {
+    max-width: 403px !important;
+    width: 100%;
+    color: rgba(169, 159, 130, 1);
+  }
+
+  .input-info {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    label {
+      width: 150px;
+      .required {
+        font-size: 0.7em;
+        vertical-align: super;
+      }
+    }
+    input {
+      border: none;
+      background-color: transparent;
+      padding-left: 5px;
+      color: black;
+      height: 45px;
+      text-transform: uppercase;
+      font-family: 'Azeret Mono', monospace;
+      &::placeholder {
+        text-transform: uppercase;
+        color: rgba(169, 159, 130, 1);
+      }
+    }
+  }
+
+  .message-info {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Azeret Mono', monospace;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    margin-top: 5px;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  .input-message {
+    textarea {
+      width: 845px;
+      height: 270px;
+      background-color: transparent;
+      border-color: rgba(169, 159, 130, 1);
+      border-radius: 3px;
+      padding: 25px;
+      resize: none;
+      font-family: 'Azeret Mono', monospace;
+      &::placeholder {
+        text-transform: uppercase;
+        color: rgba(169, 159, 130, 1);
+      }
+    }
+  }
+  p {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgba(169, 159, 130, 1);
+    margin-top: 10px;
+  }
+}
+
+.call-button {
+  margin-top: 70px;
+  display: flex;
+  width: 220px;
+  justify-self: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+  align-items: center;
+}
