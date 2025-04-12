@@ -1,1 +1,95 @@
-<p>devis works!</p>
+<div class="page-container">
+  <div class="header">
+    <h1>Demander un devis</h1>
+    <img class="grille" src="Grille.svg" alt="" />
+  </div>
+  <img class="logo" src="LBG_Logo.svg" alt="" />
+  <div class="devis-container">
+    <form class="form-container" (ngSubmit)="send()" [formGroup]="form">
+      <div class="info-container">
+        <p-divider layout="horizontal" />
+        <div class="input-info">
+          <label for="from_name">Nom<span class="required">*</span> :</label>
+          <input
+            formControlName="from_lastname"
+            type="text"
+            name="from_lastname"
+            id="from_lastname"
+            placeholder="Nom"
+          />
+        </div>
+        <p-divider layout="horizontal" />
+        <div class="input-info">
+          <label for="from_firstname">Prénom<span class="required">*</span> :</label>
+          <input
+            formControlName="from_firstname"
+            type="text"
+            name="from_firstname"
+            id="from_firstname"
+            placeholder="Prénom"
+          />
+        </div>
+        <p-divider layout="horizontal" />
+        <div class="input-info">
+          <label for="from_phone">Téléphone<span class="required">*</span> :</label>
+          <input
+            formControlName="from_phone"
+            type="text"
+            name="from_phone"
+            id="from_phone"
+            placeholder="Téléphone"
+          />
+        </div>
+        <p-divider layout="horizontal" />
+        <div class="input-info">
+          <label for="from_email">Adresse email<span class="required">*</span> :</label>
+          <input
+            formControlName="from_email"
+            type="email"
+            name="from_email"
+            id="from_email"
+            placeholder="Adresse email"
+          />
+        </div>
+        <p-divider layout="horizontal" />
+        <div class="input-info">
+          <label for="from_adress">Adresse postale<span class="required">*</span> :</label>
+          <input
+            formControlName="from_adress"
+            type="text"
+            name="from_adress"
+            id="from_adress"
+            placeholder="Adresse postale"
+          />
+        </div>
+        <p-divider layout="horizontal" />
+        <p>* Champs obligatoires</p>
+      </div>
+      <div class="message-container">
+        <div class="message-info">
+          <div>
+            Pour établir un devis plus précis, merci de nous fournir si possible les informations
+            suivantes :
+          </div>
+          <span>• Nom de votre entreprise</span>
+          <span>• Nombre de participants</span>
+          <span>• Date de l’événement</span>
+          <span>• Lieu de l’événement</span>
+        </div>
+        <div class="input-message">
+          <textarea
+            formControlName="message"
+            type="text"
+            name="message"
+            id="message"
+            placeholder="Veuillez préciser votre demande ici."
+          ></textarea>
+        </div>
+        <button type="submit" class="call-button">Envoyer ma demande</button>
+      </div>
+    </form>
+  </div>
+  <div class="image-container">
+    <img src="bavette.png" alt="Bavette" />
+  </div>
+</div>
