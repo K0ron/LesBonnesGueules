@@ -1,0 +1,10 @@
+<div class="search-container">
+  <button
+    *ngFor="let carte of cartes; let i = index"
+    class="cate-button"
+    [class.active]="selectedIndex === i"
+    (click)="selectedMenu(i)"
+  >
+    {{ carte }}
+  </button>
+</div>

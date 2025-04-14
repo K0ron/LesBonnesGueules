@@ -1,1 +1,33 @@
-<p>carte works!</p>
+<div class="page-container">
+  <div class="header">
+    <div class="text-container">
+      <div class="text">
+        Nous proposons une variété de mets de qualité à partager, à savourer sous forme d’apéritif
+        dînatoire ou de repas assis, autour d’un brasero, d’un tournebroche ou d’un fumoir. <br />
+        <p>> découvrez nos prestations</p>
+      </div>
+      <h1>Notre carte</h1>
+    </div>
+    <img class="grille" src="Grille.svg" alt="" />
+  </div>
+  <img class="logo" src="LBG_Logo.svg" alt="" />
+  <app-search-menu (categorySelected)="onCategorySelected($event)" />
+
+  <ng-container [ngSwitch]="selectedCategory">
+    <app-apero-card *ngSwitchCase="'APERO'" />
+    <app-plats-card *ngSwitchCase="'PLATS'" />
+    <app-accompagnements-card *ngSwitchCase="'ACCOMPAGNEMENTS'" />
+    <app-fromage-dessert-card *ngSwitchCase="'FROMAGE & DESSERT'" />
+    <app-boisson-card *ngSwitchCase="'BOISSONS'" />
+    <app-menu-enfant-card *ngSwitchCase="'MENU ENFANT'" />
+  </ng-container>
+  <div class="footer-container">
+    <div class="button-container">
+      <button (click)="goDevis()" class="call-button">Appeler</button>
+      <button (click)="goDevis()" class="devis-button">Demander un devis</button>
+    </div>
+  </div>
+  <div class="image-container">
+    <img src="bavette.png" alt="Bavette" />
+  </div>
+</div>
