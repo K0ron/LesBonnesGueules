@@ -7,15 +7,27 @@
   gap: 32px;
   justify-content: center;
 
-  button {
+  .cate-button {
+    margin-top: 84px;
     height: 45px;
     width: auto;
+    background-color: rgba(241, 235, 222, 1);
     border: 1px solid rgba(17, 17, 17, 1);
     border-radius: 40px;
     cursor: pointer;
-    padding: 0 30px;
+    padding: 1% 30px;
     font-family: 'Paper Johnny Eins', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
+
+    &:hover {
+      background-color: rgba(17, 17, 17, 1);
+      color: rgba(241, 235, 222, 1);
+    }
+  }
+
+  .cate-button.active {
+    background-color: rgba(17, 17, 17, 1);
+    color: rgba(241, 235, 222, 1);
   }
 }

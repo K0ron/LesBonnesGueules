@@ -1,8 +1,10 @@
 <div class="search-container">
-  <button>apéro</button>
-  <button>Plats</button>
-  <button>Accompagnements</button>
-  <button>fromage & dessert</button>
-  <button>Boissons</button>
-  <button>menu enfant</button>
+  <button
+    *ngFor="let carte of cartes; let i = index"
+    class="cate-button"
+    [class.active]="selectedIndex === i"
+    (click)="selectedMenu(i)"
+  >
+    {{ carte }}
+  </button>
 </div>
