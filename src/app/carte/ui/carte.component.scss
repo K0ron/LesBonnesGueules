@@ -77,6 +77,12 @@
       line-height: 20px;
       width: 389px;
       letter-spacing: 0.5px;
+      z-index: 1;
+
+      .link {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
 
     p {

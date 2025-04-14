@@ -41,4 +41,8 @@ export class CarteComponent implements OnInit {
   onCategorySelected(category: string) {
     this.selectedCategory = category;
   }
+
+  goToPrestations() {
+    this.router.navigate(['/prestation']);
+  }
 }
