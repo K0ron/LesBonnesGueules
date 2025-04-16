@@ -15,8 +15,10 @@ export class AppComponent {
   title = 'lesBonneGueules';
 
   constructor(private router: Router) {
-    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
-      window.scrollTo(0, 0);
-    });
+    if (typeof window !== 'undefined') {
+      this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+        window.scrollTo(0, 0);
+      });
+    }
   }
 }

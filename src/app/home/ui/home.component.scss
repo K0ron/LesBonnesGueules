@@ -1,28 +1,36 @@
+@import 'media';
+
 .home-container {
-    margin-top: -90px;
-    display: flex;
-    flex-direction: column;
+  margin-top: -90px;
+  display: flex;
+  flex-direction: column;
 }
 
 .top-block {
-    display: flex;
-    flex-direction: row;
-    img {
-        height: 349px;
-        top: 0;
-        left: 475px;
-        position: absolute;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: $mobile) {
+    flex-direction: column-reverse;
+  }
+
+  img {
+    height: 349px;
+    top: 0;
+    left: 475px;
+    position: absolute;
+  }
+
+  .arrow {
+    @media (max-width: $mobile) {
+      display: none;
     }
 
-    .arrow {
-        height: 39px;
-        width: 39px;
-        position: absolute;
-        top: 1133px;
-        left: 630px;
-        z-index: 1;
-    }
+    height: 39px;
+    width: 39px;
+    position: absolute;
+    top: 1133px;
+    left: 630px;
+    z-index: 1;
+  }
 }
-
-
-
