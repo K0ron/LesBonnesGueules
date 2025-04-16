@@ -8,22 +8,20 @@ import { filter } from 'rxjs';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
   showButtonDevis: boolean = false;
   isHomePage: boolean = false;
   isScrolled: boolean = false;
+  menuIsOpen: boolean = false;
 
-  constructor(private router: Router
-  ) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.checkIfHome();
     this.showDevis();
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
       this.showDevis();
       this.checkIfHome();
     });
@@ -75,4 +73,7 @@ export class HeaderComponent implements OnInit {
     window.open('https://www.facebook.com/p/Les-Bonnes-Gueules-100094581984531/', '_blank');
   }
 
+  toggleMenu() {
+    this.menuIsOpen = !this.menuIsOpen;
+  }
 }

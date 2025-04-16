@@ -1,13 +1,56 @@
 <div class="header-container" [class.transparent]="!isScrolled && isHomePage">
-    <div (click)="goHome()" class="goHome">LES BONNES GUEULES</div>
-    <div class="button-container">
-        <button (click)="goToEquipe()" class="button">L'ÉQUIPE</button>
-        <button (click)="goToPrestations()" class="button">NOS PRESTATIONS</button>
-        <button (click)="goToLaCarte()" class="button">NOTRE CARTE</button>
-        <div class="social-container">
-            <img src="ic-social-instagram.svg" alt="Instagram" (click)="goToInstagram()">
-            <img src="ic-social-facebook.svg" alt="Facebook" (click)="goToFacebook()">
-        </div>
-        <button *ngIf="showButtonDevis" (click)="goDevis()" class="devis-button">DEMANDER UN DEVIS</button>
+  <div (click)="goHome()" class="goHome">LES BONNES GUEULES</div>
+  <div class="button-container">
+    <button (click)="goToEquipe()" class="button">L'ÉQUIPE</button>
+    <button (click)="goToPrestations()" class="button">NOS PRESTATIONS</button>
+    <button (click)="goToLaCarte()" class="button">NOTRE CARTE</button>
+    <div class="social-container">
+      <img src="ic-social-instagram.svg" alt="Instagram" (click)="goToInstagram()" />
+      <img src="ic-social-facebook.svg" alt="Facebook" (click)="goToFacebook()" />
     </div>
+    <button *ngIf="showButtonDevis" (click)="goDevis()" class="devis-button">
+      DEMANDER UN DEVIS
+    </button>
+  </div>
+</div>
+
+<div class="header-mobile" [class.transparent]="!isScrolled && isHomePage && !menuIsOpen">
+  <button class="burger" (click)="toggleMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </button>
+  <div *ngIf="menuIsOpen" class="menu-title">Menu</div>
+  <button class="burger" (click)="toggleMenu()" *ngIf="menuIsOpen">
+    <img class="croix" src="burger-croix.svg" alt="" />
+  </button>
+
+  <div class="goHome">LES BONNES GUEULES</div>
+
+  <div class="modal-menu" *ngIf="menuIsOpen">
+    <div class="menu">
+      <div class="grille-container">
+        <img src="grille-claire.svg" alt="Grille" />
+      </div>
+      <div class="menu-container">
+        <img class="logo" src="LBG_Logo.svg" alt="Les Bonnes Gueules" />
+        <div class="nav-container">
+          <button (click)="goToEquipe()">L'équipe</button>
+          <button (click)="goToPrestations()">Nos prestations</button>
+          <button (click)="goToLaCarte()">Notre carte</button>
+        </div>
+        <div class="social-container-mobile">
+          <div class="social" (click)="goToInstagram()">
+            <img src="ic-social-instagram.svg" alt="Instagram" />
+            <button>Instagram</button>
+          </div>
+          <div class="social" (click)="goToFacebook()">
+            <img src="ic-social-facebook.svg" alt="Facebook" />
+            <button>Facebook</button>
+          </div>
+        </div>
+        <button (click)="goDevis()" class="devis-button">Demander un devis</button>
+      </div>
+    </div>
+  </div>
 </div>
