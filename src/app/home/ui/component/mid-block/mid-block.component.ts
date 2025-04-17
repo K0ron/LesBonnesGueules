@@ -10,26 +10,25 @@ import { Router } from '@angular/router';
   styleUrl: './mid-block.component.scss',
 })
 export class MidBlockComponent implements OnInit {
-
   constructor(private router: Router) {}
 
   prestations: any[] = [
     {
       id: 1,
       name: 'Brasero',
-      img: 'Brasero.svg'
+      img: 'Brasero.svg',
     },
     {
       id: 2,
       name: 'Tourne broche',
-      img: 'porc.png'
+      img: 'porc.png',
     },
     {
-      id: 3, 
+      id: 3,
       name: 'Fumoir',
-      img: 'komado.png'
+      img: 'komado.png',
     },
-  ]
+  ];
 
   ngOnInit(): void {}
 
@@ -41,13 +40,9 @@ export class MidBlockComponent implements OnInit {
     const container = document.querySelector('.prestation-container') as HTMLElement;
     container.scrollBy({ left: -200, behavior: 'smooth' }); // Défilement à gauche
   }
-  
+
   scrollRight() {
     const container = document.querySelector('.prestation-container') as HTMLElement;
     container.scrollBy({ left: 200, behavior: 'smooth' }); // Défilement à droite
   }
-  
-
-
-
 }

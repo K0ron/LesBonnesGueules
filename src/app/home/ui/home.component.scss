@@ -10,10 +10,6 @@
   display: flex;
   flex-direction: row;
 
-  @media (max-width: $mobile) {
-    flex-direction: column-reverse;
-  }
-
   img {
     height: 349px;
     top: 0;
@@ -22,15 +18,28 @@
   }
 
   .arrow {
-    @media (max-width: $mobile) {
-      display: none;
-    }
-
     height: 39px;
     width: 39px;
     position: absolute;
     top: 1133px;
     left: 630px;
     z-index: 1;
+  }
+}
+
+@media (max-width: $mobile) {
+  .top-block {
+    flex-direction: column-reverse;
+
+    img {
+      height: 178px;
+      top: 274px;
+      left: 5%;
+      z-index: 10;
+    }
+
+    .arrow {
+      display: none;
+    }
   }
 }

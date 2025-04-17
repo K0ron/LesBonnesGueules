@@ -1,3 +1,5 @@
+@import 'media';
+
 .left-block-container {
   width: 651px;
   border: 1px solid rgba(241, 235, 222, 1);
@@ -71,5 +73,46 @@
     text-transform: uppercase;
     line-height: 20px;
     font-weight: 400;
+  }
+}
+
+@media (max-width: $mobile) {
+  .left-block-container {
+    width: 100%;
+  }
+
+  .top {
+    height: 460px;
+
+    .text-container {
+      top: 78px;
+      left: 5%;
+      width: 100%;
+
+      p {
+        font-size: 13px;
+      }
+
+      div {
+        font-size: 70px;
+        line-height: 64px;
+      }
+
+      .devis-button {
+        margin-top: 36px;
+        margin-left: 10%;
+      }
+    }
+  }
+
+  .bottom {
+    height: 460px;
+
+    .text-container {
+      width: 290px;
+      margin-top: 70px;
+      margin-left: 5%;
+      font-size: 13px;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@import 'media';
+
 .bottom-block-container {
   position: relative;
   display: flex;
@@ -48,4 +50,43 @@
   height: 300px;
   top: -55px;
   left: 78px;
+}
+
+@media (max-width: $mobile) {
+  .pics-container {
+    display: none;
+  }
+
+  .bavette {
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: -30px;
+      left: -140px;
+      height: 350px;
+    }
+  }
+
+  .logo {
+    height: 160px;
+    top: 630px;
+    left: 25%;
+    z-index: 10;
+  }
+
+  .button-container {
+    height: 379px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 210px;
+    }
+  }
 }
