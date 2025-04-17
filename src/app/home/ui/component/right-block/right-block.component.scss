@@ -23,10 +23,14 @@
     height: 390px;
     width: 100%;
     overflow: hidden;
+    position: relative;
 
     img {
-      height: 1008px;
-      width: 650px;
+      position: absolute;
+      height: 500px;
+      width: auto;
+      top: 0;
+      left: -230px;
     }
   }
 }
