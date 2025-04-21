@@ -21,7 +21,7 @@ export class DevisComponent {
   constructor(private fb: FormBuilder, private alertService: AlertService) {
     this.form = this.fb.group({
       from_firstname: ['', Validators.required],
-      from_lastname: ['', Validators.required],
+      from_lastname: '',
       from_email: ['', Validators.required],
       from_phone: ['', Validators.required],
       message: ['', Validators.required],

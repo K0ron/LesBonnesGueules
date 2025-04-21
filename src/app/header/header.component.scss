@@ -100,7 +100,7 @@
     text-transform: uppercase;
 
     &.transparent {
-      background-color: red;
+      background-color: transparent;
 
       .goHome {
         color: transparent;
@@ -200,7 +200,7 @@
         height: 50px;
         background-color: rgba(17, 17, 17, 1);
         color: rgba(241, 235, 222, 1);
-        font-size: 13px;
+        font-size: 16px;
         justify-content: center;
         display: flex;
         align-items: center;

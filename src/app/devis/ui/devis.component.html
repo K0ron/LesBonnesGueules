@@ -9,7 +9,7 @@
       <div class="info-container">
         <p-divider layout="horizontal" />
         <div class="input-info">
-          <label for="from_name">Nom<span class="required">*</span> :</label>
+          <label for="from_name">Nom / Société<span class="required">*</span> :</label>
           <input
             formControlName="from_lastname"
             type="text"
@@ -20,7 +20,7 @@
         </div>
         <p-divider layout="horizontal" />
         <div class="input-info">
-          <label for="from_firstname">Prénom<span class="required">*</span> :</label>
+          <label for="from_firstname">Prénom :</label>
           <input
             formControlName="from_firstname"
             type="text"
@@ -60,6 +60,17 @@
             name="from_adress"
             id="from_adress"
             placeholder="Adresse postale"
+          />
+        </div>
+        <p-divider layout="horizontal" />
+        <div class="input-info">
+          <label for="from_adress">Ville<span class="required">*</span> :</label>
+          <input
+            formControlName="from_adress"
+            type="text"
+            name="from_adress"
+            id="from_adress"
+            placeholder="Ville"
           />
         </div>
         <p-divider layout="horizontal" />

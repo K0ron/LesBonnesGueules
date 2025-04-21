@@ -1,20 +1,22 @@
 <div class="page-container">
-    <div class="team-container">
-        <h1>L'équipe</h1>
-        <img src="Grille.svg" alt="Grille">
-        <app-team-card class="card"/>
+  <div class="team-container">
+    <h1>L'équipe</h1>
+    <div class="grille-container">
+      <img src="Grille.svg" alt="Grille" />
     </div>
-    <div class="bottom-container">
-        <img src="grille-zoom.svg" alt="Grille">
-        <div class="text-container">
-            <div class="title">Vous voulez passer <br>un bon repas avec nous ?</div>
-            <div class="button-container">
-                <button (click)="goDevis()"  class="devis-button">Demander un devis</button>
-                <button (click)="goDevis()" class="call-button">Appeler</button>
-            </div>
-        </div>
+    <app-team-card class="card" />
+  </div>
+  <div class="bottom-container">
+    <img src="grille-zoom.svg" alt="Grille" />
+    <div class="text-container">
+      <div class="title">Vous voulez passer <br />un bon repas avec nous ?</div>
+      <div class="button-container">
+        <button (click)="goDevis()" class="devis-button">Demander un devis</button>
+        <button (click)="goDevis()" class="call-button">Appeler</button>
+      </div>
     </div>
-    <div class="image-container">
-        <img src="bavette.png" alt="Bavette">
-    </div>
-</div> 
+  </div>
+  <div class="image-container">
+    <img src="bavette.jpeg" alt="Bavette" />
+  </div>
+</div>

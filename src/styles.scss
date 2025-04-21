@@ -6,11 +6,27 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+
+  font-family: 'Azeret Mono';
+  src: url('assets/fonts/azert_mono/AzeretMono-Regular.woff2') format('woff2'),
+    url('assets/fonts/azert_mono/AzeretMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import 'media';
+
+@media (max-width: $mobile) {
+  * {
+    font-size: 16px;
+  }
 }
 
 * {
   margin: 0;
   padding: 0;
+  //outline: 1px solid red;
 }
 
 .devis-button {
