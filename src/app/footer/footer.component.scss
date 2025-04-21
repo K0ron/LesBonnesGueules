@@ -58,6 +58,12 @@
   }
 }
 
+@media (min-width: $desktop) {
+  .footer-mobile {
+    display: none;
+  }
+}
+
 @media (max-width: $mobile) {
   .footer-container {
     display: none;
