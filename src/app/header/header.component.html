@@ -14,7 +14,7 @@
   </div>
 </div>
 
-<div class="header-mobile">
+<div class="header-mobile" [class.transparent]="!isScrolled && isHomePage && !menuIsOpen">
   <button class="burger" (click)="toggleMenu()">
     <div class="line"></div>
     <div class="line"></div>
