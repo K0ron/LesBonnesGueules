@@ -14,7 +14,7 @@
   </div>
 </div>
 
-<div class="header-mobile" [class.transparent]="!isScrolled && isHomePage && !menuIsOpen">
+<div class="header-mobile">
   <button class="burger" (click)="toggleMenu()">
     <div class="line"></div>
     <div class="line"></div>
@@ -22,10 +22,10 @@
   </button>
   <div *ngIf="menuIsOpen" class="menu-title">Menu</div>
   <button class="burger" (click)="toggleMenu()" *ngIf="menuIsOpen">
-    <img class="croix" src="burger-croix.svg" alt="" />
+    <img class="croix" src="mobile/burger-croix.svg" alt="" />
   </button>
 
-  <div class="goHome">LES BONNES GUEULES</div>
+  <div class="goHome" *ngIf="!menuIsOpen" (click)="goHomePage()">LES BONNES GUEULES</div>
 
   <div class="modal-menu" *ngIf="menuIsOpen">
     <div class="menu">
@@ -33,8 +33,9 @@
         <img src="grille-claire.svg" alt="Grille" />
       </div>
       <div class="menu-container">
-        <img class="logo" src="LBG_Logo.svg" alt="Les Bonnes Gueules" />
+        <img class="logo" src="LBG_Logo.svg" alt="" />
         <div class="nav-container">
+          <button (click)="goHome()">Acceuil</button>
           <button (click)="goToEquipe()">L'équipe</button>
           <button (click)="goToPrestations()">Nos prestations</button>
           <button (click)="goToLaCarte()">Notre carte</button>

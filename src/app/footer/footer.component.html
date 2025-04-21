@@ -1,40 +1,96 @@
-
 <div class="footer-container">
-
-    <div class="top">
-        <img src="LBG_Logo.svg" alt="Les Bonnes Gueules">
-        <div class="text-container">
-            <p-divider layout="vertical" />
-            <div class="infos">
-                <strong>à propos</strong>
-                <p>Accueil</p>
-                <p>notre carte</p>
-                <p>Nos prestations</p>
-                <p>l’équipe</p>
-                <p>contact</p>
-            </div>
-            <p-divider layout="vertical" />
-            <div class="infos">
-                <strong>Nos prestations</strong>
-                <p>Brasero</p>
-                <p>Tourne-broche</p>
-                <p>Fumoir</p>
-            </div>
-            <p-divider layout="vertical" />
-            <div class="infos">
-                <strong>Contact</strong>
-                <p>Les bonnes gueules</p>
-                <p>06 26 55 51 77</p>
-                <p>brasserielesbonnesgueules&#64;gmail.com</p>
-                <p>Instagram</p>
-                <p>Faceboot</p>
-            </div>
-        </div>
+  <div class="top">
+    <img src="LBG_Logo.svg" alt="Les Bonnes Gueules" />
+    <div class="text-container">
+      <p-divider layout="vertical" />
+      <div class="infos">
+        <strong>à propos</strong>
+        <p>Accueil</p>
+        <p>notre carte</p>
+        <p>Nos prestations</p>
+        <p>l’équipe</p>
+        <p>contact</p>
+      </div>
+      <p-divider layout="vertical" />
+      <div class="infos">
+        <strong>Nos prestations</strong>
+        <p>Brasero</p>
+        <p>Tourne-broche</p>
+        <p>Fumoir</p>
+      </div>
+      <p-divider layout="vertical" />
+      <div class="infos">
+        <strong>Contact</strong>
+        <p>Les bonnes gueules</p>
+        <p>06 26 55 51 77</p>
+        <p>brasserielesbonnesgueules&#64;gmail.com</p>
+        <p>Instagram</p>
+        <p>Faceboot</p>
+      </div>
     </div>
-    <div class="bottom">
-            <div>© Copyright Les Bonnes Gueules</div>
-            <p>Mention légales</p>
-            <p>plan du site</p>
-    </div>
+  </div>
+  <div class="bottom">
+    <div>© Copyright Les Bonnes Gueules</div>
+    <p>Mention légales</p>
+    <p>plan du site</p>
+  </div>
+</div>
 
+<div class="footer-mobile">
+  <div class="info-container">
+    <div class="footer-accordion">
+      <div class="accordion-header" (click)="toggleSection('à propos')">
+        <h4>à propos</h4>
+        <span>
+          <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('à propos')" />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('à propos')">
+        <p>Accueil</p>
+        <p>notre carte</p>
+        <p>Nos prestations</p>
+        <p>l’équipe</p>
+        <p>contact</p>
+      </div>
+    </div>
+    <div class="footer-accordion">
+      <div class="accordion-header" (click)="toggleSection('prestations')">
+        <h4>Nos prestations</h4>
+        <span>
+          <img
+            src="mobile/arrow-accordion.svg"
+            alt="arrow"
+            [class.rotated]="isOpen('prestations')"
+          />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('prestations')">
+        <p>Brasero</p>
+        <p>Tourne-broche</p>
+        <p>Fumoir</p>
+      </div>
+    </div>
+    <div class="footer-accordion">
+      <div class="accordion-header" (click)="toggleSection('contact')">
+        <h4>Contact</h4>
+        <span>
+          <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('contact')" />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('contact')">
+        <p>Les bonnes gueules</p>
+        <p>06 26 55 51 77</p>
+        <p>brasserielesbonnesgueules&#64;gmail.com</p>
+        <p>Instagram</p>
+        <p>Faceboot</p>
+      </div>
+    </div>
+  </div>
+  <div class="legal-container">
+    <div class="legals">
+      <p>Mention légales</p>
+      <p>plan du site</p>
+      <p>© Copyright Les Bonnes Gueules</p>
+    </div>
+  </div>
 </div>

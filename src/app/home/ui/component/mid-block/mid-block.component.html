@@ -2,7 +2,13 @@
   <div class="text-container">
     <div>Nos prestations</div>
     <button (click)="goToPrestations()">voir toutes nos prestations</button>
-    <p>Un show culinaire, entre flammes, gourmandiSE ET bonne humeur garantie !</p>
+    <p class="text-desktop">
+      Un show culinaire, entre flammes, gourmandiSE ET bonne humeur garantie !
+    </p>
+    <p class="text-mobile">
+      Vous êtes un particulier ou une entreprise et vous souhaitez organiser un événement ? Nous
+      vous garantissons un show culinaire mêlant flammes, gourmandise et bonne humeur !
+    </p>
   </div>
   <div class="grille-container">
     <img src="grille-claire.svg" alt="Grille" />
@@ -19,19 +25,19 @@
   <div class="prestation-container-mobile">
     <div (click)="goToPrestations()">
       <div class="img-container">
-        <img class="brasero" src="brasero.jpg" alt="" />
+        <img src="mobile/brasero-mobile.png" alt="" />
       </div>
       <p>Brasero</p>
     </div>
     <div (click)="goToPrestations()">
       <div class="img-container">
-        <img class="broche" src="porc.png" alt="" />
+        <img src="mobile/broche-mobile.png" alt="" />
       </div>
       <p>Tourne broche</p>
     </div>
     <div (click)="goToPrestations()">
       <div class="img-container">
-        <img class="fumoir" src="komado.png" alt="" />
+        <img src="mobile/fumoir-mobile.png" alt="" />
       </div>
       <p>Fumoir</p>
     </div>
