@@ -27,7 +27,7 @@ export class TeamCardComponent {
       nickname: '(Ramich)',
       role: 'Co-Gérant',
       description:
-        "@Grand maître du bavardage, il pourrait commenter un film en temps réel… même s'il ne l'a jamais vu.",
+        "Grand maître du bavardage, il pourrait commenter un film en temps réel… même s'il ne l'a jamais vu.",
       devise: '"Une phrase de plus, ça ne mange pas de pain !"',
     },
     {
