@@ -25,6 +25,13 @@
   top: 81px;
   left: 80px;
   z-index: 10;
+
+  @media (min-width: $desktop) {
+    .text-mobile {
+      display: none;
+    }
+  }
+
   div {
     width: 200px;
     font-family: 'Paper Johnny Eins', sans-serif;
@@ -151,7 +158,17 @@
   .text-container {
     position: absolute;
     top: 76px;
-    left: 5%;
+    left: 29px;
+    z-index: 2;
+
+    .text-desktop {
+      display: none;
+    }
+
+    .text-mobile {
+      width: 335px;
+      line-height: 20px;
+    }
   }
 
   .grille-container {
@@ -176,7 +193,7 @@
     }
 
     button {
-      margin-left: 5%;
+      margin-left: 52px;
       width: 290px;
       height: 45px;
       background-color: rgba(17, 17, 17, 1);
@@ -194,8 +211,11 @@
     .img-container {
       height: 200px;
       width: 100%;
+      overflow: hidden;
+      position: relative;
 
       img {
+        position: absolute;
         height: 200px;
         width: 100%;
         object-fit: cover;

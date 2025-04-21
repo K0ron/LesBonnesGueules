@@ -47,30 +47,40 @@ export class HeaderComponent implements OnInit {
 
   goHome() {
     this.router.navigate(['/home']);
+    this.toggleMenu();
+  }
+  goHomePage() {
+    this.router.navigate(['/home']);
   }
 
   goDevis() {
     this.router.navigate(['/devis']);
+    this.toggleMenu();
   }
 
   goToLaCarte() {
     this.router.navigate(['/lacarte']);
+    this.toggleMenu();
   }
 
   goToPrestations() {
     this.router.navigate(['/prestation']);
+    this.toggleMenu();
   }
 
   goToEquipe() {
     this.router.navigate(['/lequipe']);
+    this.toggleMenu();
   }
 
   goToInstagram() {
     window.open('https://www.instagram.com/les_bonnes_gueules/?hl=fr', '_blank');
+    this.toggleMenu();
   }
 
   goToFacebook() {
     window.open('https://www.facebook.com/p/Les-Bonnes-Gueules-100094581984531/', '_blank');
+    this.toggleMenu();
   }
 
   toggleMenu() {
