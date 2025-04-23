@@ -1,3 +1,5 @@
+@import 'media';
+
 .boisson-container {
   height: 492px;
   display: flex;
@@ -32,4 +34,42 @@ h1 {
   font-size: 13px;
   text-transform: uppercase;
   line-height: 30px;
+}
+
+@media (max-width: $mobile) {
+  .boisson-container {
+    height: auto;
+    flex-direction: column-reverse;
+
+    .grille {
+      width: 100%;
+      height: 1345px;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      height: 320px;
+      width: auto;
+      bottom: 0px;
+      left: -85px;
+    }
+  }
+
+  .right-block {
+    margin-bottom: 55px;
+    h1 {
+      margin-left: 29px;
+    }
+
+    .text-container {
+      margin-left: 29px;
+    }
+  }
 }
