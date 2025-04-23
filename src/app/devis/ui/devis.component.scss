@@ -1,6 +1,9 @@
+@import 'media';
+
 .page-container {
   margin-top: 90px;
   background-color: rgba(241, 235, 222, 1);
+  width: 100%;
 }
 
 .header {
@@ -146,4 +149,53 @@
   height: 300px;
   overflow: hidden;
   align-items: center;
+}
+
+@media (max-width: $mobile) {
+  .header {
+    h1 {
+      width: 335px;
+      text-align: center;
+    }
+
+    .grille {
+      height: 1345px;
+    }
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .devis-container {
+    margin-left: 29px;
+    margin-right: 29px;
+  }
+
+  .form-container {
+    flex-direction: column;
+    gap: 95px;
+
+    .input-message {
+      textarea {
+        width: 335px;
+      }
+    }
+
+    .call-button {
+      margin-right: 62px;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    img {
+      position: absolute;
+      top: -70px;
+      left: -190px;
+      height: 435px;
+    }
+  }
 }

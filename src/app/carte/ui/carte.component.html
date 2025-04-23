@@ -10,10 +10,10 @@
     </div>
     <img class="grille" src="Grille.svg" alt="" />
   </div>
-  <img class="logo" src="LBG_Logo.svg" alt="" />
-  <app-search-menu (categorySelected)="onCategorySelected($event)" />
+  <img class="logo" src="LBG_Logo.svg" alt="" *ngIf="!isMobile" />
+  <app-search-menu (categorySelected)="onCategorySelected($event)" *ngIf="!isMobile" />
 
-  <ng-container [ngSwitch]="selectedCategory">
+  <ng-container [ngSwitch]="selectedCategory" *ngIf="!isMobile">
     <app-apero-card *ngSwitchCase="'APERO'" />
     <app-plats-card *ngSwitchCase="'PLATS'" />
     <app-accompagnements-card *ngSwitchCase="'ACCOMPAGNEMENTS'" />
@@ -21,6 +21,84 @@
     <app-boisson-card *ngSwitchCase="'BOISSONS'" />
     <app-menu-enfant-card *ngSwitchCase="'MENU ENFANT'" />
   </ng-container>
+
+  <div class="carte-mobile" *ngIf="isMobile">
+    <div class="carte-accordion">
+      <div class="accordion-header" (click)="toggleSection('apero')">
+        <h4 class="title" [class.active]="isOpen('apero')">Apéro</h4>
+        <span>
+          <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('apero')" />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('apero')">
+        <app-apero-card />
+      </div>
+    </div>
+    <div class="carte-accordion">
+      <div class="accordion-header" (click)="toggleSection('plat')">
+        <h4 class="title" [class.active]="isOpen('plat')">Plat</h4>
+        <span>
+          <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('plat')" />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('plat')">
+        <app-plats-card />
+      </div>
+    </div>
+    <div class="carte-accordion">
+      <div class="accordion-header" (click)="toggleSection('accompagnements')">
+        <h4 class="title" [class.active]="isOpen('accompagnements')">Accompagnements</h4>
+        <span>
+          <img
+            src="mobile/arrow-accordion.svg"
+            alt="arrow"
+            [class.rotated]="isOpen('accompagnements')"
+          />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('accompagnements')">
+        <app-accompagnements-card />
+      </div>
+    </div>
+    <div class="carte-accordion">
+      <div class="accordion-header" (click)="toggleSection('fromage')">
+        <h4 class="title" [class.active]="isOpen('fromage')">Fromage & Dessert</h4>
+        <span>
+          <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('fromage')" />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('fromage')">
+        <app-fromage-dessert-card />
+      </div>
+    </div>
+    <div class="carte-accordion">
+      <div class="accordion-header" (click)="toggleSection('boisson')">
+        <h4 class="title" [class.active]="isOpen('boisson')">Boissons</h4>
+        <span>
+          <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('boisson')" />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('boisson')">
+        <app-boisson-card />
+      </div>
+    </div>
+    <div class="carte-accordion">
+      <div class="accordion-header" (click)="toggleSection('menu-enfant')">
+        <h4 class="title" [class.active]="isOpen('menu-enfant')">Menu enfant</h4>
+        <span>
+          <img
+            src="mobile/arrow-accordion.svg"
+            alt="arrow"
+            [class.rotated]="isOpen('menu-enfant')"
+          />
+        </span>
+      </div>
+      <div class="accordion-body" *ngIf="isOpen('menu-enfant')">
+        <app-menu-enfant-card />
+      </div>
+    </div>
+  </div>
+
   <div class="footer-container">
     <div class="button-container">
       <button (click)="goDevis()" class="call-button">Appeler</button>
@@ -28,6 +106,6 @@
     </div>
   </div>
   <div class="image-container">
-    <img src="bavette.png" alt="Bavette" />
+    <img src="bavette.jpeg" alt="Bavette" />
   </div>
 </div>
