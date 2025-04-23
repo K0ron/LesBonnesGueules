@@ -27,6 +27,8 @@ import { Router } from '@angular/router';
 })
 export class CarteComponent implements OnInit {
   selectedCategory: string | null = null;
+  isMobile: boolean = false;
+  openSection: string | null = null;
 
   constructor(private router: Router) {}
 
@@ -35,7 +37,10 @@ export class CarteComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedCategory = 'APERO';
+    this.isMobile = window.innerWidth < 480;
+    if (!this.isMobile) {
+      this.selectedCategory = 'APERO';
+    }
   }
 
   onCategorySelected(category: string) {
@@ -44,5 +49,13 @@ export class CarteComponent implements OnInit {
 
   goToPrestations() {
     this.router.navigate(['/prestation']);
+  }
+
+  toggleSection(section: string) {
+    this.openSection = this.openSection === section ? null : section;
+  }
+
+  isOpen(section: string): boolean {
+    return this.openSection === section;
   }
 }

@@ -1,3 +1,5 @@
+@import 'media';
+
 .plats-container {
   height: 834px;
   display: flex;
@@ -34,27 +36,6 @@
     width: 389px;
     display: flex;
     overflow: hidden;
-  }
-
-  .title {
-    display: flex;
-    flex-direction: column;
-    margin-left: 74px;
-    margin-right: 60px;
-    gap: 197px;
-
-    .sub-title {
-      gap: 5px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    p {
-      font-family: 'Azeret Mono', monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      line-height: 20px;
-    }
   }
 
   .terre-container {
@@ -106,5 +87,44 @@ h1 {
   img {
     position: absolute;
     right: 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .plats-container {
+    height: auto;
+  }
+
+  .top {
+    flex-direction: column-reverse;
+    height: auto;
+
+    .image-container {
+      height: 263px;
+      width: 100%;
+      position: relative;
+
+      img {
+        height: 370px;
+        position: absolute;
+        width: auto;
+        top: -60px;
+        left: 0px;
+      }
+    }
+
+    .terre-container {
+      margin-left: 40px;
+      height: 500px;
+
+      .text-container {
+        gap: 20px;
+        width: 335px;
+      }
+    }
+
+    .mer-container {
+      margin-left: 40px;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@import 'media';
+
 .page-container {
   margin-top: 90px;
   background-color: rgba(241, 235, 222, 1);
@@ -87,6 +89,81 @@
 
     p {
       text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .header {
+    height: auto;
+
+    .text-container {
+      flex-direction: column-reverse;
+      gap: 50px;
+      margin-left: 29px;
+      margin-top: 65px;
+      margin-bottom: 83px;
+      .text {
+        width: 335px;
+      }
+    }
+  }
+
+  .carte-accordion {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 20px;
+
+    .title {
+      font-family: 'Paper Johnny Eins', sans-serif;
+      font-size: 20px;
+      border: 1px solid rgba(17, 17, 17, 1);
+      border-radius: 40px;
+      padding: 15px 29px 0 29px;
+      height: 45px;
+    }
+
+    .title.active {
+      background-color: rgba(17, 17, 17, 1);
+      color: rgba(241, 235, 222, 1);
+    }
+
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 145px;
+      border-bottom: 1px solid rgba(17, 17, 17, 1);
+      padding-left: 29px;
+      padding-right: 20px;
+
+      img {
+        width: 28px;
+        height: 13px;
+        transition: transform 0.3s ease;
+        margin-right: 10px;
+
+        &.rotated {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .accordion-body {
+      margin-top: 10px;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    img {
+      position: absolute;
+      top: -70px;
+      left: -190px;
+      height: 435px;
     }
   }
 }
