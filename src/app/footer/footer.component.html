@@ -1,4 +1,4 @@
-<div class="footer-container">
+<div class="footer-container" *ngIf="!isMobile">
   <div class="top">
     <img src="LBG_Logo.svg" alt="Les Bonnes Gueules" />
     <div class="text-container">
@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div class="footer-mobile">
+<div class="footer-mobile" *ngIf="isMobile">
   <img class="logo" src="LBG_Logo.svg" alt="Les Bonnes Gueules" />
   <div class="info-container">
     <div class="footer-accordion">

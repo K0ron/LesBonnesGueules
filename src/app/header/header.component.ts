@@ -15,10 +15,12 @@ export class HeaderComponent implements OnInit {
   isHomePage: boolean = false;
   isScrolled: boolean = false;
   menuIsOpen: boolean = false;
+  isMobile: boolean = false;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
+    this.isMobile = window.innerWidth < 480;
     this.checkIfHome();
     this.showDevis();
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {

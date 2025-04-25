@@ -58,17 +58,7 @@
   }
 }
 
-@media (min-width: $desktop) {
-  .footer-mobile {
-    display: none;
-  }
-}
-
 @media (max-width: $mobile) {
-  .footer-container {
-    display: none;
-  }
-
   .footer-mobile {
     height: 330px;
     width: 100%;

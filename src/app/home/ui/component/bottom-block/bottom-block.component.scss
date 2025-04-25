@@ -32,15 +32,15 @@
 }
 
 .grille-container {
-  height: 200px;
+  height: 450px;
   width: 100%;
   position: absolute;
   bottom: 0;
   overflow: hidden;
   img {
     opacity: 0.4;
-    height: 200px;
-    width: 1512px;
+    height: auto;
+    width: 1555px;
     object-fit: cover;
   }
 }
@@ -53,10 +53,6 @@
 }
 
 @media (max-width: $mobile) {
-  .pics-container {
-    display: none;
-  }
-
   .bavette {
     overflow: hidden;
     height: 300px;
@@ -69,10 +65,6 @@
       left: -190px;
       height: 435px;
     }
-  }
-
-  .logo {
-    display: none;
   }
 
   .button-container {

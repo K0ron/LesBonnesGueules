@@ -26,12 +26,6 @@
   left: 80px;
   z-index: 10;
 
-  @media (min-width: $desktop) {
-    .text-mobile {
-      display: none;
-    }
-  }
-
   div {
     width: 200px;
     font-family: 'Paper Johnny Eins', sans-serif;
@@ -111,9 +105,6 @@
   }
 }
 
-.prestation-container::-webkit-scrollbar {
-  display: none;
-}
 .prev {
   position: absolute;
   background: none;
@@ -134,25 +125,10 @@
 }
 
 @media (max-width: $mobile) {
-  .prev {
-    display: none;
-  }
-  .next {
-    display: none;
-  }
-
-  .carousel-fade {
-    display: none;
-  }
-
-  .prestation-container {
-    display: none;
-  }
-
   .mid-block-container {
     display: flex;
     flex-direction: column;
-    height: 1300px;
+    height: 1330px;
   }
 
   .text-container {
@@ -160,10 +136,6 @@
     top: 76px;
     left: 29px;
     z-index: 2;
-
-    .text-desktop {
-      display: none;
-    }
 
     .text-mobile {
       width: 335px;
@@ -221,11 +193,5 @@
         object-fit: cover;
       }
     }
-  }
-}
-
-@media (min-width: $desktop) {
-  .prestation-container-mobile {
-    display: none;
   }
 }

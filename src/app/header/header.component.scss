@@ -1,10 +1,6 @@
 @import 'media';
 
 .header-container {
-  @media (max-width: $mobile) {
-    display: none;
-  }
-
   width: 100%;
   height: 90px;
   display: flex;
@@ -83,9 +79,6 @@
 
 .header-mobile {
   display: flex; // 👈 par défaut
-  @media (min-width: $mobile) {
-    display: none;
-  }
 
   @media (max-width: $mobile) {
     width: 100%;
@@ -196,7 +189,7 @@
       }
 
       .devis-button {
-        width: 210px;
+        width: 260px;
         height: 50px;
         background-color: rgba(17, 17, 17, 1);
         color: rgba(241, 235, 222, 1);
@@ -229,7 +222,7 @@
       flex-direction: column;
       height: 256px;
       border-bottom: 1px solid rgba(17, 17, 17, 1);
-      padding-top: 58px;
+      padding-top: 25px;
     }
 
     .social-container-mobile {
