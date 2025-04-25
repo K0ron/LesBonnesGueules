@@ -1,20 +1,43 @@
 <div class="page-container">
-    <div class="prestations-container">
-        <h1>Nos prestations</h1>
-        <img src="Grille.svg" alt="Grille">
-        <app-prestation-card class="card"/>
+  <div class="prestations-container">
+    <div class="header">
+      <h1>Nos prestations</h1>
+      <img src="Grille.svg" alt="Grille" />
     </div>
-    <div class="bottom-container">
-        <img src="grille-zoom.svg" alt="Grille">
-        <div class="text-container">
-            <div class="title">Vous voulez passer <br>un bon repas avec nous ?</div>
-            <div class="button-container">
-                <button (click)="goDevis()"  class="devis-button">Demander un devis</button>
-                <button (click)="goDevis()" class="call-button">Appeler</button>
-            </div>
-        </div>
+    <app-prestation-card class="card" />
+  </div>
+  <div class="info-container">
+    <img class="arrow" src="arrow.svg" alt="Arrow" />
+    <div class="text-container">
+      <div class="left-text">
+        <div>Particulier</div>
+        <p>- Mariage</p>
+        <p>- Aniversaire</p>
+        <p>- baptême</p>
+        <p>- fête de famille</p>
+        <p>- repas entre amis</p>
+      </div>
+      <div class="right-text">
+        <div>Entreprise</div>
+        <p>- Portes ouvertes</p>
+        <p>- Repas d’équipe</p>
+        <p>- Aniversaire</p>
+        <p>- départ en retraite</p>
+        <p>- team building</p>
+      </div>
     </div>
-    <div class="image-container">
-        <img src="bavette.png" alt="Bavette">
+  </div>
+  <div class="bottom-container">
+    <img src="grille-zoom.svg" alt="Grille" />
+    <div class="text-container">
+      <div class="title">Vous voulez passer <br />un bon repas avec nous ?</div>
+      <div class="button-container">
+        <button (click)="goDevis()" class="devis-button">Demander un devis</button>
+        <button (click)="goDevis()" class="call-button">Appeler</button>
+      </div>
     </div>
-</div> 
+  </div>
+  <div class="image-container">
+    <img src="bavette.jpeg" alt="Bavette" />
+  </div>
+</div>

@@ -1,45 +1,78 @@
- .card-container {
-    display: flex;
-    flex-direction: row;
+@import 'media';
 
-    img {
-        height: 600px;
-        width: 996px;
+.card-container {
+  display: flex;
+  flex-direction: row;
+
+  img {
+    height: 600px;
+    width: 996px;
+  }
+}
+
+.text-container {
+  margin-left: 96px;
+  align-self: center;
+}
+
+.title {
+  font-family: 'Paper Johnny Eins';
+  color: rgba(241, 235, 222, 1);
+  background-color: rgba(17, 17, 17, 1);
+  text-transform: uppercase;
+  font-size: 20px;
+  border: 1px solid rgba(241, 235, 222, 1);
+  border-radius: 40px;
+  height: 45px;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 10px;
+}
+
+.description {
+  color: rgba(241, 235, 222, 1);
+  font-size: 13px;
+  font-family: 'Azeret Mono', monospace;
+  text-transform: uppercase;
+  line-height: 20px;
+  width: 340px;
+  margin-top: 32px;
+}
+
+.prestations-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 82px;
+}
+
+@media (max-width: $mobile) {
+  .prestations-container {
+    height: auto;
+    margin-bottom: 0;
+  }
+  .card-container {
+    margin-bottom: 95px;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    gap: 50px;
+    .image-container {
+      width: 100%;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: auto;
+      }
     }
- }
+  }
 
- .text-container {
-    margin-left: 96px;
-    align-self: center  ;
- }
-
- .title {
-    font-family: 'Paper Johnny Eins';
-    color: rgba(241, 235, 222, 1);
-    background-color: rgba(17, 17, 17, 1);
-    text-transform: uppercase;
-    font-size: 20px;
-    border: 1px solid rgba(241, 235, 222, 1);
-    border-radius: 40px;
-    height: 45px;
-    padding-left: 37px;
-    padding-right: 37px;
-    padding-top: 10px;
- }
-
- .description {
-    color: rgba(241, 235, 222, 1);
-    font-size: 13px;
-    font-family: 'Azeret Mono', monospace;
-    text-transform: uppercase;
-    line-height: 20px;
-    width: 340px;
-    margin-top: 32px;
- }
-
- .prestations-container {
-   display: flex;
-   flex-direction: column;
-   gap: 30px;
-   margin-bottom: 82px;
- }
+  .text-container {
+    margin-left: 29px;
+  }
+}
