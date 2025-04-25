@@ -1,20 +1,25 @@
-import { Component } from '@angular/core';
-import { TeamCardComponent } from "./component/team-card/team-card.component";
+import { Component, OnInit } from '@angular/core';
+import { TeamCardComponent } from './component/team-card/team-card.component';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-equipe',
   standalone: true,
-  imports: [TeamCardComponent],
+  imports: [TeamCardComponent, CommonModule],
   templateUrl: './equipe.component.html',
-  styleUrl: './equipe.component.scss'
+  styleUrl: './equipe.component.scss',
 })
-export class EquipeComponent {
+export class EquipeComponent implements OnInit {
+  isMobile: boolean = false;
 
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 480;
+  }
 
   goDevis() {
     this.router.navigate(['/devis']);
   }
-
 }

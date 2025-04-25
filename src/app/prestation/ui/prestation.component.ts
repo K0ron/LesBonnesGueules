@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PrestationCardComponent } from './component/prestation-card/prestation-card.component';
-import { DividerModule } from 'primeng/divider';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-prestation',
   standalone: true,
-  imports: [PrestationCardComponent, DividerModule],
+  imports: [PrestationCardComponent, CommonModule],
   templateUrl: './prestation.component.html',
   styleUrl: './prestation.component.scss',
 })
-export class PrestationComponent {
+export class PrestationComponent implements OnInit {
+  isMobile: boolean = false;
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 480;
+  }
 
   goDevis() {
     this.router.navigate(['/devis']);

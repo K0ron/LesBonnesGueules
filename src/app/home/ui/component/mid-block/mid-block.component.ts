@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './mid-block.component.scss',
 })
 export class MidBlockComponent implements OnInit {
+  isMobile: boolean = false;
   constructor(private router: Router) {}
 
   prestations: any[] = [
@@ -30,7 +31,9 @@ export class MidBlockComponent implements OnInit {
     },
   ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 480;
+  }
 
   goToPrestations() {
     this.router.navigate(['/prestation']);

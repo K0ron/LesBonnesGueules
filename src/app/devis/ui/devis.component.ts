@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import emailjs from '@emailjs/browser';
@@ -12,11 +12,12 @@ import { AlertService } from '../../alert.service';
   templateUrl: './devis.component.html',
   styleUrl: './devis.component.scss',
 })
-export class DevisComponent {
+export class DevisComponent implements OnInit {
   publicKey: string = 'qMKDtBUHNPpEPlfO7';
   serviceID: string = 'service_1z5qcga';
   templateID: string = 'template_lbg';
   form: FormGroup;
+  isMobile: boolean = false;
 
   constructor(private fb: FormBuilder, private alertService: AlertService) {
     this.form = this.fb.group({
@@ -27,6 +28,10 @@ export class DevisComponent {
       message: ['', Validators.required],
       from_adress: ['', Validators.required],
     });
+  }
+
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 480;
   }
 
   async send() {

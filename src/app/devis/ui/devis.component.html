@@ -3,7 +3,7 @@
     <h1>Demander un devis</h1>
     <img class="grille" src="Grille.svg" alt="" />
   </div>
-  <img class="logo" src="LBG_Logo.svg" alt="" />
+  <img class="logo" src="LBG_Logo.svg" alt="" *ngIf="!isMobile" />
   <div class="devis-container">
     <form class="form-container" (ngSubmit)="send()" [formGroup]="form">
       <div class="info-container">

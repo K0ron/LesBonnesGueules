@@ -2,10 +2,10 @@
   <div class="text-container">
     <div>Nos prestations</div>
     <button (click)="goToPrestations()">voir toutes nos prestations</button>
-    <p class="text-desktop">
+    <p class="text-desktop" *ngIf="!isMobile">
       Un show culinaire, entre flammes, gourmandiSE ET bonne humeur garantie !
     </p>
-    <p class="text-mobile">
+    <p class="text-mobile" *ngIf="isMobile">
       Vous êtes un particulier ou une entreprise et vous souhaitez organiser un événement ? Nous
       vous garantissons un show culinaire mêlant flammes, gourmandise et bonne humeur !
     </p>
@@ -13,8 +13,8 @@
   <div class="grille-container">
     <img src="grille-claire.svg" alt="Grille" />
   </div>
-  <div class="carousel-fade"></div>
-  <div class="prestation-container">
+  <div class="carousel-fade" *ngIf="!isMobile"></div>
+  <div class="prestation-container" *ngIf="!isMobile">
     <div (click)="goToPrestations()" *ngFor="let prestation of prestations">
       <div class="img-container">
         <img src="{{ prestation.img }}" alt="{{ prestation.name }}" />
@@ -22,7 +22,7 @@
       <div>{{ prestation.name }}</div>
     </div>
   </div>
-  <div class="prestation-container-mobile">
+  <div class="prestation-container-mobile" *ngIf="isMobile">
     <div (click)="goToPrestations()">
       <div class="img-container">
         <img src="mobile/brasero-mobile.png" alt="" />
@@ -43,8 +43,10 @@
     </div>
     <button (click)="goToPrestations()">voir toutes nos prestations</button>
   </div>
-  <button class="prev" (click)="scrollLeft()"><img src="arrow-carou-left.svg" alt="left" /></button>
-  <button class="next" (click)="scrollRight()">
+  <button class="prev" (click)="scrollLeft()" *ngIf="!isMobile">
+    <img src="arrow-carou-left.svg" alt="left" />
+  </button>
+  <button class="next" (click)="scrollRight()" *ngIf="!isMobile">
     <img src="arrow-carou-right.svg" alt="right" />
   </button>
 </div>

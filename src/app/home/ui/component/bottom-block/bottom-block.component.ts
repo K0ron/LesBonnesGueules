@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-bottom-block',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './bottom-block.component.html',
-  styleUrl: './bottom-block.component.scss'
+  styleUrl: './bottom-block.component.scss',
 })
-export class BottomBlockComponent {
+export class BottomBlockComponent implements OnInit {
+  isMobile: boolean = false;
+  constructor(private router: Router) {}
 
-  constructor(private router: Router){}
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 480;
+  }
 
   goDevis() {
     this.router.navigate(['/devis']);
   }
-
 }

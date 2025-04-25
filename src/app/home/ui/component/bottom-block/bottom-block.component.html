@@ -1,17 +1,17 @@
 <div class="bottom-block-container">
-  <img class="logo" src="LBG_Logo.svg" alt="Les Bonnes Gueules" />
+  <img class="logo" src="LBG_Logo.svg" alt="" *ngIf="!isMobile" />
   <div class="bavette">
-    <img src="bavette.jpeg" alt="Bavette" />
+    <img src="bavette.jpeg" alt="" />
   </div>
-  <div class="pics-container">
-    <img src="hadri-quent.png" alt="Hadri Quent" />
-    <img src="porc.png" alt="Porc" />
+  <div class="pics-container" *ngIf="!isMobile">
+    <img src="hadri-quent.png" alt="" />
+    <img src="porc.png" alt="" />
   </div>
   <div class="button-container">
     <button (click)="goDevis()" class="call-button">Appeler</button>
     <button (click)="goDevis()" class="devis-button">Demander un devis</button>
   </div>
   <div class="grille-container">
-    <img src="grille-zoom.svg" alt="Grille" />
+    <img src="grille-zoom.svg" alt="" />
   </div>
 </div>
