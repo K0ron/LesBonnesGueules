@@ -92,45 +92,6 @@
   }
 }
 
-.info-container {
-  height: auto;
-  background-color: rgba(241, 235, 222, 1);
-  overflow: hidden;
-  position: relative;
-
-  .arrow {
-    height: 39px;
-    top: 32px;
-    left: 177px;
-    position: absolute;
-    rotate: 90deg;
-  }
-
-  .text-container {
-    border-top: solid 1px rgba(17, 17, 17, 1);
-    margin-top: 52px;
-    margin-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    padding-left: 93px;
-    div > div {
-      font-family: 'Paper Johnny Eins', sans-serif;
-      font-size: 25px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      margin-top: 66px;
-    }
-
-    p {
-      font-family: 'Azeret Mono', monospace;
-      font-size: 16px;
-      text-transform: uppercase;
-      line-height: 25px;
-      font-weight: 400;
-    }
-  }
-}
-
 @media (max-width: $mobile) {
   .prestations-container {
     .card {
@@ -198,6 +159,56 @@
       top: -70px;
       left: -190px;
       height: 435px;
+    }
+  }
+
+  .info-container {
+    height: auto;
+    background-color: rgba(241, 235, 222, 1);
+    overflow: hidden;
+    position: relative;
+
+    .arrow-container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      top: 79px;
+      gap: 192px;
+
+      .line-arrow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .line {
+          height: 0;
+          width: 77px;
+          border: solid 1px rgba(17, 17, 17, 1);
+        }
+      }
+    }
+
+    .text-container {
+      margin-top: 90px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 140px;
+      gap: 60px;
+      div > div {
+        font-family: 'Paper Johnny Eins', sans-serif;
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-family: 'Azeret Mono', monospace;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 25px;
+        font-weight: 400;
+      }
     }
   }
 }
