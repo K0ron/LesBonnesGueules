@@ -111,6 +111,9 @@
   height: 276px;
   background-color: rgba(241, 235, 222, 1);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     opacity: 0.4;
@@ -122,11 +125,11 @@
 
   .text-container {
     display: flex;
-    height: 82px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 93px;
+    margin-top: 11px;
+    gap: 317px;
 
     .title {
       width: 644px;
