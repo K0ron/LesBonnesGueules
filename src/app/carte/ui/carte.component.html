@@ -25,7 +25,9 @@
   <div class="carte-mobile" *ngIf="isMobile">
     <div class="carte-accordion">
       <div class="accordion-header" (click)="toggleSection('apero')">
-        <h4 class="title" [class.active]="isOpen('apero')">Apéro</h4>
+        <div class="title">
+          <h4 [class.active]="isOpen('apero')">Apéro</h4>
+        </div>
         <span>
           <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('apero')" />
         </span>
@@ -36,7 +38,9 @@
     </div>
     <div class="carte-accordion">
       <div class="accordion-header" (click)="toggleSection('plat')">
-        <h4 class="title" [class.active]="isOpen('plat')">Plat</h4>
+        <div class="title">
+          <h4 [class.active]="isOpen('plat')">Plat</h4>
+        </div>
         <span>
           <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('plat')" />
         </span>
@@ -47,7 +51,9 @@
     </div>
     <div class="carte-accordion">
       <div class="accordion-header" (click)="toggleSection('accompagnements')">
-        <h4 class="title" [class.active]="isOpen('accompagnements')">Accompagnements</h4>
+        <div class="title">
+          <h4 [class.active]="isOpen('accompagnements')">Accompagnements</h4>
+        </div>
         <span>
           <img
             src="mobile/arrow-accordion.svg"
@@ -62,7 +68,9 @@
     </div>
     <div class="carte-accordion">
       <div class="accordion-header" (click)="toggleSection('fromage')">
-        <h4 class="title" [class.active]="isOpen('fromage')">Fromage & Dessert</h4>
+        <div class="title">
+          <h4 [class.active]="isOpen('fromage')">Fromage & Dessert</h4>
+        </div>
         <span>
           <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('fromage')" />
         </span>
@@ -73,7 +81,9 @@
     </div>
     <div class="carte-accordion">
       <div class="accordion-header" (click)="toggleSection('boisson')">
-        <h4 class="title" [class.active]="isOpen('boisson')">Boissons</h4>
+        <div class="title">
+          <h4 [class.active]="isOpen('boisson')">Boissons</h4>
+        </div>
         <span>
           <img src="mobile/arrow-accordion.svg" alt="arrow" [class.rotated]="isOpen('boisson')" />
         </span>
@@ -84,7 +94,9 @@
     </div>
     <div class="carte-accordion">
       <div class="accordion-header" (click)="toggleSection('menu-enfant')">
-        <h4 class="title" [class.active]="isOpen('menu-enfant')">Menu enfant</h4>
+        <div class="title">
+          <h4 [class.active]="isOpen('menu-enfant')">Menu enfant</h4>
+        </div>
         <span>
           <img
             src="mobile/arrow-accordion.svg"

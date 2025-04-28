@@ -1,10 +1,11 @@
 <div class="mid-block-container">
   <div class="text-container">
     <div>Nos prestations</div>
-    <button (click)="goToPrestations()">voir toutes nos prestations</button>
+
     <p class="text-desktop" *ngIf="!isMobile">
       Un show culinaire, entre flammes, gourmandiSE ET bonne humeur garantie !
     </p>
+    <button (click)="goToPrestations()">voir toutes nos prestations</button>
     <p class="text-mobile" *ngIf="isMobile">
       Vous êtes un particulier ou une entreprise et vous souhaitez organiser un événement ? Nous
       vous garantissons un show culinaire mêlant flammes, gourmandise et bonne humeur !

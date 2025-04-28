@@ -7,23 +7,33 @@
     <app-prestation-card class="card" />
   </div>
   <div class="info-container">
-    <img class="arrow" src="arrow.svg" alt="Arrow" />
-    <div class="text-container">
-      <div class="left-text">
-        <div>Particulier</div>
-        <p>- Mariage</p>
-        <p>- Aniversaire</p>
-        <p>- baptême</p>
-        <p>- fête de famille</p>
-        <p>- repas entre amis</p>
+    <div class="arrow-container">
+      <div class="line-arrow">
+        <div class="line"></div>
+        <img class="arrow" src="arrow.svg" alt="Arrow" />
       </div>
-      <div class="right-text">
+      <div class="line-arrow">
+        <div *ngIf="isMobile" class="line"></div>
+        <img class="arrow" src="arrow.svg" alt="Arrow" />
+      </div>
+    </div>
+
+    <div class="text-container">
+      <div class="entreprise-text">
         <div>Entreprise</div>
         <p>- Portes ouvertes</p>
         <p>- Repas d’équipe</p>
-        <p>- Aniversaire</p>
-        <p>- départ en retraite</p>
-        <p>- team building</p>
+        <p>- Anniversaire</p>
+        <p>- Départ en retraite</p>
+        <p>- Team building</p>
+      </div>
+      <div class="particulier-text">
+        <div>Particulier</div>
+        <p>- Mariage</p>
+        <p>- Anniversaire</p>
+        <p>- baptême</p>
+        <p>- fête de famille</p>
+        <p>- repas entre amis</p>
       </div>
     </div>
   </div>

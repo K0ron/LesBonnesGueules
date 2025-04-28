@@ -8,36 +8,102 @@
 
   .card {
     z-index: 1;
-    margin-top: 86px;
   }
 }
 
 .image-container {
-  display: flex;
   height: 300px;
+  width: 100%;
   overflow: hidden;
-  align-items: center;
+  position: relative;
+  img {
+    position: absolute;
+    top: -430px;
+    left: -15px;
+    width: 1520px;
+    height: auto;
+  }
 }
 
 .prestations-container {
   display: flex;
   flex-direction: column;
   background-color: rgba(17, 17, 17, 1);
-  h1 {
-    font-family: 'Paper Johnny Eins', sans-serif;
-    font-size: 40px;
-    text-transform: uppercase;
-    align-self: center;
-    margin-top: 88px;
-    color: rgba(241, 235, 222, 1);
-    z-index: 1;
-  }
-  img {
-    opacity: 0.4;
-    position: absolute;
+  .header {
+    position: relative;
+    overflow: hidden;
+    height: 211px;
     width: 100%;
-    height: 222px;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-family: 'Paper Johnny Eins', sans-serif;
+      font-size: 40px;
+      text-transform: uppercase;
+      align-self: center;
+      margin-top: 88px;
+      color: rgba(241, 235, 222, 1);
+      z-index: 1;
+    }
+    img {
+      position: absolute;
+      top: -11px;
+      left: 0;
+      opacity: 0.4;
+      width: 100%;
+      height: 222px;
+      object-fit: cover;
+    }
+  }
+}
+
+.info-container {
+  height: 390px;
+  width: 100%;
+  background-color: rgba(241, 235, 222, 1);
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid rgba(17, 17, 17, 1);
+
+  .arrow-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    top: 110px;
+    gap: 280px;
+
+    .line-arrow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .line {
+        height: 0;
+        width: 449px;
+        border: solid 1px rgba(17, 17, 17, 1);
+      }
+    }
+  }
+  .text-container {
+    margin-top: 119px;
+    margin-bottom: 20px;
+    margin-left: 510px;
+    display: flex;
+    flex-direction: row;
+    gap: 145px;
+    div > div {
+      font-family: 'Paper Johnny Eins', sans-serif;
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-family: 'Azeret Mono', monospace;
+      text-transform: uppercase;
+      line-height: 20px;
+      font-weight: 400;
+    }
   }
 }
 
@@ -45,6 +111,9 @@
   height: 276px;
   background-color: rgba(241, 235, 222, 1);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     opacity: 0.4;
@@ -59,7 +128,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 93px;
+    margin-top: 11px;
+    gap: 317px;
 
     .title {
       width: 644px;
@@ -88,45 +158,6 @@
         height: 45px;
         border: solid 1px rgba(17, 17, 17, 1);
       }
-    }
-  }
-}
-
-.info-container {
-  height: auto;
-  background-color: rgba(241, 235, 222, 1);
-  overflow: hidden;
-  position: relative;
-
-  .arrow {
-    height: 39px;
-    top: 32px;
-    left: 177px;
-    position: absolute;
-    rotate: 90deg;
-  }
-
-  .text-container {
-    border-top: solid 1px rgba(17, 17, 17, 1);
-    margin-top: 52px;
-    margin-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    padding-left: 93px;
-    div > div {
-      font-family: 'Paper Johnny Eins', sans-serif;
-      font-size: 25px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      margin-top: 66px;
-    }
-
-    p {
-      font-family: 'Azeret Mono', monospace;
-      font-size: 16px;
-      text-transform: uppercase;
-      line-height: 25px;
-      font-weight: 400;
     }
   }
 }
@@ -198,6 +229,56 @@
       top: -70px;
       left: -190px;
       height: 435px;
+    }
+  }
+
+  .info-container {
+    height: auto;
+    background-color: rgba(241, 235, 222, 1);
+    overflow: hidden;
+    position: relative;
+
+    .arrow-container {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      top: 79px;
+      gap: 192px;
+
+      .line-arrow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .line {
+          height: 0;
+          width: 77px;
+          border: solid 1px rgba(17, 17, 17, 1);
+        }
+      }
+    }
+
+    .text-container {
+      margin-top: 90px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 140px;
+      gap: 60px;
+      div > div {
+        font-family: 'Paper Johnny Eins', sans-serif;
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-family: 'Azeret Mono', monospace;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 25px;
+        font-weight: 400;
+      }
     }
   }
 }

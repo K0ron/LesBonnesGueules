@@ -11,10 +11,17 @@
   }
 
   .image-container {
-    display: flex;
     height: 300px;
+    width: 100%;
     overflow: hidden;
-    align-items: center;
+    position: relative;
+    img {
+      position: absolute;
+      top: -430px;
+      left: -15px;
+      width: 1520px;
+      height: auto;
+    }
   }
 
   .footer-container {
@@ -116,11 +123,14 @@
     line-height: 20px;
 
     .title {
-      font-family: 'Paper Johnny Eins', sans-serif;
-      font-size: 20px;
+      h4 {
+        font-family: 'Paper Johnny Eins', sans-serif;
+        font-size: 20px;
+        margin-top: 16px;
+      }
       border: 1px solid rgba(17, 17, 17, 1);
       border-radius: 40px;
-      padding: 15px 29px 0 29px;
+      padding: 0 29px 0 29px;
       height: 45px;
     }
 

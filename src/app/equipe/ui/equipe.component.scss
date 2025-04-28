@@ -11,10 +11,17 @@
 }
 
 .image-container {
-  display: flex;
   height: 300px;
+  width: 100%;
   overflow: hidden;
-  align-items: center;
+  position: relative;
+  img {
+    position: absolute;
+    top: -430px;
+    left: -15px;
+    width: 1520px;
+    height: auto;
+  }
 }
 
 .team-container {
@@ -58,6 +65,9 @@
   height: 276px;
   background-color: rgba(241, 235, 222, 1);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     opacity: 0.4;
@@ -72,7 +82,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 93px;
+    margin-top: 11px;
+    gap: 317px;
 
     .title {
       width: 644px;
