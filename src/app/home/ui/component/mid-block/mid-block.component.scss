@@ -2,6 +2,7 @@
 
 .mid-block-container {
   height: 637px;
+  width: 100%;
   position: relative;
   background-color: rgba(241, 235, 222, 1);
 }
@@ -79,12 +80,11 @@
   text-transform: uppercase;
   width: 1030px;
   overflow-x: auto;
-
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.prestation-container::-webkit-scrollbar {
+  display: none;
 }
 
 .img-container {
