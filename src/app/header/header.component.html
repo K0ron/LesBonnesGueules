@@ -14,7 +14,11 @@
   </div>
 </div>
 
-<div class="header-mobile" [class.transparent]="!isScrolled && isHomePage && !menuIsOpen">
+<div
+  class="header-mobile"
+  [class.transparent]="!isScrolled && isHomePage && !menuIsOpen"
+  *ngIf="isMobile"
+>
   <button class="burger" (click)="toggleMenu()">
     <div class="line"></div>
     <div class="line"></div>

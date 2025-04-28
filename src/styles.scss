@@ -25,6 +25,12 @@
   }
 }
 
+@media (min-width: $desktop) {
+  * {
+    font-size: 13px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
