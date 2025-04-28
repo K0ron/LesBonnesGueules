@@ -1,57 +1,77 @@
 @import 'media';
 
-.bottom-block-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(17, 17, 17, 1);
-}
+//// DESKSTOP /////
+@media (min-width: $desktop) {
+  .bottom-block-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(17, 17, 17, 1);
+  }
 
-.pics-container {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  margin-top: 32px;
-  margin-bottom: 76px;
-  z-index: 1;
-  overflow: hidden;
-}
+  .pics-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 32px;
+    margin-bottom: 76px;
+    z-index: 1;
+    overflow: hidden;
+  }
 
-.button-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 32px;
-  margin-bottom: 72px;
-  z-index: 1;
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 72px;
+    z-index: 1;
 
-  .devis-button {
-    height: 45px;
-    text-transform: uppercase;
+    .devis-button {
+      height: 45px;
+      text-transform: uppercase;
+    }
+  }
+
+  .grille-container {
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    img {
+      opacity: 0.4;
+      height: auto;
+      width: 1555px;
+      object-fit: cover;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    height: 300px;
+    top: -55px;
+    left: 78px;
+    z-index: 2;
+  }
+
+  .bavette {
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      top: -395px;
+      left: -5px;
+      width: 1600px;
+      height: auto;
+    }
   }
 }
+////////////////
 
-.grille-container {
-  height: 450px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  overflow: hidden;
-  img {
-    opacity: 0.4;
-    height: auto;
-    width: 1555px;
-    object-fit: cover;
-  }
-}
-
-.logo {
-  position: absolute;
-  height: 300px;
-  top: -55px;
-  left: 78px;
-}
-
+//// MOBILE /////
 @media (max-width: $mobile) {
   .bavette {
     overflow: hidden;
@@ -79,3 +99,4 @@
     }
   }
 }
+////////////////

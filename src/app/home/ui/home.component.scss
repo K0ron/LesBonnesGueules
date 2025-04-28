@@ -4,17 +4,28 @@
   margin-top: -90px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .top-block {
   display: flex;
   flex-direction: row;
+  width: 100%;
+
+  app-left-block {
+    width: 43%;
+  }
+
+  app-right-block {
+    width: 57%;
+  }
 
   img {
     height: 349px;
     top: 0;
     left: 475px;
     position: absolute;
+    z-index: 1;
   }
 
   .arrow {
@@ -25,6 +36,14 @@
     left: 630px;
     z-index: 1;
   }
+}
+
+app-mid-block {
+  width: 100%;
+}
+
+app-bottom-block {
+  width: 100%;
 }
 
 @media (max-width: $mobile) {
