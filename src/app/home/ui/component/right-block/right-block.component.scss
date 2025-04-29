@@ -12,29 +12,19 @@
     left: -65%;
     width: auto;
     height: 100%;
-    border-color: red;
   }
 }
 
 @media (max-width: $mobile) {
   .right-block-container {
     width: 100%;
-  }
-
-  @media (max-width: $mobile) {
-    .top {
-      height: 390px;
-
-      overflow: hidden;
-      position: relative;
-
-      img {
-        position: absolute;
-        height: 500px;
-        width: auto;
-        top: 0;
-        left: -230px;
-      }
+    height: 430px;
+    img {
+      position: absolute;
+      height: 500px;
+      width: auto;
+      top: 50px;
+      left: -220px;
     }
   }
 }

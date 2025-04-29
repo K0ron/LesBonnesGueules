@@ -47,13 +47,20 @@ app-bottom-block {
 }
 
 @media (max-width: $mobile) {
+  app-right-block {
+    width: 100% !important;
+  }
+
+  app-left-block {
+    width: 100% !important;
+  }
   .top-block {
     flex-direction: column-reverse;
 
     img {
       height: 178px;
-      top: 274px;
-      left: 5%;
+      top: 235px;
+      left: 29px;
       z-index: 1;
     }
   }
