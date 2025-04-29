@@ -164,16 +164,12 @@
       margin-top: 10px;
     }
   }
-
   .image-container {
-    position: relative;
-    height: 300px;
-    width: 100%;
     img {
-      position: absolute;
-      top: -70px;
-      left: -190px;
-      height: 435px;
+      height: 435px !important;
+      width: auto !important;
+      top: -70px !important;
+      left: -190px !important;
     }
   }
 }

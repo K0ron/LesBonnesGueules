@@ -74,16 +74,14 @@
 //// MOBILE /////
 @media (max-width: $mobile) {
   .bavette {
-    overflow: hidden;
     height: 300px;
     width: 100%;
-    position: relative;
 
     img {
-      position: absolute;
       top: -70px;
       left: -190px;
       height: 435px;
+      width: auto;
     }
   }
 
