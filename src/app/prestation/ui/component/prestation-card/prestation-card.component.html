@@ -6,16 +6,12 @@
         [numVisible]="1"
         [numScroll]="1"
         [circular]="true"
-        autoplayInterval="3000"
+        [autoplayInterval]="3000"
         [showNavigators]="false"
       >
         <ng-template let-img #item>
-          <div class="border border-surface rounded-border m-2 p-4">
-            <div class="mb-4">
-              <div class="relative mx-auto">
-                <img [src]="img" [alt]="prestation.name" class="w-full rounded-border" />
-              </div>
-            </div>
+          <div class="img-container">
+            <img [src]="img" [alt]="prestation.name" />
           </div>
         </ng-template>
       </p-carousel>
