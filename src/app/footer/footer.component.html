@@ -5,18 +5,18 @@
       <p-divider layout="vertical" />
       <div class="infos">
         <strong>à propos</strong>
-        <p>Accueil</p>
-        <p>notre carte</p>
-        <p>Nos prestations</p>
-        <p>l’équipe</p>
-        <p>contact</p>
+        <p class="click" (click)="goHome()">Accueil</p>
+        <p class="click" (click)="goToLaCarte()">notre carte</p>
+        <p class="click" (click)="goToPrestations()">Nos prestations</p>
+        <p class="click" (click)="goToEquipe()">l’équipe</p>
+        <p class="click" (click)="goDevis()">contact</p>
       </div>
       <p-divider layout="vertical" />
       <div class="infos">
         <strong>Nos prestations</strong>
-        <p>Brasero</p>
-        <p>Tourne-broche</p>
-        <p>Fumoir</p>
+        <p class="click" (click)="goToPrestations()">Brasero</p>
+        <p class="click" (click)="goToPrestations()">Tourne-broche</p>
+        <p class="click" (click)="goToPrestations()">Fumoir</p>
       </div>
       <p-divider layout="vertical" />
       <div class="infos">
@@ -24,8 +24,8 @@
         <p>Les bonnes gueules</p>
         <p>06 26 55 51 77</p>
         <p>brasserielesbonnesgueules&#64;gmail.com</p>
-        <p>Instagram</p>
-        <p>Faceboot</p>
+        <p class="click" (click)="goToInstagram()">Instagram</p>
+        <p class="click" (click)="goToFacebook()">Faceboot</p>
       </div>
     </div>
   </div>
