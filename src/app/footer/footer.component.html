@@ -47,11 +47,11 @@
         </span>
       </div>
       <div class="accordion-body" *ngIf="isOpen('à propos')">
-        <p>Accueil</p>
-        <p>notre carte</p>
-        <p>Nos prestations</p>
-        <p>l’équipe</p>
-        <p>contact</p>
+        <p (click)="goHome()">Accueil</p>
+        <p (click)="goToLaCarte()">notre carte</p>
+        <p (click)="goToPrestations()">Nos prestations</p>
+        <p (click)="goToEquipe()">l’équipe</p>
+        <p (click)="goDevis()">contact</p>
       </div>
     </div>
     <div class="footer-accordion">
@@ -66,9 +66,9 @@
         </span>
       </div>
       <div class="accordion-body" *ngIf="isOpen('prestations')">
-        <p>Brasero</p>
-        <p>Tourne-broche</p>
-        <p>Fumoir</p>
+        <p (click)="goToPrestations()">Brasero</p>
+        <p (click)="goToPrestations()">Tourne-broche</p>
+        <p (click)="goToPrestations()">Fumoir</p>
       </div>
     </div>
     <div class="footer-accordion">
@@ -80,10 +80,10 @@
       </div>
       <div class="accordion-body" *ngIf="isOpen('contact')">
         <p>Les bonnes gueules</p>
-        <p>06 26 55 51 77</p>
+        <p (click)="callNumber()">06 26 55 51 77</p>
         <p>brasserielesbonnesgueules&#64;gmail.com</p>
-        <p>Instagram</p>
-        <p>Faceboot</p>
+        <p (click)="goToInstagram()">Instagram</p>
+        <p (click)="goToFacebook()">Faceboot</p>
       </div>
     </div>
   </div>

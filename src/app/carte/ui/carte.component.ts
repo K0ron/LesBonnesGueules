@@ -58,4 +58,8 @@ export class CarteComponent implements OnInit {
   isOpen(section: string): boolean {
     return this.openSection === section;
   }
+
+  callNumber() {
+    window.open('tel:+33626555177');
+  }
 }
