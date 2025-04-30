@@ -20,4 +20,8 @@ export class BottomBlockComponent implements OnInit {
   goDevis() {
     this.router.navigate(['/devis']);
   }
+
+  callNumber() {
+    window.open('tel:+33626555177');
+  }
 }

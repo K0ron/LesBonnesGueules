@@ -8,7 +8,7 @@
     <img src="porc.png" alt="" />
   </div>
   <div class="button-container">
-    <button (click)="goDevis()" class="call-button">Appeler</button>
+    <button (click)="callNumber()" class="call-button" *ngIf="isMobile">Appeler</button>
     <button (click)="goDevis()" class="devis-button">Demander un devis</button>
   </div>
   <div class="grille-container">

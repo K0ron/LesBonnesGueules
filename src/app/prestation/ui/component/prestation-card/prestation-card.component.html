@@ -1,8 +1,6 @@
 <div class="prestations-container">
   <div class="card-container" *ngFor="let prestation of prestations">
     <div class="carousel-container">
-      <!-- <img [src]="prestation.img" alt="{{ prestation.name }}" /> -->
-      <!-- carou -->
       <p-carousel
         [value]="prestation.img"
         [numVisible]="1"
@@ -21,9 +19,7 @@
           </div>
         </ng-template>
       </p-carousel>
-      <!----------->
     </div>
-
     <div class="text-container">
       <button class="title">{{ prestation.name }}</button>
       <div class="description" [innerHTML]="prestation.description"></div>
