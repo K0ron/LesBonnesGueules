@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselModule } from 'primeng/carousel';
+import { Carousel, CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-prestation-card',
@@ -10,6 +10,8 @@ import { CarouselModule } from 'primeng/carousel';
   styleUrl: './prestation-card.component.scss',
 })
 export class PrestationCardComponent {
+  @ViewChildren('carouselRef') carousel!: QueryList<Carousel>;
+
   prestations: any[] = [
     {
       id: 1,
@@ -45,4 +47,12 @@ export class PrestationCardComponent {
         'Le kamado et le smoker sont des équipements de cuisson qui utilisent une chaleur douce et un fumage naturel pour sublimer les viandes.<br><br>Grâce à eux, notre viande est préparée lentement, pour une texture fondante et un goût fumé.',
     },
   ];
+
+  scrollLeft(index: number) {
+    this.carousel.toArray()[index]?.navBackward(new Event('click') as unknown as MouseEvent);
+  }
+
+  scrollRight(index: number) {
+    this.carousel.toArray()[index]?.navForward(new Event('click') as unknown as MouseEvent);
+  }
 }
