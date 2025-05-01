@@ -11,12 +11,11 @@
     flex-direction: row;
     overflow: hidden;
     z-index: 0;
-    height: 834px;
+    height: 465px;
+    width: 100%;
     .grille {
-      width: 100%;
-      height: 120%;
+      position: absolute;
       object-fit: cover;
-      opacity: 0.3;
     }
   }
 

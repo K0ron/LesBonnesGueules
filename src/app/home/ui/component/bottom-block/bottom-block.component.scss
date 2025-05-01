@@ -40,7 +40,6 @@
   bottom: 0;
   overflow: hidden;
   img {
-    opacity: 0.4;
     height: auto;
     width: 1555px;
     object-fit: cover;
@@ -82,11 +81,12 @@
       left: -190px;
       height: 435px;
       width: auto;
+      z-index: 1;
     }
   }
 
   .button-container {
-    height: 379px;
+    height: 306px;
     display: flex;
     flex-direction: column;
     justify-content: center;

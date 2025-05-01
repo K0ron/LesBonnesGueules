@@ -12,6 +12,10 @@ import { Carousel, CarouselModule } from 'primeng/carousel';
 export class PrestationCardComponent {
   @ViewChildren('carouselRef') carousel!: QueryList<Carousel>;
 
+  constructor() {
+    Carousel.prototype.onTouchMove = () => {};
+  }
+
   prestations: any[] = [
     {
       id: 1,

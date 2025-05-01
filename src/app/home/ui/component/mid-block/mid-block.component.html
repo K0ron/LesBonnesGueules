@@ -5,14 +5,15 @@
     <p class="text-desktop" *ngIf="!isMobile">
       Un show culinaire, entre flammes, gourmandiSE ET bonne humeur garantie !
     </p>
-    <button (click)="goToPrestations()">voir toutes nos prestations</button>
+
     <p class="text-mobile" *ngIf="isMobile">
       Vous êtes un particulier ou une entreprise et vous souhaitez organiser un événement ? Nous
       vous garantissons un show culinaire mêlant flammes, gourmandise et bonne humeur !
     </p>
+    <button (click)="goToPrestations()">voir toutes nos prestations</button>
   </div>
   <div class="grille-container">
-    <img src="grille-claire.svg" alt="Grille" />
+    <img src="grilles/Grille_beige.svg" alt="Grille" />
   </div>
   <div class="carousel-fade" *ngIf="!isMobile"></div>
   <div class="prestation-container" *ngIf="!isMobile">

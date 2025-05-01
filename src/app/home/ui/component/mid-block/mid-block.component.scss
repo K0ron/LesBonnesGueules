@@ -9,14 +9,12 @@
 
 .grille-container {
   height: 350px;
-  width: 846px;
+  width: 855px;
   position: absolute;
   top: 0;
   right: 0;
   overflow: hidden;
   img {
-    height: auto;
-    width: 862px;
     object-fit: cover;
   }
 }
@@ -167,7 +165,7 @@
     button {
       margin-left: 52px;
       width: 290px;
-      height: 45px;
+      height: 50px;
       background-color: rgba(17, 17, 17, 1);
       border: none;
       border-radius: 40px;

@@ -10,9 +10,7 @@
   .grille {
     left: 0;
     position: absolute;
-    width: 68%;
     object-fit: cover;
-    opacity: 0.3;
   }
 
   .image-container {
@@ -30,6 +28,7 @@
 .left-block {
   width: 414px;
   border-right: 1px solid rgba(17, 17, 17, 1);
+  z-index: 2;
 
   .text {
     width: 213px;

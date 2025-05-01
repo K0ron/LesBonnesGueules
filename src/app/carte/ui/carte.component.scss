@@ -23,30 +23,6 @@
       height: auto;
     }
   }
-
-  .footer-container {
-    height: 200px;
-    background-color: rgba(17, 17, 17, 1);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    overflow: hidden;
-    position: relative;
-
-    .button-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 32px;
-      margin-top: 72px;
-      z-index: 1;
-
-      .devis-button {
-        height: 45px;
-        text-transform: uppercase;
-      }
-    }
-  }
 }
 
 .header {
@@ -67,9 +43,8 @@
   }
   .grille {
     position: absolute;
-    width: 100%;
     object-fit: cover;
-    opacity: 0.3;
+    top: -1px;
   }
 
   .text-container {
@@ -96,6 +71,60 @@
 
     p {
       text-decoration: underline;
+    }
+  }
+}
+
+.bottom-container {
+  height: 200px;
+  background-color: rgba(17, 17, 17, 1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 11px;
+    gap: 317px;
+
+    .title {
+      width: 644px;
+      font-family: 'Paper Johnny Eins', sans-serif;
+      font-size: 50px;
+      text-transform: uppercase;
+      z-index: 1;
+      color: rgba(241, 235, 222, 1);
+      line-height: 50px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      z-index: 1;
+
+      .devis-button {
+        color: rgba(17, 17, 17, 1);
+        background-color: rgba(241, 235, 222, 1);
+        height: 45px;
+        text-transform: uppercase;
+      }
+
+      .call-button {
+        color: rgba(241, 235, 222, 1);
+        background-color: rgba(17, 17, 17, 1);
+        border: 1px solid rgba(241, 235, 222, 1);
+        height: 45px;
+      }
     }
   }
 }
@@ -159,10 +188,6 @@
         }
       }
     }
-
-    .accordion-body {
-      margin-top: 10px;
-    }
   }
   .image-container {
     img {
@@ -170,6 +195,36 @@
       width: auto !important;
       top: -70px !important;
       left: -190px !important;
+    }
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    height: 440px;
+    position: relative;
+    background-color: rgba(17, 17, 17, 1);
+
+    .text-container {
+      margin-top: 51px;
+      height: 393px;
+      flex-direction: column;
+      justify-content: start;
+      gap: 51px;
+      .button-container {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 9px;
+
+        button {
+          width: 210px;
+        }
+      }
+      .title {
+        margin-top: 20px;
+        width: 335px;
+        font-size: 36px;
+        line-height: 35px;
+      }
     }
   }
 }
