@@ -9,12 +9,9 @@
   .grille {
     right: 0;
     position: absolute;
-    width: 68%;
     object-fit: cover;
-    opacity: 0.3;
   }
-
-  img {
+  .image-container {
     z-index: 1;
   }
 }

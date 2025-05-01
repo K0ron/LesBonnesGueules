@@ -8,7 +8,7 @@
       </div>
       <h1>Notre carte</h1>
     </div>
-    <img class="grille" src="Grille.svg" alt="" />
+    <img class="grille" src="grilles/Grille_gris.svg" alt="" />
   </div>
   <img class="logo" src="LBG_Logo.svg" alt="" *ngIf="!isMobile" />
   <app-search-menu (categorySelected)="onCategorySelected($event)" *ngIf="!isMobile" />
@@ -111,10 +111,16 @@
     </div>
   </div>
 
-  <div class="footer-container">
-    <div class="button-container">
-      <button (click)="callNumber()" class="call-button" *ngIf="isMobile">Appeler</button>
-      <button (click)="goDevis()" class="devis-button">Demander un devis</button>
+  <div class="bottom-container">
+    <img *ngIf="isMobile" src="grilles/Grille_gris.svg" alt="Grille" />
+    <div class="text-container">
+      <div *ngIf="isMobile" class="title">
+        Vous voulez passer <br *ngIf="!isMobile" />un bon repas avec nous ?
+      </div>
+      <div class="button-container">
+        <button (click)="goDevis()" class="devis-button">Demander un devis</button>
+        <button (click)="callNumber()" class="call-button" *ngIf="isMobile">Appeler</button>
+      </div>
     </div>
   </div>
   <div class="image-container">

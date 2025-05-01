@@ -10,12 +10,10 @@
   .grille {
     right: 0;
     position: absolute;
-    width: 68%;
     object-fit: cover;
-    opacity: 0.3;
   }
 
-  img {
+  .image-container {
     z-index: 1;
   }
 }
@@ -56,10 +54,6 @@ h1 {
   .accompagnements-container {
     flex-direction: column-reverse;
     height: auto;
-
-    .grille {
-      width: 1360px;
-    }
 
     .image-container {
       height: 300px;

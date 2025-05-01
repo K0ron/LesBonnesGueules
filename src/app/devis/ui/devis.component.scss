@@ -25,9 +25,7 @@
   }
   .grille {
     position: absolute;
-    width: 100%;
     object-fit: cover;
-    opacity: 0.3;
   }
 }
 
@@ -113,7 +111,7 @@
   .input-message {
     textarea {
       width: 845px;
-      height: 270px;
+      height: 360px;
       background-color: transparent;
       border-color: rgba(169, 159, 130, 1);
       border-radius: 3px;
@@ -164,10 +162,6 @@
       width: 335px;
       text-align: center;
     }
-
-    .grille {
-      height: 1345px;
-    }
   }
 
   .devis-container {
@@ -186,7 +180,8 @@
     }
 
     .call-button {
-      margin-right: 45px;
+      margin-right: 60px;
+      margin-top: 45px;
     }
   }
 

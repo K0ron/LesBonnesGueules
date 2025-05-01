@@ -9,14 +9,15 @@
   .grille {
     right: 0;
     position: absolute;
-    width: 68%;
     object-fit: cover;
-    opacity: 0.3;
   }
-
-  img {
+  .image-container {
     z-index: 1;
   }
+}
+
+.right-block {
+  z-index: 2;
 }
 
 h1 {
@@ -40,11 +41,6 @@ h1 {
   .boisson-container {
     height: auto;
     flex-direction: column-reverse;
-
-    .grille {
-      width: 100%;
-      height: 1345px;
-    }
   }
 
   .image-container {

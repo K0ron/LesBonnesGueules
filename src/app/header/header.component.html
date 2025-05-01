@@ -1,6 +1,7 @@
 <div class="header-container" [class.transparent]="!isScrolled && isHomePage" *ngIf="!isMobile">
   <div (click)="goHome()" class="goHome">LES BONNES GUEULES</div>
   <div class="button-container">
+    <button (click)="goHome()" class="button">ACCEUIL</button>
     <button (click)="goToEquipe()" class="button">L'ÉQUIPE</button>
     <button (click)="goToPrestations()" class="button">NOS PRESTATIONS</button>
     <button (click)="goToLaCarte()" class="button">NOTRE CARTE</button>
