@@ -77,10 +77,9 @@
 
 /////// MOBILE HEADER ////////
 
-.header-mobile {
-  display: flex; // 👈 par défaut
-
-  @media (max-width: $mobile) {
+@media (max-width: $mobile) {
+  .header-mobile {
+    display: flex;
     width: 100%;
     height: 90px;
     display: flex;
@@ -148,7 +147,7 @@
 
   .modal-menu {
     width: 100%;
-    height: 857px;
+    height: 700px;
     position: absolute;
     top: 90px;
     left: 0;
@@ -166,10 +165,9 @@
         top: 0;
         right: 0;
         img {
-          height: 950px;
+          height: 970px;
           width: auto;
           object-fit: cover;
-          opacity: 0.3;
         }
       }
     }
@@ -181,16 +179,25 @@
       flex-direction: column;
       z-index: 10;
 
+      .line {
+        height: 1px;
+        width: 100%;
+        border-bottom: 1px solid rgba(17, 17, 17, 1);
+        position: absolute;
+        bottom: 110px;
+      }
+
       .logo {
         position: absolute;
         height: 138px;
-        bottom: -70px;
+        bottom: 40px;
         align-self: center;
+        z-index: 1;
       }
 
       .devis-button {
-        width: 260px;
-        height: 50px;
+        width: 300px;
+        height: 65px;
         background-color: rgba(17, 17, 17, 1);
         color: rgba(241, 235, 222, 1);
         font-size: 16px;
@@ -199,7 +206,7 @@
         align-items: center;
         position: absolute;
         align-self: center;
-        bottom: 136px;
+        bottom: 210px;
         margin-left: 0 !important;
       }
 
