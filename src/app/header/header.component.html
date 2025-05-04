@@ -33,31 +33,25 @@
   <div class="goHome" *ngIf="!menuIsOpen" (click)="goHomePage()">LES BONNES GUEULES</div>
 
   <div class="modal-menu" *ngIf="menuIsOpen">
-    <div class="menu">
-      <div class="grille-container">
-        <img src="grille-claire.svg" alt="Grille" />
+    <div class="menu-container">
+      <div class="nav-container">
+        <button (click)="goHome()">Acceuil</button>
+        <button (click)="goToEquipe()">L'équipe</button>
+        <button (click)="goToPrestations()">Nos prestations</button>
+        <button (click)="goToLaCarte()">Notre carte</button>
       </div>
-      <div class="menu-container">
-        <img class="logo" src="LBG_Logo.svg" alt="" />
-        <div class="line"></div>
-        <div class="nav-container">
-          <button (click)="goHome()">Acceuil</button>
-          <button (click)="goToEquipe()">L'équipe</button>
-          <button (click)="goToPrestations()">Nos prestations</button>
-          <button (click)="goToLaCarte()">Notre carte</button>
+      <button (click)="goDevis()" class="devis-button">Demander un devis</button>
+      <div class="social-container-mobile">
+        <div class="social" (click)="goToInstagram()">
+          <img src="ic-social-instagram.svg" alt="Instagram" />
+          <button>Instagram</button>
         </div>
-        <div class="social-container-mobile">
-          <div class="social" (click)="goToInstagram()">
-            <img src="ic-social-instagram.svg" alt="Instagram" />
-            <button>Instagram</button>
-          </div>
-          <div class="social" (click)="goToFacebook()">
-            <img src="ic-social-facebook.svg" alt="Facebook" />
-            <button>Facebook</button>
-          </div>
+        <div class="social" (click)="goToFacebook()">
+          <img src="ic-social-facebook.svg" alt="Facebook" />
+          <button>Facebook</button>
         </div>
-        <button (click)="goDevis()" class="devis-button">Demander un devis</button>
       </div>
+      <img class="logo" src="LBG_Logo.svg" alt="" />
     </div>
   </div>
 </div>
