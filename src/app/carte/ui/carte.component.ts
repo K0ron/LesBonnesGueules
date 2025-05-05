@@ -60,7 +60,7 @@ export class CarteComponent implements OnInit {
         const yOffset = -90;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
-      }, 0);
+      }, 150);
     }
   }
 
