@@ -51,8 +51,17 @@ export class CarteComponent implements OnInit {
     this.router.navigate(['/prestation']);
   }
 
-  toggleSection(section: string) {
-    this.openSection = this.openSection === section ? null : section;
+  toggleSection(section: string, element: HTMLElement) {
+    if (this.openSection === section) {
+      this.openSection = null;
+    } else {
+      this.openSection = section;
+      setTimeout(() => {
+        const yOffset = -90;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }, 0);
+    }
   }
 
   isOpen(section: string): boolean {

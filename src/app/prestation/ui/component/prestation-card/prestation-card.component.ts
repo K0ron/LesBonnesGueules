@@ -1,6 +1,7 @@
-import { Component, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Carousel, CarouselModule } from 'primeng/carousel';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-prestation-card',
@@ -12,8 +13,20 @@ import { Carousel, CarouselModule } from 'primeng/carousel';
 export class PrestationCardComponent {
   @ViewChildren('carouselRef') carousel!: QueryList<Carousel>;
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private el: ElementRef) {
     Carousel.prototype.onTouchMove = () => {};
+  }
+
+  ngAfterViewInit() {
+    this.route.queryParams.subscribe((params) => {
+      const id = params['id'];
+      if (id) {
+        setTimeout(() => {
+          const el = this.el.nativeElement.querySelector(`#prestation-${id}`);
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 0);
+      }
+    });
   }
 
   prestations: any[] = [

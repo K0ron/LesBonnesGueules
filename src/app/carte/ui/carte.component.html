@@ -23,8 +23,8 @@
   </ng-container>
 
   <div class="carte-mobile" *ngIf="isMobile">
-    <div class="carte-accordion">
-      <div class="accordion-header" (click)="toggleSection('apero')">
+    <div class="carte-accordion" #apero>
+      <div class="accordion-header" (click)="toggleSection('apero', apero)">
         <div class="title">
           <h4 [class.active]="isOpen('apero')">Apéro</h4>
         </div>
@@ -36,8 +36,8 @@
         <app-apero-card />
       </div>
     </div>
-    <div class="carte-accordion">
-      <div class="accordion-header" (click)="toggleSection('plat')">
+    <div class="carte-accordion" #plat>
+      <div class="accordion-header" (click)="toggleSection('plat', plat)">
         <div class="title">
           <h4 [class.active]="isOpen('plat')">Plat</h4>
         </div>
@@ -49,8 +49,8 @@
         <app-plats-card />
       </div>
     </div>
-    <div class="carte-accordion">
-      <div class="accordion-header" (click)="toggleSection('accompagnements')">
+    <div class="carte-accordion" #accompagnements>
+      <div class="accordion-header" (click)="toggleSection('accompagnements', accompagnements)">
         <div class="title">
           <h4 [class.active]="isOpen('accompagnements')">Accompagnements</h4>
         </div>
@@ -66,8 +66,8 @@
         <app-accompagnements-card />
       </div>
     </div>
-    <div class="carte-accordion">
-      <div class="accordion-header" (click)="toggleSection('fromage')">
+    <div class="carte-accordion" #fromage>
+      <div class="accordion-header" (click)="toggleSection('fromage', fromage)">
         <div class="title">
           <h4 [class.active]="isOpen('fromage')">Fromage & Dessert</h4>
         </div>
@@ -79,8 +79,8 @@
         <app-fromage-dessert-card />
       </div>
     </div>
-    <div class="carte-accordion">
-      <div class="accordion-header" (click)="toggleSection('boisson')">
+    <div class="carte-accordion" #boisson>
+      <div class="accordion-header" (click)="toggleSection('boisson', boisson)">
         <div class="title">
           <h4 [class.active]="isOpen('boisson')">Boissons</h4>
         </div>
@@ -92,8 +92,8 @@
         <app-boisson-card />
       </div>
     </div>
-    <div class="carte-accordion">
-      <div class="accordion-header" (click)="toggleSection('menu-enfant')">
+    <div class="carte-accordion" #menuEnfant>
+      <div class="accordion-header" (click)="toggleSection('menu-enfant', menuEnfant)">
         <div class="title">
           <h4 [class.active]="isOpen('menu-enfant')">Menu enfant</h4>
         </div>

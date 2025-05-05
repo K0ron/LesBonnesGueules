@@ -1,5 +1,9 @@
 <div class="prestations-container">
-  <div class="card-container" *ngFor="let prestation of prestations; let i = index">
+  <div
+    class="card-container"
+    *ngFor="let prestation of prestations; let i = index"
+    [id]="'prestation-' + prestation.id"
+  >
     <div class="carousel-container">
       <div class="navigator-container">
         <button class="prev" (click)="scrollLeft(i)"><span>&lt;</span></button>

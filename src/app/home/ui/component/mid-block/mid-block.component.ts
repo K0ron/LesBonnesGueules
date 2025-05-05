@@ -39,6 +39,10 @@ export class MidBlockComponent implements OnInit {
     this.router.navigate(['/prestation']);
   }
 
+  goToOnePrestation(prestationId: number) {
+    this.router.navigate(['/prestation'], { queryParams: { id: prestationId } });
+  }
+
   scrollLeft() {
     const container = document.querySelector('.prestation-container') as HTMLElement;
     container.scrollBy({ left: -200, behavior: 'smooth' }); // Défilement à gauche
