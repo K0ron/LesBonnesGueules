@@ -36,17 +36,26 @@ h1 {
   line-height: 30px;
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .boisson-container {
     height: auto;
-    flex-direction: column-reverse;
+
+    @media (max-width: $mobile) {
+      height: auto;
+      flex-direction: column-reverse;
+    }
   }
 
   .image-container {
     position: relative;
     height: 300px;
-    width: 100%;
+    width: 50%;
     overflow: hidden;
+
+    @media (max-width: $mobile) {
+      height: 300px;
+      width: 100%;
+    }
 
     img {
       position: absolute;
@@ -54,11 +63,21 @@ h1 {
       width: auto;
       bottom: 0px;
       left: -85px;
+
+      @media (max-width: $mobile) {
+        height: 320px;
+        bottom: 0px;
+        left: -85px;
+      }
     }
   }
 
   .right-block {
-    margin-bottom: 55px;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 55px;
+    }
     h1 {
       margin-left: 29px;
     }

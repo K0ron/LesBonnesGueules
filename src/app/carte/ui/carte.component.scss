@@ -134,18 +134,26 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .header {
     height: auto;
 
     .text-container {
       flex-direction: column-reverse;
       gap: 50px;
-      margin-left: 29px;
+      margin-left: 85px;
       margin-top: 65px;
       margin-bottom: 83px;
+
+      @media (max-width: $mobile) {
+        margin-left: 29px;
+      }
       .text {
-        width: 335px;
+        width: 600px;
+
+        @media (max-width: $mobile) {
+          width: 335px;
+        }
       }
     }
   }
@@ -182,6 +190,10 @@
       padding-left: 29px;
       padding-right: 20px;
 
+      @media (max-width: $mobile) {
+        height: 145px;
+      }
+
       img {
         width: 28px;
         height: 13px;
@@ -195,26 +207,50 @@
     }
   }
   .image-container {
+    position: relative !important;
+    height: 250px !important;
+    width: 100% !important;
+
+    @media (max-width: $mobile) {
+      height: 300px !important;
+    }
+
     img {
-      height: 435px !important;
+      top: -155px !important;
+      left: -15px !important;
+      height: 550px !important;
       width: auto !important;
-      top: -70px !important;
-      left: -190px !important;
+      @media (max-width: $mobile) {
+        top: -70px !important;
+        left: -190px !important;
+        height: 435px !important;
+      }
     }
   }
 
   .bottom-container {
     flex-direction: column;
-    height: 440px;
+    height: 250px;
     position: relative;
     background-color: rgba(17, 17, 17, 1);
 
+    @media (max-width: $mobile) {
+      height: 440px;
+    }
+
     .text-container {
-      margin-top: 51px;
       height: 393px;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: start;
       gap: 51px;
+
+      @media (max-width: $mobile) {
+        margin-top: 51px;
+        height: 393px;
+        flex-direction: column;
+        justify-content: start;
+      }
+
       .button-container {
         flex-direction: column;
         gap: 25px;

@@ -89,9 +89,23 @@ h1 {
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .plats-container {
     height: auto;
+
+    .grille-container {
+      height: 770px;
+    }
+
+    .menu-container {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
+    }
   }
 
   .top {
@@ -99,22 +113,37 @@ h1 {
     height: auto;
 
     .image-container {
-      height: 263px;
+      height: 400px;
       width: 100%;
       position: relative;
 
+      @media (max-width: $mobile) {
+        height: 263px;
+      }
+
       img {
-        height: 370px;
+        height: 730px;
         position: absolute;
         width: auto;
-        top: -60px;
+        top: -170px;
         left: 0px;
+
+        @media (max-width: $mobile) {
+          height: 370px;
+          top: -60px;
+          left: 0px;
+        }
       }
     }
 
     .terre-container {
       margin-left: 40px;
       height: 500px;
+
+      @media (max-width: $mobile) {
+        height: 420px;
+        margin-left: 40px;
+      }
 
       .text-container {
         gap: 20px;
@@ -124,6 +153,11 @@ h1 {
 
     .mer-container {
       margin-left: 40px;
+
+      @media (max-width: $mobile) {
+        margin-left: 40px;
+        margin-bottom: 40px;
+      }
     }
   }
 }
