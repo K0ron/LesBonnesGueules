@@ -162,7 +162,7 @@
 
   .bottom-container {
     flex-direction: column;
-    height: 350px;
+    height: 250px;
     position: relative;
 
     @media (max-width: $mobile) {
@@ -175,10 +175,6 @@
       width: 100%;
       background-color: rgba(17, 17, 17, 1);
       top: 50px;
-
-      @media (max-width: $mobile) {
-        top: 50px;
-      }
     }
     .text-container {
       margin-top: 0;
@@ -211,12 +207,6 @@
         width: 335px;
         font-size: 36px;
         line-height: 35px;
-
-        @media (max-width: $mobile) {
-          margin-top: 46px;
-          font-size: 36px;
-          line-height: 35px;
-        }
       }
     }
   }
