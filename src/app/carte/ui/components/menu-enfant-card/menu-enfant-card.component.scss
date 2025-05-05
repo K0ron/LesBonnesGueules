@@ -33,10 +33,15 @@ h1 {
   width: 377px;
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .enfant-container {
     height: auto;
-    flex-direction: column-reverse;
+    flex-direction: row;
+
+    @media (max-width: $mobile) {
+      height: auto;
+      flex-direction: column-reverse;
+    }
 
     .grille {
       width: 100%;
@@ -49,12 +54,22 @@ h1 {
       overflow: hidden;
       position: relative;
 
+      @media (max-width: $mobile) {
+        height: 260px;
+      }
+
       img {
         position: absolute;
         height: 305px;
         width: auto;
         bottom: 0px;
         left: -55px;
+
+        @media (max-width: $mobile) {
+          height: 305px;
+          bottom: 0px;
+          left: -55px;
+        }
       }
     }
   }
@@ -62,14 +77,28 @@ h1 {
   .right-block {
     z-index: 2;
     margin-bottom: 55px;
+    margin-right: 20px;
+
+    @media (max-width: $mobile) {
+      margin-right: 0;
+    }
 
     h1 {
       margin-left: 29px;
+
+      @media (max-width: $mobile) {
+        margin-left: 29px;
+      }
     }
 
     .text {
-      margin-left: 29px;
+      margin-left: 45px;
       width: 335px;
+
+      @media (max-width: $mobile) {
+        margin-left: 29px;
+        width: 335px;
+      }
     }
   }
 }
