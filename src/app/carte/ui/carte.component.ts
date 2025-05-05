@@ -37,7 +37,7 @@ export class CarteComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 480;
+    this.isMobile = window.innerWidth < 769;
     if (!this.isMobile) {
       this.selectedCategory = 'APERO';
     }

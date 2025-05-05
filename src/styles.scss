@@ -19,6 +19,12 @@
 
 @import 'media';
 
+@media (max-width: $tablet-vert) {
+  * {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: $mobile) {
   * {
     font-size: 14px;
