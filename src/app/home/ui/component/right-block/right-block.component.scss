@@ -14,34 +14,26 @@
     height: 100%;
   }
 }
-//// MOBILE /////
-@media (max-width: $mobile) {
-  .right-block-container {
-    width: 100%;
-    height: 430px;
-    img {
-      position: absolute;
-      height: 500px;
-      width: auto;
-      top: 50px;
-      left: -220px;
-    }
-  }
-}
-///////////////////
-/// TABLET VERTICAL ///
+
 @media (max-width: $tablet-vert) {
   .right-block-container {
     width: 100%;
     height: 580px;
+    @media (max-width: $mobile) {
+      height: 430px;
+    }
     img {
       position: absolute;
-      height: 500px;
+      height: 750px;
       width: auto;
-      top: 50px;
-      left: -220px;
+      top: 27px;
+      left: -205px;
+      @media (max-width: $mobile) {
+        height: 500px;
+        top: 50px;
+        left: -220px;
+      }
     }
   }
 }
-////////////
-/// TABLET HORIZONTAL ///
+///////////////////

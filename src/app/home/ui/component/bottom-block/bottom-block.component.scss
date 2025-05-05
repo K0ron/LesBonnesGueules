@@ -28,7 +28,6 @@
   z-index: 1;
 
   .devis-button {
-    height: 45px;
     text-transform: uppercase;
     &:hover {
       background-color: rgba(17, 17, 17, 1);
@@ -76,26 +75,46 @@
 ////////////////
 
 //// MOBILE /////
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .bavette {
-    height: 300px;
+    height: 250px;
     width: 100%;
 
+    @media (max-width: $mobile) {
+      height: 300px;
+    }
+
     img {
-      top: -70px;
-      left: -190px;
-      height: 435px;
+      top: -155px;
+      left: -15px;
+      height: 550px;
       width: auto;
       z-index: 1;
+      @media (max-width: $mobile) {
+        top: -70px;
+        left: -190px;
+        height: 435px;
+      }
     }
   }
 
   .button-container {
-    height: 306px;
+    height: 317px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
+    @media (max-width: $mobile) {
+      height: 306px;
+    }
+
+    .devis-button {
+      margin-bottom: 100px;
+      @media (max-width: $mobile) {
+        margin-bottom: 0;
+      }
+    }
 
     button {
       width: 210px;
