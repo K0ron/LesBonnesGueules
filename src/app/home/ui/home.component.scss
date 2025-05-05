@@ -45,7 +45,7 @@ app-mid-block {
 app-bottom-block {
   width: 100%;
 }
-
+//// MOBILE ////
 @media (max-width: $mobile) {
   app-right-block {
     width: 100% !important;
@@ -65,3 +65,29 @@ app-bottom-block {
     }
   }
 }
+////////////////
+/// TABLET VERTICAL /////
+@media (max-width: $tablet-vert) {
+  app-right-block {
+    width: 100% !important;
+  }
+
+  app-left-block {
+    width: 100% !important;
+  }
+  .top-block {
+    flex-direction: column-reverse;
+
+    img {
+      height: 178px;
+      top: 235px;
+      left: 29px;
+      z-index: 1;
+    }
+  }
+}
+////////////////
+/// TABLET HORIZONTAL /////
+@media (max-width: $tablet-hor) {
+}
+////////////////
