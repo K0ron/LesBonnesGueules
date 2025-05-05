@@ -17,7 +17,7 @@
   </div>
   <div class="carousel-fade" *ngIf="!isMobile"></div>
   <div class="prestation-container" *ngIf="!isMobile">
-    <div (click)="goToPrestations()" *ngFor="let prestation of prestations">
+    <div (click)="goToOnePrestation(prestation.id)" *ngFor="let prestation of prestations">
       <div class="img-container">
         <img src="{{ prestation.img }}" alt="{{ prestation.name }}" />
       </div>
@@ -25,19 +25,19 @@
     </div>
   </div>
   <div class="prestation-container-mobile" *ngIf="isMobile">
-    <div (click)="goToPrestations()">
+    <div (click)="goToOnePrestation(1)">
       <div class="img-container">
         <img src="mobile/brasero-mobile.png" alt="" />
       </div>
       <p>Brasero</p>
     </div>
-    <div (click)="goToPrestations()">
+    <div (click)="goToOnePrestation(2)">
       <div class="img-container">
         <img src="mobile/broche-mobile.png" alt="" />
       </div>
       <p>Tourne broche</p>
     </div>
-    <div (click)="goToPrestations()">
+    <div (click)="goToOnePrestation(3)">
       <div class="img-container">
         <img src="mobile/fumoir-mobile.png" alt="" />
       </div>

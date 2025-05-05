@@ -140,6 +140,12 @@
   justify-self: flex-end;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background-color: rgba(241, 235, 222, 1);
+    color: rgba(17, 17, 17, 1);
+    border: 1px solid rgba(17, 17, 17, 1);
+  }
 }
 
 .image-container {

@@ -43,10 +43,18 @@
     font-family: 'Azeret Mono', monospace;
     font-size: 13px;
     cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
   }
   .social-container {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     img {
       height: 18px;
@@ -62,6 +70,12 @@
     border: none;
     background-color: rgba(241, 235, 222, 1);
     cursor: pointer;
+
+    &:hover {
+      background-color: rgba(17, 17, 17, 1);
+      color: rgba(241, 235, 222, 1);
+      border: 1px solid rgba(241, 235, 222, 1);
+    }
   }
 }
 
@@ -96,7 +110,6 @@
     border-bottom: 0.5px solid rgba(96, 96, 96, 1);
     &.transparent {
       background-color: transparent;
-      border: none;
 
       .goHome {
         color: transparent;

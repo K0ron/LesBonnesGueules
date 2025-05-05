@@ -30,6 +30,11 @@
   .devis-button {
     height: 45px;
     text-transform: uppercase;
+    &:hover {
+      background-color: rgba(17, 17, 17, 1);
+      color: rgba(241, 235, 222, 1);
+      border: 1px solid rgba(241, 235, 222, 1);
+    }
   }
 }
 

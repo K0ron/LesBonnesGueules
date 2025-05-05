@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   menuIsOpen: boolean = false;
   isMobile: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(public router: Router) {}
 
   ngOnInit() {
     this.isMobile = window.innerWidth < 480;

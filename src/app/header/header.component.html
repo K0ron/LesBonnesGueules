@@ -1,10 +1,22 @@
 <div class="header-container" [class.transparent]="!isScrolled && isHomePage" *ngIf="!isMobile">
   <div (click)="goHome()" class="goHome">LES BONNES GUEULES</div>
   <div class="button-container">
-    <button (click)="goHome()" class="button">ACCEUIL</button>
-    <button (click)="goToEquipe()" class="button">L'ÉQUIPE</button>
-    <button (click)="goToPrestations()" class="button">NOS PRESTATIONS</button>
-    <button (click)="goToLaCarte()" class="button">NOTRE CARTE</button>
+    <button (click)="goHome()" [class.active]="router.url === '/home'" class="button">
+      ACCEUIL
+    </button>
+    <button (click)="goToEquipe()" [class.active]="router.url === '/lequipe'" class="button">
+      L'ÉQUIPE
+    </button>
+    <button
+      (click)="goToPrestations()"
+      [class.active]="router.url === '/prestation'"
+      class="button"
+    >
+      NOS PRESTATIONS
+    </button>
+    <button (click)="goToLaCarte()" [class.active]="router.url === '/lacarte'" class="button">
+      NOTRE CARTE
+    </button>
     <div class="social-container">
       <img src="ic-social-instagram.svg" alt="Instagram" (click)="goToInstagram()" />
       <img src="ic-social-facebook.svg" alt="Facebook" (click)="goToFacebook()" />
