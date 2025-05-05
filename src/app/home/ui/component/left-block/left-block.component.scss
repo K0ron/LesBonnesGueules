@@ -97,40 +97,69 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .left-block-container {
     width: 100%;
-    height: 977px;
+    height: 954px;
+    @media (max-width: $mobile) {
+      height: 977px;
+    }
   }
 
   .top {
-    height: 517px;
+    height: 614px;
+    @media (max-width: $mobile) {
+      height: 517px;
+    }
 
     .text-container {
-      top: 85px;
-      left: 29px;
-      width: 335px;
+      top: 145px;
+      left: 90px;
+      width: 400px;
+      @media (max-width: $mobile) {
+        top: 85px;
+        left: 29px;
+        width: 335px;
+      }
 
       div {
-        font-size: 70px;
-        line-height: 64px;
+        font-size: 100px;
+        line-height: 90px;
+        @media (max-width: $mobile) {
+          font-size: 70px;
+          line-height: 64px;
+        }
       }
 
       .devis-button {
-        margin-top: 55px;
-        align-self: center;
+        margin-top: 25px;
         width: 227px;
         height: 50px;
+        margin-left: 180px;
+        @media (max-width: $mobile) {
+          margin-top: 55px;
+          align-self: center;
+          width: 227px;
+          height: 50px;
+        }
       }
     }
   }
 
   .bottom {
-    height: 470px;
+    height: 340px;
+    @media (max-width: $mobile) {
+      height: 470px;
+    }
 
     .text-container {
-      width: 335px;
-      margin-left: 29px;
+      width: 600px;
+      margin-left: 90px;
+      padding-top: 65px;
+      @media (max-width: $mobile) {
+        width: 335px;
+        margin-left: 29px;
+      }
     }
   }
 }

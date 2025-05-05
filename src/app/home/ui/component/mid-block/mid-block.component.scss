@@ -126,33 +126,52 @@
   z-index: 2;
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .mid-block-container {
     display: flex;
     flex-direction: column;
-    height: 1330px;
+    height: 1910px;
+    @media (max-width: $mobile) {
+      height: 1330px;
+    }
   }
 
   .text-container {
     position: absolute;
-    top: 76px;
-    left: 29px;
+    top: 61px;
+    left: 90px;
     z-index: 2;
 
+    @media (max-width: $mobile) {
+      top: 76px;
+      left: 29px;
+    }
+
     .text-mobile {
-      width: 335px;
+      width: 600px;
       line-height: 20px;
+      @media (max-width: $mobile) {
+        width: 335px;
+      }
+    }
+
+    button {
+      margin-left: 160px;
+      margin-top: 50px;
     }
   }
 
   .grille-container {
-    height: 413px;
+    height: 390px;
     width: 100%;
+    @media (max-width: $mobile) {
+      height: 413px;
+    }
   }
 
   .prestation-container-mobile {
     position: absolute;
-    top: 413px;
+    top: 390px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -161,12 +180,17 @@
     text-transform: uppercase;
     border-bottom: 1px solid rgba(17, 17, 17, 1);
 
+    @media (max-width: $mobile) {
+      top: 413px;
+      gap: 34px;
+    }
+
     p {
       text-align: center;
     }
 
     button {
-      margin-left: 52px;
+      margin-left: 240px;
       width: 290px;
       height: 50px;
       background-color: rgba(17, 17, 17, 1);
@@ -178,19 +202,30 @@
       text-transform: uppercase;
       margin-top: 24px;
       margin-bottom: 32px;
+
+      @media (max-width: $mobile) {
+        margin-left: 52px;
+      }
     }
 
     .img-container {
-      height: 200px;
+      height: 400px;
       width: 100%;
       overflow: hidden;
       position: relative;
 
+      @media (max-width: $mobile) {
+        height: 200px;
+      }
+
       img {
         position: absolute;
-        height: 200px;
+        height: 400px;
         width: 100%;
         object-fit: cover;
+        @media (max-width: $mobile) {
+          height: 200px;
+        }
       }
     }
   }
