@@ -11,6 +11,10 @@
   overflow: hidden;
   position: relative;
 
+  @media (max-width: $tablet-hori) {
+    height: 400px;
+  }
+
   .navigator-container {
     position: absolute;
     display: flex;
@@ -73,6 +77,11 @@
 .text-container {
   margin-left: 96px;
   align-self: center;
+
+  @media (max-width: $tablet-hori) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 
 .title {

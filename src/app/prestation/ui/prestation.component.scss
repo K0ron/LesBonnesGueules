@@ -12,22 +12,6 @@
   }
 }
 
-// Style pour les images dans leur conteneur
-.image-container {
-  height: 300px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-
-  img {
-    position: absolute;
-    top: -430px;
-    left: -15px;
-    width: 1520px;
-    height: auto;
-  }
-}
-
 // Styles des prestations
 .prestations-container {
   display: flex;
@@ -86,6 +70,10 @@
         height: 0;
         width: 449px;
         border: solid 1px rgba(17, 17, 17, 1);
+
+        @media (max-width: $tablet-hori) {
+          width: 335px;
+        }
       }
     }
   }
@@ -97,6 +85,11 @@
     display: flex;
     flex-direction: row;
     gap: 145px;
+
+    @media (max-width: $tablet-hori) {
+      margin-left: 390px;
+      gap: 140px;
+    }
 
     div > div {
       font-family: 'Paper Johnny Eins', sans-serif;
@@ -137,6 +130,10 @@
     margin-top: 11px;
     gap: 317px;
 
+    @media (max-width: $tablet-hori) {
+      gap: 135px;
+    }
+
     .title {
       width: 644px;
       font-family: 'Paper Johnny Eins', sans-serif;
@@ -170,6 +167,31 @@
         height: 45px;
         border: solid 1px rgba(17, 17, 17, 1);
       }
+    }
+  }
+}
+
+// Style pour les images dans leur conteneur
+.image-container {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: $tablet-hori) {
+    height: 250px;
+  }
+
+  img {
+    position: absolute;
+    top: -430px;
+    left: -15px;
+    width: 1520px;
+    height: auto;
+
+    @media (max-width: $tablet-hori) {
+      top: -265px;
+      left: -25px;
+      width: 1050px;
     }
   }
 }
