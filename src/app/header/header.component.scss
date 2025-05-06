@@ -90,9 +90,7 @@
   line-height: 26px;
 }
 
-/////// MOBILE HEADER ////////
-
-@media (max-width: $tablet-hor) {
+@media (max-width: $tablet-vert) {
   .header-mobile {
     display: flex;
     width: 100%;

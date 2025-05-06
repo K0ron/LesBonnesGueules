@@ -19,7 +19,7 @@
 
 @import 'media';
 
-@media (max-width: $tablet-vert) {
+@media (max-width: $tablet-hori) {
   * {
     font-size: 14px;
   }
@@ -55,6 +55,7 @@
   border: none;
   background-color: rgba(241, 235, 222, 1);
   cursor: pointer;
+  height: 45px;
 
   @media (max-width: $mobile) {
     height: 50px;

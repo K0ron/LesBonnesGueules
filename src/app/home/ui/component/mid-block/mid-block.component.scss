@@ -84,6 +84,10 @@
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  @media (max-width: $tablet-hori) {
+    width: 555px;
+  }
 }
 .prestation-container::-webkit-scrollbar {
   display: none;

@@ -20,12 +20,20 @@
   flex-direction: row;
   margin-top: 32px;
   margin-left: 81px;
+
+  @media (max-width: $tablet-hori) {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 }
 
 .text-container {
   display: flex;
   flex-direction: row;
   margin-left: 373px;
+  @media (max-width: $tablet-hori) {
+    margin-left: 0;
+  }
 
   .p-divider.p-divider-vertical {
     min-height: 100px !important;
