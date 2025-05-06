@@ -76,6 +76,7 @@
     margin-bottom: 32px;
     label {
       width: 150px;
+
       .required {
         font-size: 0.7em;
         vertical-align: super;
@@ -92,6 +93,12 @@
       &::placeholder {
         text-transform: uppercase;
         color: rgba(169, 159, 130, 1);
+      }
+    }
+
+    @media (max-width: $tablet-hori) {
+      label {
+        width: 165px;
       }
     }
   }
@@ -142,7 +149,7 @@
 
     .input-message {
       textarea {
-        width: 570px;
+        width: 550px;
       }
     }
   }
