@@ -23,10 +23,13 @@ export class SearchMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedIndex = 0;
+    console.log('MENU', this.selectedIndex);
   }
 
   selectedMenu(index: number) {
     this.selectedIndex = index;
+    console.log('MENU', this.selectedIndex);
     this.categorySelected.emit(this.cartes[index]);
+    console.log('CATE', this.cartes[index]);
   }
 }
