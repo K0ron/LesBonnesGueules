@@ -16,6 +16,12 @@
   .image-container {
     z-index: 1;
   }
+
+  .menu-container {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .middle-block {

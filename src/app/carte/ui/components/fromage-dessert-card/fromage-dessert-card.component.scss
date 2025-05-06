@@ -23,6 +23,12 @@
       top: 0;
     }
   }
+
+  .menu-container {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .left-block {
