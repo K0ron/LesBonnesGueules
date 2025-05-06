@@ -49,6 +49,10 @@
     color: #fff;
     border: none;
   }
+
+  @media (max-width: $tablet-hori) {
+    margin-left: 25px;
+  }
 }
 
 .form-container {
@@ -128,6 +132,20 @@
     color: rgba(169, 159, 130, 1);
     margin-top: 10px;
   }
+
+  @media (max-width: $tablet-hori) {
+    gap: 35px;
+
+    .message-info {
+      width: 450px;
+    }
+
+    .input-message {
+      textarea {
+        width: 570px;
+      }
+    }
+  }
 }
 
 .call-button {
@@ -156,6 +174,16 @@
     left: -15px;
     width: 1520px;
     height: auto;
+  }
+
+  @media (max-width: $tablet-hori) {
+    height: 250px;
+
+    img {
+      top: -265px;
+      left: -25px;
+      width: 1050px;
+    }
   }
 }
 
