@@ -36,6 +36,11 @@
   margin-right: 79px;
   margin-top: 23px;
   gap: 40px;
+
+  @media (max-width: $tablet-hori) {
+    margin-right: 20px;
+    gap: 15px;
+  }
   .button {
     border: none;
     background-color: transparent;
@@ -88,6 +93,10 @@
   color: rgba(241, 235, 222, 1);
   cursor: pointer;
   line-height: 26px;
+
+  @media (max-width: $tablet-hori) {
+    margin-left: 29px;
+  }
 }
 
 @media (max-width: $tablet-vert) {
