@@ -15,12 +15,23 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: $tablet-hori) {
+    height: 250px;
+  }
+
   img {
     position: absolute;
     top: -430px;
     left: -15px;
     width: 1520px;
     height: auto;
+
+    @media (max-width: $tablet-hori) {
+      top: -265px;
+      left: -25px;
+      width: 1050px;
+    }
   }
 }
 
@@ -57,6 +68,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+
+  @media (max-width: $tablet-hori) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 89px;
+  }
 }
 
 .bottom-container {
@@ -80,6 +97,10 @@
     align-items: center;
     margin-top: 11px;
     gap: 317px;
+
+    @media (max-width: $tablet-hori) {
+      gap: 135px;
+    }
 
     .title {
       width: 644px;
