@@ -48,6 +48,11 @@
     flex-direction: column;
     margin-right: 100px;
     margin-left: 114px;
+
+    @media (max-width: $tablet-hori) {
+      margin-right: 45px;
+      margin-left: 29px;
+    }
   }
 }
 
@@ -68,30 +73,6 @@ h1 {
   .list-container {
     width: 200px;
     line-height: 30px;
-  }
-}
-
-.bottom {
-  z-index: 1;
-
-  height: 369px;
-  display: flex;
-  flex-direction: row;
-  padding-left: 80px;
-
-  .hiver-container {
-    border-right: 1px solid rgba(17, 17, 17, 1);
-    height: 369px;
-    width: 389px;
-  }
-
-  .broche-container {
-    margin-left: 60px;
-  }
-
-  img {
-    position: absolute;
-    right: 0;
   }
 }
 

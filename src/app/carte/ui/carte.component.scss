@@ -8,6 +8,10 @@
     height: 202px;
     top: 150px;
     right: 70px;
+
+    @media (max-width: $tablet-hori) {
+      height: 190px;
+    }
   }
 
   .image-container {
@@ -15,12 +19,21 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    @media (max-width: $tablet-hori) {
+      height: 250px;
+    }
     img {
       position: absolute;
       top: -430px;
       left: -15px;
       width: 1520px;
       height: auto;
+
+      @media (max-width: $tablet-hori) {
+        top: -265px;
+        left: -25px;
+        width: 1050px;
+      }
     }
   }
 }
@@ -70,6 +83,11 @@
 
     p {
       text-decoration: underline;
+    }
+
+    @media (max-width: $tablet-hori) {
+      gap: 30px;
+      margin-left: 25px;
     }
   }
 }
