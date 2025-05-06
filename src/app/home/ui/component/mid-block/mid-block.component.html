@@ -15,7 +15,6 @@
   <div class="grille-container">
     <img src="grilles/Grille_beige.svg" alt="Grille" />
   </div>
-  <div class="carousel-fade" *ngIf="!isMobile"></div>
   <div class="prestation-container" *ngIf="!isMobile">
     <div (click)="goToOnePrestation(prestation.id)" *ngFor="let prestation of prestations">
       <div class="img-container">
@@ -33,22 +32,10 @@
     </div>
     <div (click)="goToOnePrestation(2)">
       <div class="img-container">
-        <img src="mobile/broche-mobile.png" alt="" />
-      </div>
-      <p>Tourne broche</p>
-    </div>
-    <div (click)="goToOnePrestation(3)">
-      <div class="img-container">
         <img src="mobile/fumoir-mobile.png" alt="" />
       </div>
       <p>Fumoir</p>
     </div>
     <button (click)="goToPrestations()">voir toutes nos prestations</button>
   </div>
-  <button class="prev" (click)="scrollLeft()" *ngIf="!isMobile">
-    <img src="arrow-carou-left.svg" alt="left" />
-  </button>
-  <button class="next" (click)="scrollRight()" *ngIf="!isMobile">
-    <img src="arrow-carou-right.svg" alt="right" />
-  </button>
 </div>

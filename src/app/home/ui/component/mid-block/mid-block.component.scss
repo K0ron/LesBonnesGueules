@@ -61,48 +61,33 @@
   }
 }
 
-.carousel-fade {
-  position: absolute;
-  height: 450px;
-  width: 108px;
-  background: linear-gradient(to right, rgba(241, 235, 222, 0), rgba(241, 235, 222, 1));
-  right: 0;
-  top: 71px;
-  z-index: 1;
-}
-
 .prestation-container {
   position: absolute;
   display: flex;
   flex-direction: row;
   gap: 24px;
   top: 71px;
-  left: 467px;
+  left: 400px;
   font-family: 'Azeret Mono', monospace;
   text-transform: uppercase;
-  width: 1030px;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  width: 1097px;
+  overflow: hidden;
 
   @media (max-width: $tablet-hori) {
     width: 555px;
   }
 }
-.prestation-container::-webkit-scrollbar {
-  display: none;
-}
 
 .img-container {
   height: 450px;
-  width: 353px;
+  width: 537px;
   cursor: pointer;
   margin-bottom: 10px;
   overflow: hidden;
 
   img {
     height: 450px;
-    width: 353px;
+    width: 540px;
     object-fit: cover;
     transition: transform 0.3s ease;
     &:hover {

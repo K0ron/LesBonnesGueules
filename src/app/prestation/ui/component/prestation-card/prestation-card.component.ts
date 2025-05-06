@@ -23,7 +23,16 @@ export class PrestationCardComponent {
       if (id) {
         setTimeout(() => {
           const el = this.el.nativeElement.querySelector(`#prestation-${id}`);
-          el.scrollIntoView({ behavior: 'smooth' });
+          if (el) {
+            const headerOffset = 90;
+            const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth',
+            });
+          }
         }, 0);
       }
     });
@@ -43,17 +52,6 @@ export class PrestationCardComponent {
     },
     {
       id: 2,
-      img: [
-        'prestations/brasero/presta-bra-1.png',
-        'prestations/brasero/presta-bra-2.jpg',
-        'prestations/brasero/presta-bra-3.jpg',
-      ],
-      name: 'Tourne Broche',
-      description:
-        'Le tournebroche, c’est la cuisson d’une viande qui tourne lentement au-dessus des braises, pour un festin simple, savoureux et partagé entre bons vivants !',
-    },
-    {
-      id: 3,
       img: [
         'prestations/fumoir/presta-fum-1.png',
         'prestations/fumoir/presta-fum-2.jpg',
