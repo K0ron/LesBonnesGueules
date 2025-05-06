@@ -12,6 +12,11 @@
     left: -65%;
     width: auto;
     height: 100%;
+    @media (max-width: $tablet-hori) {
+      left: -90%;
+      top: 90px;
+      height: 1020px;
+    }
   }
 }
 
