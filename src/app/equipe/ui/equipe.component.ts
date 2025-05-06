@@ -12,11 +12,13 @@ import { CommonModule } from '@angular/common';
 })
 export class EquipeComponent implements OnInit {
   isMobile: boolean = false;
+  isTabletVert: boolean = false;
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 480;
+    this.isMobile = window.innerWidth < 394;
+    this.isTabletVert = window.innerWidth < 769;
   }
 
   goDevis() {

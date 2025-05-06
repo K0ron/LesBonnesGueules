@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 480;
+    this.isMobile = window.innerWidth < 769;
   }
 
   toggleSection(section: string) {

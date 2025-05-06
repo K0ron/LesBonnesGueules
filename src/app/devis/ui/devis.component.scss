@@ -49,6 +49,10 @@
     color: #fff;
     border: none;
   }
+
+  @media (max-width: $tablet-hori) {
+    margin-left: 25px;
+  }
 }
 
 .form-container {
@@ -66,13 +70,13 @@
     display: flex;
     flex-direction: row;
     font-family: 'Azeret Mono', monospace;
-    font-size: 13px;
     text-transform: uppercase;
     align-items: center;
     margin-top: 32px;
     margin-bottom: 32px;
     label {
       width: 150px;
+
       .required {
         font-size: 0.7em;
         vertical-align: super;
@@ -91,13 +95,18 @@
         color: rgba(169, 159, 130, 1);
       }
     }
+
+    @media (max-width: $tablet-hori) {
+      label {
+        width: 165px;
+      }
+    }
   }
 
   .message-info {
     display: flex;
     flex-direction: column;
     font-family: 'Azeret Mono', monospace;
-    font-size: 13px;
     line-height: 20px;
     text-transform: uppercase;
     margin-bottom: 60px;
@@ -126,10 +135,23 @@
   }
   p {
     font-family: 'Azeret Mono', monospace;
-    font-size: 13px;
     text-transform: uppercase;
     color: rgba(169, 159, 130, 1);
     margin-top: 10px;
+  }
+
+  @media (max-width: $tablet-hori) {
+    gap: 35px;
+
+    .message-info {
+      width: 450px;
+    }
+
+    .input-message {
+      textarea {
+        width: 550px;
+      }
+    }
   }
 }
 
@@ -159,6 +181,16 @@
     left: -15px;
     width: 1520px;
     height: auto;
+  }
+
+  @media (max-width: $tablet-hori) {
+    height: 250px;
+
+    img {
+      top: -265px;
+      left: -25px;
+      width: 1050px;
+    }
   }
 }
 

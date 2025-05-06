@@ -16,12 +16,29 @@
   .image-container {
     position: relative;
 
+    @media (max-width: $tablet-hori) {
+      width: 371px;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        left: -160px;
+        top: 0;
+      }
+    }
+
     img {
       z-index: 1;
       position: absolute;
       right: -725px;
       top: 0;
     }
+  }
+
+  .menu-container {
+    height: auto;
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -37,7 +54,14 @@
     margin-top: 26px;
     line-height: 20px;
     text-transform: uppercase;
-    font-size: 13px;
+  }
+
+  @media (max-width: $tablet-hori) {
+    width: 326px;
+
+    .text {
+      margin-left: 47px;
+    }
   }
 }
 
@@ -47,26 +71,33 @@ h1 {
   font-family: 'Paper Johnny Eins', sans-serif;
   text-transform: uppercase;
   font-size: 33px;
+
+  @media (max-width: $tablet-hori) {
+    margin-left: 47px;
+  }
 }
 
 .text-container {
   margin-top: 15px;
   margin-left: 80px;
   font-family: 'Azeret Mono', monospace;
-  font-size: 13px;
   text-transform: uppercase;
   line-height: 20px;
   width: 280px;
 
+  @media (max-width: $tablet-hori) {
+    margin-left: 47px;
+    margin-right: 22px;
+  }
+
   .sub-title {
     font-family: 'Azeret Mono', monospace;
-    font-size: 13px;
     text-transform: uppercase;
     margin-bottom: 25px;
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .dessert-container {
     height: auto;
     flex-direction: column;
@@ -78,16 +109,38 @@ h1 {
 
     .image-container {
       overflow: hidden;
-      height: 300px;
+      height: 400px;
+
+      @media (max-width: $mobile) {
+        height: 300px;
+      }
       img {
-        top: -44px;
+        top: -115px;
         left: 0px;
-        height: 400px;
+        height: 700px;
+
+        @media (max-width: $mobile) {
+          top: -44px;
+          left: 0px;
+          height: 400px;
+        }
+      }
+    }
+
+    .menu-container {
+      display: flex;
+      flex-direction: row;
+      height: auto;
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
       }
     }
   }
 
   .left-block {
+    width: 360px;
+    border: none;
     z-index: 2;
     .text {
       margin-left: 70px;

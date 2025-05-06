@@ -22,6 +22,12 @@
   img {
     z-index: 1;
   }
+
+  .menu-container {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .top {
@@ -42,6 +48,11 @@
     flex-direction: column;
     margin-right: 100px;
     margin-left: 114px;
+
+    @media (max-width: $tablet-hori) {
+      margin-right: 45px;
+      margin-left: 29px;
+    }
   }
 }
 
@@ -57,7 +68,6 @@ h1 {
   display: flex;
   flex-direction: row;
   font-family: 'Azeret Mono', monospace;
-  font-size: 13px;
   text-transform: uppercase;
 
   .list-container {
@@ -66,33 +76,23 @@ h1 {
   }
 }
 
-.bottom {
-  z-index: 1;
-
-  height: 369px;
-  display: flex;
-  flex-direction: row;
-  padding-left: 80px;
-
-  .hiver-container {
-    border-right: 1px solid rgba(17, 17, 17, 1);
-    height: 369px;
-    width: 389px;
-  }
-
-  .broche-container {
-    margin-left: 60px;
-  }
-
-  img {
-    position: absolute;
-    right: 0;
-  }
-}
-
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .plats-container {
     height: auto;
+
+    .grille-container {
+      height: 770px;
+    }
+
+    .menu-container {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
+    }
   }
 
   .top {
@@ -100,22 +100,37 @@ h1 {
     height: auto;
 
     .image-container {
-      height: 263px;
+      height: 400px;
       width: 100%;
       position: relative;
 
+      @media (max-width: $mobile) {
+        height: 263px;
+      }
+
       img {
-        height: 370px;
+        height: 730px;
         position: absolute;
         width: auto;
-        top: -60px;
+        top: -170px;
         left: 0px;
+
+        @media (max-width: $mobile) {
+          height: 370px;
+          top: -60px;
+          left: 0px;
+        }
       }
     }
 
     .terre-container {
       margin-left: 40px;
       height: 500px;
+
+      @media (max-width: $mobile) {
+        height: 420px;
+        margin-left: 40px;
+      }
 
       .text-container {
         gap: 20px;
@@ -125,6 +140,11 @@ h1 {
 
     .mer-container {
       margin-left: 40px;
+
+      @media (max-width: $mobile) {
+        margin-left: 40px;
+        margin-bottom: 40px;
+      }
     }
   }
 }

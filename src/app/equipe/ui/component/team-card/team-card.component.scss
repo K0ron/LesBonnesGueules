@@ -9,6 +9,11 @@
   height: 668px;
   margin-top: 89px;
   margin-bottom: 110px;
+
+  @media (max-width: $tablet-hori) {
+    margin-top: 0;
+  }
+
   img {
     height: auto;
     width: 100%;
@@ -54,7 +59,6 @@
   gap: 20px;
   color: rgba(241, 235, 222, 1);
   font-family: 'Azeret Mono', 'Light', monospace;
-  font-size: 13px;
   text-transform: uppercase;
   line-height: 20px;
   div {
@@ -63,7 +67,7 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .card-container {
     margin-bottom: 70px;
     height: 500px;

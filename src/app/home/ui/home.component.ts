@@ -22,6 +22,6 @@ export class HomeComponent implements OnInit {
   isMobile: boolean = false;
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 480;
+    this.isMobile = window.innerWidth < 769;
   }
 }

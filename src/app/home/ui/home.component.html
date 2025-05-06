@@ -1,7 +1,8 @@
 <div class="home-container">
   <div class="top-block">
     <app-left-block />
-    <img src="logo-home.svg" alt="Les Bonnes Gueules" />
+    <img src="logo-home.svg" alt="Les Bonnes Gueules" *ngIf="!isMobile" />
+    <img src="logo-mobile.svg" alt="Les Bonnes Gueules" *ngIf="isMobile" />
     <app-right-block />
   </div>
   <app-mid-block />

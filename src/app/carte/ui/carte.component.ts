@@ -37,7 +37,7 @@ export class CarteComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 480;
+    this.isMobile = window.innerWidth < 769;
     if (!this.isMobile) {
       this.selectedCategory = 'APERO';
     }
@@ -60,7 +60,7 @@ export class CarteComponent implements OnInit {
         const yOffset = -90;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
-      }, 0);
+      }, 150);
     }
   }
 

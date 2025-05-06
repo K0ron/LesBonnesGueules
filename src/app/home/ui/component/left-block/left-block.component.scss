@@ -5,6 +5,10 @@
   height: 1259px;
   border: 1px solid rgba(241, 235, 222, 1);
   border: none;
+
+  @media (max-width: $tablet-hori) {
+    height: 1110px;
+  }
 }
 
 .top {
@@ -13,6 +17,11 @@
   background-color: rgba(17, 17, 17, 1);
   position: relative;
   overflow: hidden;
+
+  @media (max-width: $tablet-hori) {
+    height: 65%;
+  }
+
   .grille {
     object-fit: cover;
     position: absolute;
@@ -49,6 +58,11 @@
     flex-direction: column;
     top: 354px;
     left: 81px;
+
+    @media (max-width: $tablet-hori) {
+      left: 29px;
+      top: 283px;
+    }
     p {
       font-family: 'Azeret Mono', monospace;
       font-size: 16px;
@@ -66,7 +80,9 @@
 
     .devis-button {
       margin-top: 52px;
-      height: 45px;
+      @media (max-width: $tablet-hori) {
+        margin-top: 30px;
+      }
 
       &:hover {
         background-color: rgba(17, 17, 17, 1);
@@ -81,11 +97,15 @@
   height: 30%;
   background-color: rgba(241, 235, 222, 1);
   border-bottom: 1px solid rgba(17, 17, 17, 1);
+
+  @media (max-width: $tablet-hori) {
+    height: 35%;
+  }
+
   .text-container {
     height: 280px;
     width: 405px;
     font-family: 'Azeret Mono', monospace;
-    font-size: 13px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -95,48 +115,78 @@
     text-transform: uppercase;
     line-height: 20px;
     font-weight: 400;
+    @media (max-width: $tablet-hori) {
+      width: 380px;
+      margin-left: 35px;
+      padding-top: 45px;
+    }
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .left-block-container {
     width: 100%;
-    height: 977px;
+    height: 954px;
+    @media (max-width: $mobile) {
+      height: 977px;
+    }
   }
 
   .top {
-    height: 517px;
+    height: 614px;
+    @media (max-width: $mobile) {
+      height: 517px;
+    }
 
     .text-container {
-      top: 85px;
-      left: 29px;
-      width: 335px;
-
-      p {
-        font-size: 13px;
+      top: 145px;
+      left: 90px;
+      width: 400px;
+      @media (max-width: $mobile) {
+        top: 85px;
+        left: 29px;
+        width: 335px;
       }
 
       div {
-        font-size: 70px;
-        line-height: 64px;
+        font-size: 100px;
+        line-height: 90px;
+        @media (max-width: $mobile) {
+          font-size: 70px;
+          line-height: 64px;
+        }
       }
 
       .devis-button {
-        margin-top: 55px;
-        align-self: center;
+        margin-top: 25px;
         width: 227px;
         height: 50px;
+        margin-left: 180px;
+        @media (max-width: $mobile) {
+          margin-top: 55px;
+          margin-left: 0;
+          align-self: center;
+          width: 227px;
+          height: 50px;
+        }
       }
     }
   }
 
   .bottom {
-    height: 470px;
+    height: 340px;
+    @media (max-width: $mobile) {
+      height: 470px;
+    }
 
     .text-container {
-      width: 335px;
-      margin-left: 29px;
-      font-size: 13px;
+      width: 600px;
+      margin-left: 90px;
+      padding-top: 65px;
+      @media (max-width: $mobile) {
+        width: 335px;
+        margin-left: 29px;
+      }
     }
   }
 }

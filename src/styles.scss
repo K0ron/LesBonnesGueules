@@ -19,11 +19,16 @@
 
 @import 'media';
 
+@media (max-width: $tablet-hori) {
+  * {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: $mobile) {
   * {
     font-size: 14px;
   }
-
   input,
   textarea,
   select {
@@ -45,14 +50,17 @@
 
 .devis-button {
   font-family: 'Azeret Mono', monospace;
-  font-size: 13px;
   width: 197px;
   border-radius: 40px;
   border: none;
   background-color: rgba(241, 235, 222, 1);
   cursor: pointer;
+  height: 45px;
 
   @media (max-width: $mobile) {
+    height: 50px;
+  }
+  @media (max-width: $tablet-vert) {
     height: 50px;
   }
 }
@@ -62,13 +70,15 @@
   width: 110px;
   text-transform: uppercase;
   font-family: 'Azeret Mono', monospace;
-  font-size: 13px;
   color: rgba(241, 235, 222, 1);
   background-color: rgba(17, 17, 17, 1);
   border: solid 1px rgba(241, 235, 222, 1);
   border-radius: 40px;
   cursor: pointer;
   @media (max-width: $mobile) {
+    height: 50px;
+  }
+  @media (max-width: $tablet-vert) {
     height: 50px;
   }
 }

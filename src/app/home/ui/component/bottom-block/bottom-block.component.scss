@@ -1,22 +1,11 @@
 @import 'media';
 
-//// DESKSTOP /////
-
 .bottom-block-container {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: rgba(17, 17, 17, 1);
-}
-
-.pics-container {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  margin-top: 32px;
-  margin-bottom: 76px;
-  z-index: 1;
-  overflow: hidden;
 }
 
 .button-container {
@@ -28,7 +17,6 @@
   z-index: 1;
 
   .devis-button {
-    height: 45px;
     text-transform: uppercase;
     &:hover {
       background-color: rgba(17, 17, 17, 1);
@@ -57,6 +45,10 @@
   top: -55px;
   left: 78px;
   z-index: 2;
+
+  @media (max-width: $tablet-hori) {
+    height: 200px;
+  }
 }
 
 .bavette {
@@ -64,42 +56,87 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: $tablet-hori) {
+    height: 320px;
+  }
+
   img {
     position: absolute;
     top: -395px;
     left: -5px;
     width: 1600px;
     height: auto;
+    @media (max-width: $tablet-hori) {
+      top: -220px;
+      left: -25px;
+      width: 1050px;
+    }
   }
 }
 
-////////////////
+.pics-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 32px;
+  margin-top: 32px;
+  margin-bottom: 76px;
+  z-index: 1;
+  overflow: hidden;
 
-//// MOBILE /////
-@media (max-width: $mobile) {
+  @media (max-width: $tablet-hori) {
+    gap: 20px;
+    img {
+      height: 306px;
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: $tablet-vert) {
   .bavette {
-    height: 300px;
+    height: 250px;
     width: 100%;
 
+    @media (max-width: $mobile) {
+      height: 300px;
+    }
+
     img {
-      top: -70px;
-      left: -190px;
-      height: 435px;
+      top: -155px;
+      left: -15px;
+      height: 550px;
       width: auto;
       z-index: 1;
+      @media (max-width: $mobile) {
+        top: -70px;
+        left: -190px;
+        height: 435px;
+      }
     }
   }
 
   .button-container {
-    height: 306px;
+    height: 317px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
+    @media (max-width: $mobile) {
+      height: 306px;
+    }
+
+    .devis-button {
+      margin-bottom: 100px;
+      @media (max-width: $mobile) {
+        margin-bottom: 50px;
+      }
+    }
 
     button {
       width: 210px;
     }
   }
 }
-////////////////

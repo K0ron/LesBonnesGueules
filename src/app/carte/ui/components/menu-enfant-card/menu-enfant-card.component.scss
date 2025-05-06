@@ -13,6 +13,17 @@
   }
   .image-container {
     z-index: 1;
+    @media (max-width: $tablet-hori) {
+      position: relative;
+      width: 515px;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        bottom: 0px;
+        left: -185px;
+      }
+    }
   }
 }
 
@@ -22,22 +33,32 @@ h1 {
   font-family: 'Paper Johnny Eins', sans-serif;
   text-transform: uppercase;
   font-size: 33px;
+  @media (max-width: $tablet-hori) {
+    margin-left: 70px;
+  }
 }
 
 .text {
   margin-top: 26px;
   margin-left: 114px;
   font-family: 'Azeret Mono', monospace;
-  font-size: 13px;
   text-transform: uppercase;
   line-height: 20px;
   width: 377px;
+  @media (max-width: $tablet-hori) {
+    margin-left: 70px;
+  }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .enfant-container {
     height: auto;
-    flex-direction: column-reverse;
+    flex-direction: row;
+
+    @media (max-width: $mobile) {
+      height: auto;
+      flex-direction: column-reverse;
+    }
 
     .grille {
       width: 100%;
@@ -50,12 +71,22 @@ h1 {
       overflow: hidden;
       position: relative;
 
+      @media (max-width: $mobile) {
+        height: 260px;
+      }
+
       img {
         position: absolute;
         height: 305px;
         width: auto;
         bottom: 0px;
         left: -55px;
+
+        @media (max-width: $mobile) {
+          height: 305px;
+          bottom: 0px;
+          left: -55px;
+        }
       }
     }
   }
@@ -63,14 +94,28 @@ h1 {
   .right-block {
     z-index: 2;
     margin-bottom: 55px;
+    margin-right: 20px;
+
+    @media (max-width: $mobile) {
+      margin-right: 0;
+    }
 
     h1 {
       margin-left: 29px;
+
+      @media (max-width: $mobile) {
+        margin-left: 29px;
+      }
     }
 
     .text {
-      margin-left: 29px;
+      margin-left: 45px;
       width: 335px;
+
+      @media (max-width: $mobile) {
+        margin-left: 29px;
+        width: 335px;
+      }
     }
   }
 }

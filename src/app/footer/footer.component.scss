@@ -20,6 +20,11 @@
   flex-direction: row;
   margin-top: 32px;
   margin-left: 81px;
+
+  @media (max-width: $tablet-hori) {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 }
 
 .text-container {
@@ -37,12 +42,18 @@
   .infos {
     margin-left: 30px;
     font-family: 'Azeret Mono', monospace;
-    font-size: 13px;
     text-transform: uppercase;
     line-height: 20px;
 
     div {
       text-decoration: underline;
+    }
+  }
+  @media (max-width: $tablet-hori) {
+    margin-left: 0;
+
+    .infos {
+      margin-left: 20px;
     }
   }
 }
@@ -54,7 +65,6 @@
   display: flex;
   flex-direction: row;
   font-family: 'Azeret Mono', monospace;
-  font-size: 13px;
   text-transform: uppercase;
   line-height: 20px;
   align-items: center;
@@ -66,7 +76,7 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .footer-mobile {
     height: auto;
     width: 100%;
@@ -78,8 +88,12 @@
     .logo {
       position: absolute;
       top: -100px;
-      left: 117px;
+      left: 305px;
       height: 160px;
+      @media (max-width: $mobile) {
+        top: -100px;
+        left: 117px;
+      }
     }
   }
 
@@ -88,15 +102,19 @@
     flex-direction: column;
     gap: 10px;
     margin-top: 77px;
-    margin-left: 29px;
+    margin-left: 90px;
     margin-bottom: 50px;
-    width: 349px;
+    width: 600px;
     height: auto;
+    @media (max-width: $mobile) {
+      margin-left: 29px;
+      width: 349px;
+      height: auto;
+    }
   }
 
   .footer-accordion {
     font-family: 'Azeret Mono', monospace;
-    font-size: 13px;
     text-transform: uppercase;
     line-height: 20px;
 
@@ -131,10 +149,13 @@
     display: flex;
     flex-direction: column;
     font-family: 'Azeret Mono', monospace;
-    font-size: 13px;
     text-transform: uppercase;
     line-height: 20px;
     align-items: center;
+    @media (max-width: $mobile) {
+      line-height: 20px;
+      height: 115px;
+    }
 
     .legals {
       margin-top: 20px;

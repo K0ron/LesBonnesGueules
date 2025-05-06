@@ -26,15 +26,10 @@
     left: 475px;
     position: absolute;
     z-index: 1;
-  }
-
-  .arrow {
-    height: 39px;
-    width: 39px;
-    position: absolute;
-    top: 1133px;
-    left: 630px;
-    z-index: 1;
+    @media (max-width: $tablet-hori) {
+      height: 200px;
+      left: 325px;
+    }
   }
 }
 
@@ -45,8 +40,7 @@ app-mid-block {
 app-bottom-block {
   width: 100%;
 }
-
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   app-right-block {
     width: 100% !important;
   }
@@ -58,10 +52,15 @@ app-bottom-block {
     flex-direction: column-reverse;
 
     img {
-      height: 178px;
-      top: 235px;
-      left: 29px;
+      height: 300px;
+      top: 325px;
+      left: 90px;
       z-index: 1;
+      @media (max-width: $mobile) {
+        height: 178px;
+        top: 235px;
+        left: 29px;
+      }
     }
   }
 }

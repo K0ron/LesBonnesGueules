@@ -17,22 +17,17 @@ export class MidBlockComponent implements OnInit {
     {
       id: 1,
       name: 'Brasero',
-      img: 'Brasero.svg',
+      img: 'mobile/brasero-mobile.png',
     },
     {
       id: 2,
-      name: 'Tourne broche',
-      img: 'porc.png',
-    },
-    {
-      id: 3,
       name: 'Fumoir',
-      img: 'komado.png',
+      img: 'mobile/fumoir-mobile.png',
     },
   ];
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 480;
+    this.isMobile = window.innerWidth < 769;
   }
 
   goToPrestations() {
@@ -41,15 +36,5 @@ export class MidBlockComponent implements OnInit {
 
   goToOnePrestation(prestationId: number) {
     this.router.navigate(['/prestation'], { queryParams: { id: prestationId } });
-  }
-
-  scrollLeft() {
-    const container = document.querySelector('.prestation-container') as HTMLElement;
-    container.scrollBy({ left: -200, behavior: 'smooth' }); // Défilement à gauche
-  }
-
-  scrollRight() {
-    const container = document.querySelector('.prestation-container') as HTMLElement;
-    container.scrollBy({ left: 200, behavior: 'smooth' }); // Défilement à droite
   }
 }

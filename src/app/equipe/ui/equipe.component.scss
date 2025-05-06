@@ -15,12 +15,23 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+
   img {
     position: absolute;
     top: -430px;
     left: -15px;
     width: 1520px;
     height: auto;
+  }
+
+  @media (max-width: $tablet-hori) {
+    height: 250px;
+
+    img {
+      top: -265px;
+      left: -25px;
+      width: 1050px;
+    }
   }
 }
 
@@ -57,6 +68,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+
+  @media (max-width: $tablet-hori) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 89px;
+  }
 }
 
 .bottom-container {
@@ -80,6 +97,10 @@
     align-items: center;
     margin-top: 11px;
     gap: 317px;
+
+    @media (max-width: $tablet-hori) {
+      gap: 135px;
+    }
 
     .title {
       width: 644px;
@@ -119,15 +140,28 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-vert) {
   .card {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin-bottom: 100px;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
   }
 
   .team-container {
-    height: 2200px;
+    height: auto;
+
+    @media (max-width: $mobile) {
+      height: 2200px;
+    }
 
     h1 {
       margin-top: 70px;
@@ -140,13 +174,21 @@
       top: 0;
       right: 0;
       overflow: hidden;
+
+      @media (max-width: $mobile) {
+        height: 210px;
+      }
     }
   }
 
   .bottom-container {
     flex-direction: column;
-    height: 490px;
+    height: 250px;
     position: relative;
+
+    @media (max-width: $mobile) {
+      height: 490px;
+    }
 
     .line {
       position: absolute;
@@ -156,11 +198,22 @@
       top: 50px;
     }
     .text-container {
-      margin-top: 51px;
+      margin-top: 0;
       height: 393px;
-      flex-direction: column;
-      justify-content: start;
-      gap: 51px;
+      width: 100%;
+      flex-direction: row;
+      display: flex;
+      gap: 0;
+
+      @media (max-width: $mobile) {
+        margin-top: 51px;
+        height: 393px;
+        width: 335px;
+        flex-direction: column;
+        justify-content: start;
+        gap: 51px;
+      }
+
       .button-container {
         flex-direction: column;
         gap: 25px;
@@ -181,14 +234,23 @@
 
   .image-container {
     position: relative;
-    height: 300px;
+    height: 250px;
     width: 100%;
+
+    @media (max-width: $mobile) {
+      height: 300px;
+    }
+
     img {
-      position: absolute;
-      top: -70px;
-      left: -190px;
-      height: 435px;
+      top: -155px;
+      left: -15px;
+      height: 550px;
       width: auto;
+      @media (max-width: $mobile) {
+        top: -70px;
+        left: -190px;
+        height: 435px;
+      }
     }
   }
 }
