@@ -1,7 +1,5 @@
 @import 'media';
 
-//// DESKSTOP /////
-
 .bottom-block-container {
   width: 100%;
   position: relative;
@@ -49,7 +47,7 @@
   z-index: 2;
 
   @media (max-width: $tablet-hori) {
-    height: 250px;
+    height: 200px;
   }
 }
 
