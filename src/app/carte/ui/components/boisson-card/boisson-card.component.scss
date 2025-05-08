@@ -67,6 +67,7 @@
 @media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .boisson-container {
     height: auto;
+    gap: 0;
     .image-container {
       height: 400px;
       width: 50%;
