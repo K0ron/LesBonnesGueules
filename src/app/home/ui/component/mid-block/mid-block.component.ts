@@ -27,7 +27,7 @@ export class MidBlockComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 769;
+    this.isMobile = window.innerWidth < 1024;
   }
 
   goToPrestations() {

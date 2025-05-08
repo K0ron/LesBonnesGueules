@@ -31,7 +31,7 @@ export class DevisComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 769;
+    this.isMobile = window.innerWidth < 1024;
   }
 
   async send() {

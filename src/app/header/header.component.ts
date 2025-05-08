@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   constructor(public router: Router) {}
 
   ngOnInit() {
-    this.isMobile = window.innerWidth < 769;
+    this.isMobile = window.innerWidth < 1024;
     this.checkIfHome();
     this.showDevis();
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {

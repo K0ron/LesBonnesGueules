@@ -32,8 +32,10 @@
     background-color: rgba(17, 17, 17, 1);
     color: rgba(241, 235, 222, 1);
   }
+}
 
-  @media (max-width: $tablet-hori) {
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .search-container {
     height: 190px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

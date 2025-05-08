@@ -6,6 +6,7 @@
   flex-direction: row;
   overflow: hidden;
   position: relative;
+  gap: 150px;
 
   .grille {
     left: 0;
@@ -15,22 +16,13 @@
 
   .image-container {
     position: relative;
-
-    @media (max-width: $tablet-hori) {
-      width: 371px;
-      overflow: hidden;
-
-      img {
-        position: absolute;
-        left: -160px;
-        top: 0;
-      }
-    }
+    width: 574px;
+    z-index: 1;
+    overflow: hidden;
 
     img {
-      z-index: 1;
       position: absolute;
-      right: -725px;
+      left: 0;
       top: 0;
     }
   }
@@ -55,14 +47,10 @@
     line-height: 20px;
     text-transform: uppercase;
   }
+}
 
-  @media (max-width: $tablet-hori) {
-    width: 326px;
-
-    .text {
-      margin-left: 47px;
-    }
-  }
+.middle-block {
+  z-index: 2;
 }
 
 h1 {
@@ -71,10 +59,6 @@ h1 {
   font-family: 'Paper Johnny Eins', sans-serif;
   text-transform: uppercase;
   font-size: 33px;
-
-  @media (max-width: $tablet-hori) {
-    margin-left: 47px;
-  }
 }
 
 .text-container {
@@ -85,11 +69,6 @@ h1 {
   line-height: 20px;
   width: 280px;
 
-  @media (max-width: $tablet-hori) {
-    margin-left: 47px;
-    margin-right: 22px;
-  }
-
   .sub-title {
     font-family: 'Azeret Mono', monospace;
     text-transform: uppercase;
@@ -97,10 +76,42 @@ h1 {
   }
 }
 
-@media (max-width: $tablet-vert) {
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .dessert-container .image-container {
+    width: 500px;
+    img {
+      position: absolute;
+      left: 0%;
+      top: 0;
+    }
+  }
+
+  .menu-container {
+    width: 55%;
+  }
+
+  h1 {
+    margin-left: 15%;
+  }
+
+  .left-block {
+    width: 305px;
+    .text {
+      margin-left: 15%;
+    }
+  }
+
+  .text-container {
+    margin-left: 15%;
+    margin-right: 22px;
+  }
+}
+
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .dessert-container {
     height: auto;
     flex-direction: column;
+    gap: 0;
 
     .grille {
       height: 1345px;
@@ -110,20 +121,12 @@ h1 {
     .image-container {
       overflow: hidden;
       height: 400px;
+      width: 100%;
 
-      @media (max-width: $mobile) {
-        height: 300px;
-      }
       img {
         top: -115px;
         left: 0px;
-        height: 700px;
-
-        @media (max-width: $mobile) {
-          top: -44px;
-          left: 0px;
-          height: 400px;
-        }
+        height: 180%;
       }
     }
 
@@ -131,10 +134,6 @@ h1 {
       display: flex;
       flex-direction: row;
       height: auto;
-
-      @media (max-width: $mobile) {
-        flex-direction: column;
-      }
     }
   }
 
@@ -160,5 +159,60 @@ h1 {
   h1 {
     z-index: 2;
     margin-left: 70px;
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .dessert-container {
+    height: auto;
+    flex-direction: column;
+    gap: 0;
+
+    .grille {
+      height: 1345px;
+      width: 100%;
+    }
+
+    .image-container {
+      overflow: hidden;
+      height: 300px;
+      width: 100%;
+
+      img {
+        top: -44px;
+        left: 0px;
+        height: 125%;
+      }
+    }
+
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  .left-block {
+    width: 360px;
+    border: none;
+    z-index: 2;
+    .text {
+      margin-left: 7%;
+    }
+  }
+
+  .middle-block {
+    z-index: 2;
+    margin-bottom: 25px;
+  }
+
+  .text-container {
+    z-index: 2;
+    margin-left: 7%;
+  }
+
+  h1 {
+    z-index: 2;
+    margin-left: 7%;
   }
 }

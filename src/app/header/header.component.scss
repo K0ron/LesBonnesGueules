@@ -37,10 +37,6 @@
   margin-top: 23px;
   gap: 40px;
 
-  @media (max-width: $tablet-hori) {
-    margin-right: 25px;
-    gap: 15px;
-  }
   .button {
     border: none;
     background-color: transparent;
@@ -93,13 +89,20 @@
   color: rgba(241, 235, 222, 1);
   cursor: pointer;
   line-height: 26px;
+}
 
-  @media (max-width: $tablet-hori) {
-    margin-left: 25px;
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .button-container {
+    margin-right: 25px;
+    gap: 15px;
+  }
+
+  .goHome {
+    margin-left: 3%;
   }
 }
 
-@media (max-width: $tablet-vert) {
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .header-mobile {
     display: flex;
     width: 100%;
@@ -123,14 +126,12 @@
     }
 
     .menu-title {
+      width: 100%;
+      text-align: center;
       margin-top: 35px;
-      margin-left: 345px;
       font-size: 30px;
       z-index: 10;
       color: rgba(241, 235, 222, 1);
-      @media (max-width: $mobile) {
-        margin-left: 160px;
-      }
     }
 
     .burger {
@@ -185,10 +186,6 @@
     overflow: hidden;
     border-top: 0.5px solid rgb(96, 96, 96);
 
-    @media (max-width: $mobile) {
-      height: 685px;
-    }
-
     .menu-container {
       width: 100%;
       height: 100%;
@@ -197,9 +194,7 @@
       z-index: 10;
       position: relative;
       gap: 55px;
-      @media (max-width: $mobile) {
-        gap: 35px;
-      }
+
       .logo {
         position: absolute;
         bottom: 70px;
@@ -207,11 +202,6 @@
         width: 200px;
         height: 200px;
         align-self: center;
-        @media (max-width: $mobile) {
-          bottom: 70px;
-          width: 120px;
-          height: 120px;
-        }
       }
 
       .devis-button {
@@ -247,10 +237,163 @@
       margin-top: 20px;
       align-items: center;
       gap: 30px;
-      @media (max-width: $mobile) {
-        margin-top: 10px;
+    }
+
+    .social-container-mobile {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+
+      button {
+        font-size: 14px;
+      }
+
+      .social {
+        align-content: center;
+        display: flex;
+        flex-direction: row;
         gap: 20px;
       }
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .header-mobile {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    background-color: rgba(17, 17, 17, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    font-family: 'Paper Johnny Eins', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 0.5px solid rgba(96, 96, 96, 1);
+    &.transparent {
+      background-color: transparent;
+      border-bottom: none;
+
+      .goHome {
+        color: transparent;
+      }
+    }
+
+    .menu-title {
+      width: 100%;
+      text-align: center;
+      margin-top: 35px;
+      font-size: 30px;
+      z-index: 10;
+      color: rgba(241, 235, 222, 1);
+    }
+
+    .burger {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      color: rgba(241, 235, 222, 1);
+      height: 89px;
+      width: 90px;
+      background-color: rgba(17, 17, 17, 1);
+      position: absolute;
+      right: 0;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .croix {
+      height: 30px;
+      width: 30px;
+      align-self: center;
+      img {
+        color: rgba(241, 235, 222, 1);
+      }
+    }
+
+    .line {
+      height: 3px;
+      width: 32px;
+      background-color: rgba(241, 235, 222, 1);
+      align-self: center;
+    }
+
+    .goHome {
+      color: rgba(241, 235, 222, 1);
+      margin-left: 7%;
+      line-height: 23px;
+      margin-top: 26px;
+      font-size: 23px;
+    }
+  }
+
+  .modal-menu {
+    width: 100%;
+    height: 685px;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    background-color: rgba(17, 17, 17, 1);
+    z-index: 11;
+    overflow: hidden;
+    border-top: 0.5px solid rgb(96, 96, 96);
+
+    .menu-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+      position: relative;
+      gap: 35px;
+
+      .logo {
+        position: absolute;
+        bottom: 70px;
+        z-index: 11;
+        width: 120px;
+        height: 120px;
+        align-self: center;
+      }
+
+      .devis-button {
+        width: 280px;
+        background-color: rgba(241, 235, 222, 1);
+        color: rgba(17, 17, 17, 1);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        align-self: center;
+        margin-left: 0 !important;
+        font-size: 14px;
+      }
+
+      button {
+        font-family: 'Azeret Mono', monospace;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        height: 50px;
+        text-align: start;
+        z-index: 2;
+        color: rgba(241, 235, 222, 1);
+      }
+    }
+
+    .nav-container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      margin-top: 10px;
+      align-items: center;
+      gap: 20px;
     }
 
     .social-container-mobile {

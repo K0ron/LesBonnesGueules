@@ -2,12 +2,14 @@
   <div class="top">
     <img class="grille" src="grilles/Grille_gris.svg" alt="Grille" />
     <a (click)="scrollToText()">
-      <img class="arrow" src="arrow-carou-left.svg" alt="" />
+      <img class="arrow" src="arrow-carou-left.svg" alt="" *ngIf="!isMobile" />
     </a>
     <div class="text-container">
       <p>Bienvenue chez</p>
       <div>les bonnes gueules</div>
       <p>Votre traiteur à la bonne franquette !</p>
+    </div>
+    <div class="button-container">
       <button (click)="goDevis()" class="devis-button">DEMANDER UN DEVIS</button>
     </div>
   </div>

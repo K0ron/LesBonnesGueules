@@ -1,15 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-left-block',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './left-block.component.html',
   styleUrl: './left-block.component.scss',
 })
-export class LeftBlockComponent {
+export class LeftBlockComponent implements OnInit {
+  isMobile: boolean = false;
+
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 1024;
+  }
 
   goDevis() {
     this.router.navigate(['/devis']);
