@@ -228,15 +228,17 @@
   }
 
   .image-container {
-    position: relative;
     height: 250px;
     width: 100%;
+    overflow: hidden;
+    position: relative;
 
     img {
-      top: -155px;
-      left: -15px;
-      height: 550px;
-      width: auto;
+      position: absolute;
+      top: -70%;
+      left: 0;
+      width: 100%;
+      height: auto;
     }
   }
 

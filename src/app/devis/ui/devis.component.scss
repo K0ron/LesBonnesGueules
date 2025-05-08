@@ -198,9 +198,6 @@
   }
 }
 
-@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
-}
-
 @media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .header {
     h1 {
@@ -241,14 +238,16 @@
   }
 
   .image-container {
-    position: relative;
     height: 250px;
     width: 100%;
+    overflow: hidden;
+    position: relative;
+
     img {
       position: absolute;
-      top: -90%;
-      left: -190px;
-      width: 125%;
+      top: -70%;
+      left: 0;
+      width: 100%;
       height: auto;
     }
   }
