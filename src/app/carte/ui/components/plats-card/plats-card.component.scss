@@ -48,11 +48,6 @@
     flex-direction: column;
     margin-right: 100px;
     margin-left: 114px;
-
-    @media (max-width: $tablet-hori) {
-      margin-right: 45px;
-      margin-left: 29px;
-    }
   }
 }
 
@@ -76,7 +71,14 @@ h1 {
   }
 }
 
-@media (max-width: $tablet-vert) {
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .top .terre-container {
+    margin-right: 45px;
+    margin-left: 29px;
+  }
+}
+
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .plats-container {
     height: auto;
 
@@ -88,10 +90,6 @@ h1 {
       height: auto;
       display: flex;
       flex-direction: row;
-
-      @media (max-width: $mobile) {
-        flex-direction: column;
-      }
     }
   }
 
@@ -104,33 +102,18 @@ h1 {
       width: 100%;
       position: relative;
 
-      @media (max-width: $mobile) {
-        height: 263px;
-      }
-
       img {
-        height: 730px;
+        height: 200%;
         position: absolute;
         width: auto;
         top: -170px;
         left: 0px;
-
-        @media (max-width: $mobile) {
-          height: 370px;
-          top: -60px;
-          left: 0px;
-        }
       }
     }
 
     .terre-container {
-      margin-left: 40px;
+      margin-left: 10%;
       height: 500px;
-
-      @media (max-width: $mobile) {
-        height: 420px;
-        margin-left: 40px;
-      }
 
       .text-container {
         gap: 20px;
@@ -140,11 +123,55 @@ h1 {
 
     .mer-container {
       margin-left: 40px;
+    }
+  }
+}
 
-      @media (max-width: $mobile) {
-        margin-left: 40px;
-        margin-bottom: 40px;
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .plats-container {
+    height: auto;
+
+    .grille-container {
+      height: 770px;
+    }
+
+    .menu-container {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .top {
+    flex-direction: column-reverse;
+    height: auto;
+
+    .image-container {
+      height: 263px;
+      width: 100%;
+      position: relative;
+
+      img {
+        height: 155%;
+        position: absolute;
+        width: auto;
+        top: -60px;
+        left: 0px;
       }
+    }
+
+    .terre-container {
+      height: 420px;
+      margin-left: 7%;
+
+      .text-container {
+        gap: 20px;
+        width: 335px;
+      }
+    }
+
+    .mer-container {
+      margin-left: 7%;
+      margin-bottom: 40px;
     }
   }
 }

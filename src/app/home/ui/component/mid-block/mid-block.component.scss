@@ -72,10 +72,6 @@
   text-transform: uppercase;
   width: 1097px;
   overflow: hidden;
-
-  @media (max-width: $tablet-hori) {
-    width: 555px;
-  }
 }
 
 .img-container {
@@ -96,71 +92,49 @@
   }
 }
 
-.prev {
-  position: absolute;
-  background: none;
-  border: none;
-  cursor: pointer;
-  top: 286px;
-  left: 434px;
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .mid-block-container {
+    height: 960px;
+  }
+  .prestation-container {
+    position: absolute;
+    top: 350px;
+    left: 0%;
+    width: 100%;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }
 
-.next {
-  position: absolute;
-  background: none;
-  border: none;
-  cursor: pointer;
-  top: 286px;
-  right: 33px;
-  z-index: 2;
-}
-
-@media (max-width: $tablet-vert) {
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .mid-block-container {
     display: flex;
     flex-direction: column;
-    height: 1910px;
-    @media (max-width: $mobile) {
-      height: 1330px;
-    }
+    height: 1470px;
   }
 
   .text-container {
     position: absolute;
-    top: 61px;
-    left: 90px;
+    width: 80%;
+    top: 5%;
+    left: 10%;
     z-index: 2;
 
-    @media (max-width: $mobile) {
-      top: 76px;
-      left: 29px;
-    }
-
     .text-mobile {
-      width: 600px;
+      width: 100%;
       line-height: 20px;
-      @media (max-width: $mobile) {
-        width: 335px;
-      }
     }
 
     button {
       margin-left: 160px;
       margin-top: 50px;
       height: 50px;
-      @media (max-width: $mobile) {
-        margin-left: 27px;
-        margin-top: 35px;
-      }
     }
   }
 
   .grille-container {
     height: 390px;
     width: 100%;
-    @media (max-width: $mobile) {
-      height: 413px;
-    }
   }
 
   .prestation-container-mobile {
@@ -174,31 +148,27 @@
     text-transform: uppercase;
     border-bottom: 1px solid rgba(17, 17, 17, 1);
 
-    @media (max-width: $mobile) {
-      top: 413px;
-      gap: 34px;
-    }
-
     p {
       text-align: center;
     }
 
-    button {
-      margin-left: 240px;
-      width: 290px;
-      height: 50px;
-      background-color: rgba(17, 17, 17, 1);
-      border: none;
-      border-radius: 40px;
-      cursor: pointer;
-      font-family: 'Azeret Mono', monospace;
-      color: rgba(241, 235, 222, 1);
-      text-transform: uppercase;
-      margin-top: 24px;
-      margin-bottom: 32px;
-
-      @media (max-width: $mobile) {
-        margin-left: 52px;
+    .button-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      button {
+        margin-left: 0;
+        width: 290px;
+        height: 50px;
+        background-color: rgba(17, 17, 17, 1);
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        font-family: 'Azeret Mono', monospace;
+        color: rgba(241, 235, 222, 1);
+        text-transform: uppercase;
+        margin-top: 24px;
+        margin-bottom: 32px;
       }
     }
 
@@ -208,18 +178,93 @@
       overflow: hidden;
       position: relative;
 
-      @media (max-width: $mobile) {
-        height: 200px;
-      }
-
       img {
         position: absolute;
         height: 400px;
         width: 100%;
         object-fit: cover;
-        @media (max-width: $mobile) {
-          height: 200px;
-        }
+      }
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .mid-block-container {
+    display: flex;
+    flex-direction: column;
+    height: 1080px;
+  }
+
+  .text-container {
+    width: 85%;
+    position: absolute;
+    top: 76px;
+    left: 29px;
+    z-index: 2;
+
+    .text-mobile {
+      width: 100%;
+      line-height: 20px;
+    }
+
+    button {
+      margin-left: 0;
+      margin-top: 35px;
+      height: 50px;
+    }
+  }
+
+  .grille-container {
+    height: 413px;
+    width: 100%;
+  }
+
+  .prestation-container-mobile {
+    position: absolute;
+    top: 413px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 34px;
+    font-family: 'Azeret Mono', monospace;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(17, 17, 17, 1);
+
+    p {
+      text-align: center;
+    }
+
+    .button-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      button {
+        margin-left: 0;
+        width: 290px;
+        height: 50px;
+        background-color: rgba(17, 17, 17, 1);
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        font-family: 'Azeret Mono', monospace;
+        color: rgba(241, 235, 222, 1);
+        text-transform: uppercase;
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+    }
+
+    .img-container {
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
       }
     }
   }

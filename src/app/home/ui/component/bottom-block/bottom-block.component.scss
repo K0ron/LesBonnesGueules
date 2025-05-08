@@ -45,10 +45,6 @@
   top: -55px;
   left: 78px;
   z-index: 2;
-
-  @media (max-width: $tablet-hori) {
-    height: 200px;
-  }
 }
 
 .bavette {
@@ -57,21 +53,12 @@
   overflow: hidden;
   position: relative;
 
-  @media (max-width: $tablet-hori) {
-    height: 320px;
-  }
-
   img {
     position: absolute;
     top: -395px;
     left: -5px;
     width: 1600px;
     height: auto;
-    @media (max-width: $tablet-hori) {
-      top: -220px;
-      left: -25px;
-      width: 1050px;
-    }
   }
 }
 
@@ -84,36 +71,60 @@
   margin-bottom: 76px;
   z-index: 1;
   overflow: hidden;
+  position: relative;
+  height: 450px;
+  .pics {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    gap: 4%;
+  }
+}
 
-  @media (max-width: $tablet-hori) {
-    gap: 20px;
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .bavette {
+    height: 400px;
     img {
-      height: 306px;
+      top: -70%;
+      left: -3px;
+      height: 200%;
       width: auto;
+    }
+  }
+
+  .pics-container {
+    position: relative;
+    height: 350px;
+    width: 100%;
+
+    .pics {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+      gap: 4%;
     }
   }
 }
 
-@media (max-width: $tablet-vert) {
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .bavette {
     height: 250px;
     width: 100%;
 
-    @media (max-width: $mobile) {
-      height: 300px;
-    }
-
     img {
-      top: -155px;
-      left: -15px;
-      height: 550px;
+      top: -70%;
+      left: -3%;
+      height: 230%;
       width: auto;
       z-index: 1;
-      @media (max-width: $mobile) {
-        top: -70px;
-        left: -190px;
-        height: 435px;
-      }
     }
   }
 
@@ -124,15 +135,41 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
-    @media (max-width: $mobile) {
-      height: 306px;
-    }
 
     .devis-button {
       margin-bottom: 100px;
-      @media (max-width: $mobile) {
-        margin-bottom: 50px;
-      }
+    }
+
+    button {
+      width: 210px;
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .bavette {
+    height: 300px;
+    width: 100%;
+
+    img {
+      top: -70px;
+      left: -190px;
+      height: 435px;
+      width: auto;
+      z-index: 1;
+    }
+  }
+
+  .button-container {
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+
+    .devis-button {
+      margin-bottom: 50px;
     }
 
     button {

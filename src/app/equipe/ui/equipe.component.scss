@@ -10,31 +10,6 @@
   }
 }
 
-.image-container {
-  height: 300px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-
-  img {
-    position: absolute;
-    top: -430px;
-    left: -15px;
-    width: 1520px;
-    height: auto;
-  }
-
-  @media (max-width: $tablet-hori) {
-    height: 250px;
-
-    img {
-      top: -265px;
-      left: -25px;
-      width: 1050px;
-    }
-  }
-}
-
 .team-container {
   display: flex;
   flex-direction: column;
@@ -68,12 +43,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-
-  @media (max-width: $tablet-hori) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-top: 89px;
-  }
 }
 
 .bottom-container {
@@ -81,9 +50,10 @@
   background-color: rgba(241, 235, 222, 1);
   overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
+  width: 100%;
 
   img {
     position: absolute;
@@ -97,10 +67,6 @@
     align-items: center;
     margin-top: 11px;
     gap: 317px;
-
-    @media (max-width: $tablet-hori) {
-      gap: 135px;
-    }
 
     .title {
       width: 644px;
@@ -140,28 +106,58 @@
   }
 }
 
-@media (max-width: $tablet-vert) {
+.image-container {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: -430px;
+    left: -15px;
+    width: 1520px;
+    height: auto;
+  }
+}
+
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .image-container {
+    height: 400px;
+
+    img {
+      top: -265px;
+      left: -25px;
+      width: 105%;
+    }
+  }
+
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 89px;
+  }
+
+  .bottom-container {
+    .text-container {
+      width: 90%;
+      margin-left: 5%;
+      gap: 0%;
+    }
+  }
+}
+
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .card {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
     margin-bottom: 100px;
-
-    @media (max-width: $mobile) {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 0;
-    }
   }
 
   .team-container {
     height: auto;
-
-    @media (max-width: $mobile) {
-      height: 2200px;
-    }
 
     h1 {
       margin-top: 70px;
@@ -174,10 +170,6 @@
       top: 0;
       right: 0;
       overflow: hidden;
-
-      @media (max-width: $mobile) {
-        height: 210px;
-      }
     }
   }
 
@@ -185,10 +177,6 @@
     flex-direction: column;
     height: 250px;
     position: relative;
-
-    @media (max-width: $mobile) {
-      height: 490px;
-    }
 
     .line {
       position: absolute;
@@ -204,15 +192,6 @@
       flex-direction: row;
       display: flex;
       gap: 0;
-
-      @media (max-width: $mobile) {
-        margin-top: 51px;
-        height: 393px;
-        width: 335px;
-        flex-direction: column;
-        justify-content: start;
-        gap: 51px;
-      }
 
       .button-container {
         flex-direction: column;
@@ -237,20 +216,87 @@
     height: 250px;
     width: 100%;
 
-    @media (max-width: $mobile) {
-      height: 300px;
-    }
-
     img {
       top: -155px;
       left: -15px;
       height: 550px;
       width: auto;
-      @media (max-width: $mobile) {
-        top: -70px;
-        left: -190px;
-        height: 435px;
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team-container {
+    height: auto;
+
+    h1 {
+      margin-top: 70px;
+    }
+
+    .grille-container {
+      height: 210px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      overflow: hidden;
+    }
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    height: 490px;
+    position: relative;
+    .line {
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: rgba(17, 17, 17, 1);
+      top: 50px;
+    }
+    .text-container {
+      margin-top: 51px;
+      height: 393px;
+      width: 335px;
+      flex-direction: column;
+      display: flex;
+      gap: 51px;
+      justify-content: start;
+
+      .button-container {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 9px;
+
+        button {
+          width: 210px;
+        }
       }
+      .title {
+        margin-top: 46px;
+        width: 335px;
+        font-size: 36px;
+        line-height: 35px;
+      }
+    }
+  }
+
+  .image-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+
+    img {
+      top: -70px;
+      left: -190px;
+      height: 435px;
+      width: auto;
     }
   }
 }

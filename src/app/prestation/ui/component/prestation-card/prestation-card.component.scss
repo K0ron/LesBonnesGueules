@@ -11,10 +11,6 @@
   overflow: hidden;
   position: relative;
 
-  @media (max-width: $tablet-hori) {
-    height: 400px;
-  }
-
   .navigator-container {
     position: absolute;
     display: flex;
@@ -77,11 +73,6 @@
 .text-container {
   margin-left: 96px;
   align-self: center;
-
-  @media (max-width: $tablet-hori) {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
 }
 
 .title {
@@ -114,7 +105,22 @@
   margin-bottom: 82px;
 }
 
-@media (max-width: $tablet-vert) {
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .card-container {
+    height: 400px;
+  }
+
+  .carousel-container {
+    height: 400px;
+  }
+
+  .text-container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .prestations-container {
     height: auto;
     margin-bottom: 0;
@@ -126,25 +132,15 @@
     overflow: hidden;
     gap: 50px;
 
-    @media (max-width: $mobile) {
-      margin-bottom: 95px;
-    }
-
     .carousel-container {
       width: 100%;
       height: 600px;
 
-      @media (max-width: $mobile) {
-        height: 400px;
-      }
-
       .navigator-container {
-        width: 730px;
+        width: 90%;
+        margin-right: 5%;
+        right: 0;
         justify-content: space-between;
-
-        @media (max-width: $mobile) {
-          width: 355px;
-        }
       }
 
       .img-container {
@@ -152,10 +148,6 @@
         width: 100%;
         overflow: hidden;
         position: relative;
-
-        @media (max-width: $mobile) {
-          height: 400px;
-        }
 
         img {
           position: absolute;
@@ -168,14 +160,59 @@
   }
 
   .text-container {
-    margin-left: 0;
+    width: 90%;
+    margin-left: 5%;
+    .description {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .prestations-container {
+    height: auto;
+    margin-bottom: 0;
+  }
+  .card-container {
+    margin-bottom: 95px;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    gap: 50px;
+
+    .carousel-container {
+      width: 100%;
+      height: 400px;
+
+      .navigator-container {
+        width: 85%;
+        margin-right: 7%;
+        right: 0;
+      }
+
+      .img-container {
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          position: absolute;
+          height: 100%;
+          width: auto;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .text-container {
+    width: 85%;
+    margin-left: 7%;
+    margin-right: 7%;
 
     .description {
-      width: 600px;
-
-      @media (max-width: $mobile) {
-        width: 310px;
-      }
+      width: 100%;
     }
   }
 }

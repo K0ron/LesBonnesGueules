@@ -4,6 +4,7 @@
   height: 492px;
   display: flex;
   flex-direction: row;
+  gap: 45%;
   overflow: hidden;
   position: relative;
   .grille {
@@ -14,54 +15,66 @@
   .image-container {
     z-index: 1;
 
-    @media (max-width: $tablet-hori) {
-      position: relative;
-      width: 515px;
-      overflow: hidden;
-
-      img {
-        position: absolute;
-        bottom: 0px;
-        left: -185px;
-      }
+    img {
+      position: absolute;
+      bottom: 0px;
+      left: -185px;
     }
   }
 }
 
 .right-block {
   z-index: 2;
+  h1 {
+    margin-top: 65px;
+    margin-left: 114px;
+    font-family: 'Paper Johnny Eins', sans-serif;
+    text-transform: uppercase;
+    font-size: 33px;
+  }
+
+  .text-container {
+    margin-top: 26px;
+    margin-left: 114px;
+    font-family: 'Azeret Mono', monospace;
+    text-transform: uppercase;
+    line-height: 30px;
+  }
 }
 
-h1 {
-  margin-top: 65px;
-  margin-left: 114px;
-  font-family: 'Paper Johnny Eins', sans-serif;
-  text-transform: uppercase;
-  font-size: 33px;
-  @media (max-width: $tablet-hori) {
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .boisson-container {
+    gap: 0;
+  }
+  .boisson-container .image-container {
+    position: relative;
+    width: 515px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      bottom: 0px;
+      left: -30%;
+    }
+  }
+  .text-container {
+    margin-left: 70px;
+  }
+  h1 {
     margin-left: 70px;
   }
 }
 
-.text-container {
-  margin-top: 26px;
-  margin-left: 114px;
-  font-family: 'Azeret Mono', monospace;
-  text-transform: uppercase;
-  line-height: 30px;
-
-  @media (max-width: $tablet-hori) {
-    margin-left: 70px;
-  }
-}
-
-@media (max-width: $tablet-vert) {
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .boisson-container {
     height: auto;
+    .image-container {
+      height: 400px;
+      width: 50%;
 
-    @media (max-width: $mobile) {
-      height: auto;
-      flex-direction: column-reverse;
+      img {
+        left: -50%;
+        height: 100%;
+      }
     }
   }
 
@@ -71,38 +84,64 @@ h1 {
     width: 50%;
     overflow: hidden;
 
-    @media (max-width: $mobile) {
-      height: 300px;
-      width: 100%;
-    }
-
     img {
       position: absolute;
       height: 320px;
       width: auto;
       bottom: 0px;
       left: -85px;
-
-      @media (max-width: $mobile) {
-        height: 320px;
-        bottom: 0px;
-        left: -85px;
-      }
     }
   }
 
   .right-block {
     margin-bottom: 30px;
 
-    @media (max-width: $mobile) {
-      margin-bottom: 55px;
-    }
     h1 {
-      margin-left: 29px;
+      margin-left: 10%;
     }
 
     .text-container {
-      margin-left: 29px;
+      margin-left: 10%;
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .boisson-container {
+    height: auto;
+    flex-direction: column-reverse;
+
+    .image-container img {
+      left: 0%;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      height: 320px;
+      width: auto;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .right-block {
+    margin-bottom: 55px;
+
+    h1 {
+      margin-left: 7%;
+    }
+
+    .text-container {
+      width: 85%;
+      margin-left: 7%;
     }
   }
 }

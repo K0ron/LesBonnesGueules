@@ -5,10 +5,6 @@
   height: 1259px;
   border: 1px solid rgba(241, 235, 222, 1);
   border: none;
-
-  @media (max-width: $tablet-hori) {
-    height: 1110px;
-  }
 }
 
 .top {
@@ -17,10 +13,6 @@
   background-color: rgba(17, 17, 17, 1);
   position: relative;
   overflow: hidden;
-
-  @media (max-width: $tablet-hori) {
-    height: 65%;
-  }
 
   .grille {
     object-fit: cover;
@@ -59,10 +51,6 @@
     top: 354px;
     left: 81px;
 
-    @media (max-width: $tablet-hori) {
-      left: 29px;
-      top: 283px;
-    }
     p {
       font-family: 'Azeret Mono', monospace;
       font-size: 16px;
@@ -80,10 +68,25 @@
 
     .devis-button {
       margin-top: 52px;
-      @media (max-width: $tablet-hori) {
-        margin-top: 30px;
-      }
 
+      &:hover {
+        background-color: rgba(17, 17, 17, 1);
+        color: rgba(241, 235, 222, 1);
+        border: 1px solid rgba(241, 235, 222, 1);
+      }
+    }
+  }
+
+  .button-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 12%;
+    justify-content: start;
+    .devis-button {
+      width: 227px;
+      height: 50px;
+      margin-left: 81px;
       &:hover {
         background-color: rgba(17, 17, 17, 1);
         color: rgba(241, 235, 222, 1);
@@ -98,10 +101,6 @@
   background-color: rgba(241, 235, 222, 1);
   border-bottom: 1px solid rgba(17, 17, 17, 1);
 
-  @media (max-width: $tablet-hori) {
-    height: 35%;
-  }
-
   .text-container {
     height: 280px;
     width: 405px;
@@ -115,78 +114,122 @@
     text-transform: uppercase;
     line-height: 20px;
     font-weight: 400;
-    @media (max-width: $tablet-hori) {
-      width: 380px;
-      margin-left: 35px;
-      padding-top: 45px;
+  }
+}
+
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .left-block-container {
+    height: auto;
+  }
+
+  .top {
+    height: 834px;
+
+    .text-container {
+      left: 5%;
+      top: 40%;
+    }
+    .button-container {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      bottom: 7%;
+      justify-content: center;
+      .devis-button {
+        width: 227px;
+        height: 50px;
+      }
+    }
+  }
+
+  .bottom {
+    height: 416px;
+    .text-container {
+      width: 90%;
+      margin-left: 5%;
+      padding-top: 65px;
     }
   }
 }
 
-@media (max-width: $tablet-vert) {
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .left-block-container {
-    width: 100%;
-    height: 954px;
-    @media (max-width: $mobile) {
-      height: 977px;
-    }
+    height: auto;
   }
 
   .top {
     height: 614px;
-    @media (max-width: $mobile) {
-      height: 517px;
-    }
-
     .text-container {
-      top: 145px;
-      left: 90px;
-      width: 400px;
-      @media (max-width: $mobile) {
-        top: 85px;
-        left: 29px;
-        width: 335px;
-      }
-
+      top: 22%;
+      left: 10%;
+      width: 69%;
       div {
         font-size: 100px;
         line-height: 90px;
-        @media (max-width: $mobile) {
-          font-size: 70px;
-          line-height: 64px;
-        }
       }
-
+    }
+    .button-container {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      bottom: 7%;
+      justify-content: center;
       .devis-button {
-        margin-top: 25px;
         width: 227px;
         height: 50px;
-        margin-left: 180px;
-        @media (max-width: $mobile) {
-          margin-top: 55px;
-          margin-left: 0;
-          align-self: center;
-          width: 227px;
-          height: 50px;
-        }
       }
     }
   }
 
   .bottom {
     height: 340px;
-    @media (max-width: $mobile) {
-      height: 470px;
-    }
 
     .text-container {
-      width: 600px;
-      margin-left: 90px;
+      width: 80%;
+      margin-left: 10%;
       padding-top: 65px;
-      @media (max-width: $mobile) {
-        width: 335px;
-        margin-left: 29px;
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .left-block-container {
+    height: auto;
+  }
+
+  .top {
+    height: 530px;
+    .text-container {
+      top: 17%;
+      left: 7%;
+      width: 85%;
+
+      div {
+        font-size: 70px;
+        line-height: 64px;
       }
+    }
+
+    .button-container {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      bottom: 15%;
+      justify-content: center;
+      .devis-button {
+        width: 227px;
+        height: 50px;
+      }
+    }
+  }
+
+  .bottom {
+    height: 495px;
+
+    .text-container {
+      width: 85%;
+      margin-left: 7%;
+      padding-top: 15%;
     }
   }
 }

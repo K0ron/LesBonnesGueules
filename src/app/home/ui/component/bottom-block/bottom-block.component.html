@@ -4,8 +4,10 @@
     <img src="bavette.jpeg" alt="" />
   </div>
   <div class="pics-container" *ngIf="!isMobile">
-    <img src="hadri-quent.png" alt="" />
-    <img src="porc.png" alt="" />
+    <div class="pics">
+      <img src="hadri-quent.png" alt="" />
+      <img src="porc.png" alt="" />
+    </div>
   </div>
   <div class="button-container">
     <button (click)="callNumber()" class="call-button" *ngIf="isMobile">Appeler</button>

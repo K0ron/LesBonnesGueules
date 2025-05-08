@@ -49,10 +49,6 @@
     color: #fff;
     border: none;
   }
-
-  @media (max-width: $tablet-hori) {
-    margin-left: 25px;
-  }
 }
 
 .form-container {
@@ -95,12 +91,6 @@
         color: rgba(169, 159, 130, 1);
       }
     }
-
-    @media (max-width: $tablet-hori) {
-      label {
-        width: 165px;
-      }
-    }
   }
 
   .message-info {
@@ -139,20 +129,6 @@
     color: rgba(169, 159, 130, 1);
     margin-top: 10px;
   }
-
-  @media (max-width: $tablet-hori) {
-    gap: 35px;
-
-    .message-info {
-      width: 450px;
-    }
-
-    .input-message {
-      textarea {
-        width: 550px;
-      }
-    }
-  }
 }
 
 .call-button {
@@ -182,19 +158,50 @@
     width: 1520px;
     height: auto;
   }
+}
 
-  @media (max-width: $tablet-hori) {
-    height: 250px;
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .devis-container {
+    margin-left: 5%;
+  }
+
+  .form-container {
+    .message-info {
+      width: 450px;
+    }
+    .input-message {
+      textarea {
+        width: 550px;
+      }
+    }
+  }
+  .image-container {
+    height: 300px;
 
     img {
-      top: -265px;
-      left: -25px;
-      width: 1050px;
+      top: -120%;
+      left: -10%;
+      width: 120%;
     }
   }
 }
 
-@media (max-width: $mobile) {
+@media (min-width: $tablet-hori) and (max-width: 1179px) {
+  .form-container {
+    gap: 2%;
+  }
+}
+
+@media (min-width: 1180px) and (max-width: $tablet-hori-xl) {
+  .form-container {
+    gap: 17%;
+  }
+}
+
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+}
+
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
   .header {
     h1 {
       width: 335px;
@@ -203,23 +210,86 @@
   }
 
   .devis-container {
-    margin-left: 29px;
-    margin-right: 29px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .form-container {
     flex-direction: column;
     gap: 95px;
 
+    .p-divider.p-divider-horizontal {
+      max-width: 100% !important;
+    }
+
+    .message-info {
+      width: 100%;
+    }
+
     .input-message {
       textarea {
-        width: 335px;
+        width: 100%;
       }
     }
 
-    .call-button {
-      margin-right: 60px;
-      margin-top: 45px;
+    .button-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    img {
+      position: absolute;
+      top: -90%;
+      left: -190px;
+      width: 125%;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .header {
+    h1 {
+      width: 335px;
+      text-align: center;
+    }
+  }
+
+  .devis-container {
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+
+  .form-container {
+    flex-direction: column;
+    gap: 95px;
+
+    .p-divider.p-divider-horizontal {
+      max-width: 100% !important;
+    }
+
+    .message-info {
+      width: 100%;
+    }
+
+    .input-message {
+      textarea {
+        width: 100%;
+      }
+    }
+
+    .button-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 

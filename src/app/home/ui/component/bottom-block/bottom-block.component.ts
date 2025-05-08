@@ -14,7 +14,7 @@ export class BottomBlockComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth < 769;
+    this.isMobile = window.innerWidth < 1024;
   }
 
   goDevis() {
