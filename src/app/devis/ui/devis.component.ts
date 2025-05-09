@@ -27,6 +27,7 @@ export class DevisComponent implements OnInit {
       from_phone: ['', Validators.required],
       message: ['', Validators.required],
       from_adress: ['', Validators.required],
+      from_city: ['', Validators.required],
     });
   }
 
@@ -44,6 +45,7 @@ export class DevisComponent implements OnInit {
         from_phone: this.form.value.from_phone,
         message: this.form.value.message,
         from_adress: this.form.value.from_adress,
+        from_city: this.form.value.from_city,
       });
       this.alertService.showSuccessAlert('Vôtre message à bien été envoyé');
       this.form.reset();
