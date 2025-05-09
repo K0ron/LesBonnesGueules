@@ -23,7 +23,7 @@
         <div>Contact</div>
         <p>Les bonnes gueules</p>
         <p>06 26 55 51 77</p>
-        <p>brasserielesbonnesgueules&#64;gmail.com</p>
+        <p class="click" (click)="sendMail()">brasserielesbonnesgueules&#64;gmail.com</p>
         <p class="click" (click)="goToInstagram()">Instagram</p>
         <p class="click" (click)="goToFacebook()">Facebook</p>
       </div>
@@ -31,8 +31,9 @@
   </div>
   <div class="bottom">
     <div>© Copyright Les Bonnes Gueules</div>
-    <p>Mention légales</p>
-    <p>plan du site</p>
+    <p (click)="goToLegalNotices()">Mention légales</p>
+    <p (click)="goToSiteMap()">plan du site</p>
+    <p (click)="goToPrivacyPolicy()">Politique de cookies</p>
   </div>
 </div>
 
@@ -82,7 +83,7 @@
       <div class="accordion-body" *ngIf="isOpen('contact')">
         <p>Les bonnes gueules</p>
         <p (click)="callNumber()">06 26 55 51 77</p>
-        <p>brasserielesbonnesgueules&#64;gmail.com</p>
+        <p (click)="sendMail()">brasserielesbonnesgueules&#64;gmail.com</p>
         <p (click)="goToInstagram()">Instagram</p>
         <p (click)="goToFacebook()">Facebook</p>
       </div>
@@ -90,8 +91,8 @@
   </div>
   <div class="legal-container">
     <div class="legals">
-      <p>Mention légales</p>
-      <p>plan du site</p>
+      <p (click)="goToLegalNotices()">Mention légales</p>
+      <p (click)="goToSiteMap()">plan du site</p>
       <p>© Copyright Les Bonnes Gueules</p>
     </div>
   </div>

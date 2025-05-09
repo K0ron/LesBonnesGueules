@@ -1,0 +1,32 @@
+<div class="map-container">
+  <div class="site-map">
+    <h1>Plan du site</h1>
+
+    <h2>1. Accueil</h2>
+    <div class="click" (click)="goHome()">Retour à l'accueil</div>
+
+    <h2>2. Pages principales</h2>
+    <ul>
+      <li><p class="click" (click)="goToLaCarte()">Notre carte</p></li>
+      <li><p class="click" (click)="goToPrestations()">Nos prestations</p></li>
+      <li><p class="click" (click)="goToEquipe()">L’équipe</p></li>
+      <li><p class="click" (click)="goDevis()">Devis</p></li>
+    </ul>
+
+    <h2>3. Réseaux sociaux</h2>
+    <ul>
+      <li>
+        <p class="click" (click)="goToInstagram()">Instagram</p>
+      </li>
+      <li>
+        <p class="click" (click)="goToFacebook()">Facebook</p>
+      </li>
+    </ul>
+
+    <h2>4. Mentions légales</h2>
+    <div class="click">Mentions légales</div>
+
+    <h2>5. Politique de confidentialité</h2>
+    <div class="click" (click)="goToPrivacyPolicy()">Politique de confidentialité</div>
+  </div>
+</div>
