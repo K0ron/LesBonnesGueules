@@ -59,4 +59,20 @@ export class FooterComponent implements OnInit {
   callNumber() {
     window.open('tel:+33626555177');
   }
+
+  sendMail() {
+    window.location.href = 'mailto:brasserielesbonnesgueules@gmail.com';
+  }
+
+  goToPrivacyPolicy() {
+    this.router.navigate(['/politique-de-cookies']);
+  }
+
+  goToSiteMap() {
+    this.router.navigate(['/plan-du-site']);
+  }
+
+  goToLegalNotices() {
+    this.router.navigate(['/mentions-legales']);
+  }
 }

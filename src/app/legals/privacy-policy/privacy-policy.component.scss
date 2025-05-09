@@ -1,0 +1,64 @@
+@import 'media';
+
+.page-privacy {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  background-color: rgba(241, 235, 222, 1);
+  border-bottom: 1px solid rgba(17, 17, 17, 1);
+  text-transform: uppercase;
+
+  .privacy-policy {
+    width: 89%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Azeret Mono', monospace;
+    margin-bottom: 5%;
+
+    h1 {
+      font-family: 'Paper Johnny Eins', sans-serif;
+      font-size: 40px;
+      margin-top: 5%;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {
+  .page-privacy {
+    .privacy-policy {
+      width: 90%;
+    }
+  }
+}
+
+@media (min-width: $tablet-vert) and (max-width: $tablet-vert-xl) {
+  .page-privacy {
+    .privacy-policy {
+      width: 80%;
+      margin-bottom: 17%;
+    }
+  }
+}
+
+@media (min-width: $mobile-s) and (max-width: $mobile-xl) {
+  .page-privacy {
+    .privacy-policy {
+      width: 85%;
+      margin-bottom: 30%;
+    }
+  }
+}
