@@ -37,8 +37,8 @@ export class TeamCardComponent {
       role: '',
       nickname: '(quent)',
       description:
-        'Cuisinier, pâtissier et garant des plaisirs gourmands de l’équipe. Si vous le cherchez, il est sûrement en train de goûter "juste pour vérifier".',
-      devise: '"L’amour, c’est comme le beurre y’en a jamais trop !"',
+        'Cuisinier, pâtissier et garant des plaisirs gourmands de l’équipe. Si vous le cherchez, il est sûrement en train de goûter, "juste pour vérifier".',
+      devise: '"L’amour, c’est comme le beurre, on n’en a jamais assez !"',
     },
   ];
 }
