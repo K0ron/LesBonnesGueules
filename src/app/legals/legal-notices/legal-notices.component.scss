@@ -29,6 +29,13 @@
     margin-bottom: 15px;
     text-decoration: underline;
   }
+
+  a {
+    color: rgba(17, 17, 17, 1);
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 @media (min-width: $tablet-hori) and (max-width: $tablet-hori-xl) {

@@ -17,12 +17,12 @@ export class MidBlockComponent implements OnInit {
     {
       id: 1,
       name: 'Brasero',
-      img: 'mobile/brasero-mobile.png',
+      img: 'mobile/brasero-mobile.webp',
     },
     {
       id: 2,
       name: 'Fumoir',
-      img: 'mobile/fumoir-mobile.png',
+      img: 'mobile/fumoir-mobile.webp',
     },
   ];
 
