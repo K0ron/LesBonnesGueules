@@ -42,9 +42,9 @@ export class PrestationCardComponent {
     {
       id: 1,
       img: [
-        'prestations/brasero/presta-bra-1.png',
-        'prestations/brasero/presta-bra-2.jpg',
-        'prestations/brasero/presta-bra-3.jpg',
+        'prestations/brasero/presta-bra-1.webp',
+        'prestations/brasero/presta-bra-2.webp',
+        'prestations/brasero/presta-bra-3.webp',
       ],
       name: 'Brasero',
       description:
@@ -53,9 +53,9 @@ export class PrestationCardComponent {
     {
       id: 2,
       img: [
-        'prestations/fumoir/presta-fum-1.png',
-        'prestations/fumoir/presta-fum-2.jpg',
-        'prestations/fumoir/presta-fum-3.jpg',
+        'prestations/fumoir/presta-fum-1.webp',
+        'prestations/fumoir/presta-fum-2.webp',
+        'prestations/fumoir/presta-fum-3.webp',
       ],
       name: 'Fumoir',
       description:

@@ -4,6 +4,15 @@
     <meta charset="utf-8" />
     <title>LesBonneGueules</title>
     <base href="/" />
+    <script>
+      (function () {
+        if (window.location.search.includes('fbclid')) {
+          const url = new URL(window.location.href);
+          url.searchParams.delete('fbclid');
+          window.history.replaceState({}, document.title, url.pathname + url.hash);
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="assets/LBG_Logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
