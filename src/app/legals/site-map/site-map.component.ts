@@ -42,4 +42,8 @@ export class SiteMapComponent {
   goToPrivacyPolicy() {
     this.router.navigate(['/politique-de-cookies']);
   }
+
+  goToLegalNotices() {
+    this.router.navigate(['/mentions-legales']);
+  }
 }
