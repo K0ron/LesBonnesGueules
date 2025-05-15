@@ -10,7 +10,7 @@
       Vous êtes un particulier ou une entreprise et vous souhaitez organiser un événement ? Nous
       vous garantissons un show culinaire mêlant flammes, gourmandise et bonne humeur !
     </p>
-    <button (click)="goToPrestations()">voir toutes nos prestations</button>
+    <button (click)="goToPrestations()" *ngIf="!isMobile">voir toutes nos prestations</button>
   </div>
 
   <div class="grille-container">
@@ -21,21 +21,27 @@
       <div class="img-container">
         <img src="{{ prestation.img }}" alt="{{ prestation.name }}" />
       </div>
-      <div>{{ prestation.name }}</div>
+      <div class="presta-name">
+        <div>{{ prestation.name }}</div>
+      </div>
     </div>
   </div>
   <div class="prestation-container-mobile" *ngIf="isMobile">
-    <div (click)="goToOnePrestation(1)">
+    <div (click)="goToOnePrestation(1)" class="prestation">
       <div class="img-container">
         <img src="mobile/brasero-mobile.webp" alt="" />
       </div>
-      <p>Brasero</p>
+      <div class="presta-name">
+        <p>Brasero</p>
+      </div>
     </div>
-    <div (click)="goToOnePrestation(2)">
+    <div (click)="goToOnePrestation(2)" class="prestation">
       <div class="img-container">
         <img src="mobile/fumoir-mobile.webp" alt="" />
       </div>
-      <p>Fumoir</p>
+      <div class="presta-name">
+        <p>Fumoir</p>
+      </div>
     </div>
     <div class="button-container">
       <button (click)="goToPrestations()">voir toutes nos prestations</button>
