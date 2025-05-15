@@ -139,6 +139,10 @@
       width: 210px;
     }
   }
+
+  .grille-container {
+    height: 320px;
+  }
 }
 
 @media (min-width: $mobile-s) and (max-width: $mobile-xl) {
@@ -170,5 +174,9 @@
     button {
       width: 210px;
     }
+  }
+
+  .grille-container {
+    height: 306px;
   }
 }

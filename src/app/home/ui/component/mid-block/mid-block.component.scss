@@ -123,7 +123,7 @@
   .mid-block-container {
     display: flex;
     flex-direction: column;
-    height: 1470px;
+    height: 1450px;
   }
 
   .text-container {
@@ -152,7 +152,7 @@
 
   .prestation-container-mobile {
     position: absolute;
-    top: 390px;
+    top: 305px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -161,8 +161,25 @@
     text-transform: uppercase;
     border-bottom: 1px solid rgba(17, 17, 17, 1);
 
-    p {
-      text-align: center;
+    .prestation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .presta-name {
+      width: 160px;
+      height: 45px;
+      border: 1px solid rgba(17, 17, 17, 1);
+      border-radius: 40px;
+      display: flex;
+      justify-content: center;
+
+      p {
+        margin-top: 14px;
+        font-size: 20px;
+        font-family: 'Paper Johnny Eins', sans-serif;
+      }
     }
 
     .button-container {
