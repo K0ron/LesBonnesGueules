@@ -1,0 +1,54 @@
+name: Deploy Recette or Production Les Bonnes Gueules
+
+on:
+  push:
+    branches:
+      - recette
+      - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Angular CLI globally
+        run: npm install -g @angular/cli
+
+      - name: Install project dependencies
+        run: npm ci
+        working-directory: lesBonneGueules
+
+      - name: Build Angular project
+        run: npm run build --configuration production
+        working-directory: lesBonneGueules
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p 64911 92.222.167.135 >> ~/.ssh/known_hosts
+
+      - name: Copy build to VPS prod
+        if: github.ref == 'refs/heads/production'
+        run: scp -P 64911 -r lesBonneGueules/dist ubuntu@92.222.167.135:/home/ubuntu/LBG/prod
+
+      - name: Copy build to VPS recette
+        if: github.ref == 'refs/heads/recette'
+        run: scp -P 64911 -r lesBonneGueules/dist ubuntu@92.222.167.135:/home/ubuntu/LBG/recette
+
+      - name: Restart container recette
+        if: github.ref == 'refs/heads/recette'
+        run: ssh -p 64911 ubuntu@92.222.167.135 "sudo docker restart lesbonnesgueules-recette"
+
+      - name: Restart container production
+        if: github.ref == 'refs/heads/production'
+        run: ssh -p 64911 ubuntu@92.222.167.135 "sudo docker restart lesbonnesgueules-production"
