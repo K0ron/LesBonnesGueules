@@ -24,11 +24,9 @@ jobs:
 
       - name: Install project dependencies
         run: npm ci
-        working-directory: lesBonneGueules
 
       - name: Build Angular project
         run: npm run build --configuration production
-        working-directory: lesBonneGueules
 
       - name: Setup SSH
         run: |
