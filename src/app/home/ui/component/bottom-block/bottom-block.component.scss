@@ -27,16 +27,11 @@
 }
 
 .grille-container {
-  height: 450px;
+  height: 200px;
   width: 100%;
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  img {
-    height: auto;
-    width: 1555px;
-    object-fit: cover;
-  }
 }
 
 .logo {
@@ -81,7 +76,7 @@
     flex-direction: row;
     height: 100%;
     width: 100%;
-    gap: 4%;
+    gap: 32px;
   }
 }
 
@@ -144,6 +139,10 @@
       width: 210px;
     }
   }
+
+  .grille-container {
+    height: 320px;
+  }
 }
 
 @media (min-width: $mobile-s) and (max-width: $mobile-xl) {
@@ -175,5 +174,9 @@
     button {
       width: 210px;
     }
+  }
+
+  .grille-container {
+    height: 306px;
   }
 }
