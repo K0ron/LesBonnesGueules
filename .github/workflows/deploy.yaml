@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Build Les Bonnes Gueules project
-        run: ng build --configuration production
+        run: ng build --configuration productiongit
 
       - name: Setup SSH
         run: |
@@ -37,11 +37,11 @@ jobs:
 
       - name: Copy build to VPS prod
         if: github.ref == 'refs/heads/production'
-        run: scp -P 64911 -r lesBonneGueules/dist ubuntu@92.222.167.135:/home/ubuntu/LBG/prod
+        run: scp -P 64911 -r dist ubuntu@92.222.167.135:/home/ubuntu/LBG/prod
 
       - name: Copy build to VPS recette
         if: github.ref == 'refs/heads/recette'
-        run: scp -P 64911 -r lesBonneGueules/dist ubuntu@92.222.167.135:/home/ubuntu/LBG/recette
+        run: scp -P 64911 -r dist ubuntu@92.222.167.135:/home/ubuntu/LBG/recette
 
       - name: Restart container recette
         if: github.ref == 'refs/heads/recette'
