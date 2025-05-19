@@ -32,6 +32,11 @@
               {
                 "glob": "**/*",
                 "input": "src/assets"
+              },
+              {
+                "glob": "googlea298e67ef1d47837.html",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.scss"],
