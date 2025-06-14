@@ -12,7 +12,7 @@ export class TeamCardComponent {
   teammates: any[] = [
     {
       id: 1,
-      img: 'team/JO.webp',
+      img: 'team/Jo.webp',
       name: 'Johann',
       nickname: '(JO)',
       role: 'Co-Gérant',

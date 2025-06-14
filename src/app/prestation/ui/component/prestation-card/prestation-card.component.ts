@@ -42,9 +42,12 @@ export class PrestationCardComponent {
     {
       id: 1,
       img: [
-        'prestations/brasero/presta-bra-1.webp',
-        'prestations/brasero/presta-bra-2.webp',
-        'prestations/brasero/presta-bra-3.webp',
+        'prestations/brasero/bra-1.webp',
+        'prestations/brasero/bra-2.webp',
+        'prestations/brasero/bra-3.webp',
+        'prestations/brasero/bra-4.webp',
+        'prestations/brasero/bra-5.webp',
+        'prestations/brasero/bra-6.webp',
       ],
       name: 'Brasero',
       description:
