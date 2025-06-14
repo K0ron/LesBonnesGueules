@@ -17,7 +17,7 @@ export class MidBlockComponent implements OnInit {
     {
       id: 1,
       name: 'Brasero',
-      img: 'mobile/brasero-mobile.webp',
+      img: 'mobile/brasero.webp',
     },
     {
       id: 2,
