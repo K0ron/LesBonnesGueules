@@ -22,7 +22,7 @@ export class TeamCardComponent {
     },
     {
       id: 2,
-      img: 'team/hadri.webp',
+      img: 'team/Hadri.webp',
       name: 'Hadrien',
       nickname: '(Ramich)',
       role: 'Co-Gérant',
