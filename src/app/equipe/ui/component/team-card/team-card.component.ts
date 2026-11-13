@@ -34,7 +34,7 @@ export class TeamCardComponent {
       id: 3,
       img: 'team/Quent.webp',
       name: 'Quentin',
-      role: 'Cuisinier, pâtissier',
+      role: '',
       nickname: '(quent)',
       description:
         'Garant des plaisirs gourmands de l’équipe. Si vous le cherchez, il est sûrement en train de goûter, "juste pour vérifier".',
@@ -44,10 +44,10 @@ export class TeamCardComponent {
       id: 4,
       img: 'team/Louis.webp',
       name: 'Louis',
-      role: 'Cuisinier, boucher',
+      role: '',
       nickname: '(loulou)',
       description:
-        '"Le Dieu de la côte de bœuf" Maître de la découpe et gardien des belles pièces de viande. Si vous le cherchez, il est sûrement en train de parler à une côte de bœuf pour lui promettre une cuisson parfaite.',
+        '"Le Dieu de la côte de bœuf" Gardien des belles pièces de viande. Si vous le cherchez, il est sûrement en train de parler à une côte de bœuf.',
       devise: '"Travailler avec passion, partager avec plaisir et profiter sans modération !"',
     },
   ];
