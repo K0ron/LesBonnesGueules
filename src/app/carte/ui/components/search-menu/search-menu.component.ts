@@ -17,7 +17,7 @@ export class SearchMenuComponent implements OnInit {
     'PLATS',
     'ACCOMPAGNEMENTS',
     'FROMAGE & DESSERT',
-    'BOISSONS',
+    // 'BOISSONS',
     'MENU ENFANT',
   ];
 

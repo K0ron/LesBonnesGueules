@@ -1,5 +1,7 @@
 <div class="card-container" *ngFor="let teammate of teammates">
-  <img [src]="teammate.img" alt="{{ teammate.name }}" />
+  <div class="img-container">
+    <img [src]="teammate.img" alt="{{ teammate.name }}" />
+  </div>
   <div class="name-block">
     <div class="name-container">
       <div class="name">{{ teammate.name }}</div>
