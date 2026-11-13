@@ -47,7 +47,7 @@ export class TeamCardComponent {
       role: 'Cuisinier, boucher',
       nickname: '(loulou)',
       description:
-        'Gardien des belles pièces de viande et maître de la découpe. Si vous le cherchez, il est sûrement en pleine discussion avec une côte de bœuf, « juste pour la rassurer ».',
+        '"Le Dieu de la côte de bœuf" Maître de la découpe et gardien des belles pièces de viande. Si vous le cherchez, il est sûrement en train de parler à une côte de bœuf pour lui promettre une cuisson parfaite.',
       devise: '"Travailler avec passion, partager avec plaisir et profiter sans modération !"',
     },
   ];
