@@ -18,7 +18,7 @@
     <app-plats-card *ngSwitchCase="'PLATS'" />
     <app-accompagnements-card *ngSwitchCase="'ACCOMPAGNEMENTS'" />
     <app-fromage-dessert-card *ngSwitchCase="'FROMAGE & DESSERT'" />
-    <app-boisson-card *ngSwitchCase="'BOISSONS'" />
+    <!-- <app-boisson-card *ngSwitchCase="'BOISSONS'" /> -->
     <app-menu-enfant-card *ngSwitchCase="'MENU ENFANT'" />
   </ng-container>
 
@@ -79,7 +79,7 @@
         <app-fromage-dessert-card />
       </div>
     </div>
-    <div class="carte-accordion" #boisson>
+    <!-- <div class="carte-accordion" #boisson>
       <div class="accordion-header" (click)="toggleSection('boisson', boisson)">
         <div class="title">
           <h4 [class.active]="isOpen('boisson')">Boissons</h4>
@@ -91,7 +91,7 @@
       <div class="accordion-body" *ngIf="isOpen('boisson')">
         <app-boisson-card />
       </div>
-    </div>
+    </div> -->
     <div class="carte-accordion" #menuEnfant>
       <div class="accordion-header" (click)="toggleSection('menu-enfant', menuEnfant)">
         <div class="title">
