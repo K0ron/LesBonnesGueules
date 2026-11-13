@@ -47,7 +47,7 @@ export class TeamCardComponent {
       role: '',
       nickname: '(loulou)',
       description:
-        '"Le Dieu de la côte de bœuf" Gardien des belles pièces de viande. Si vous le cherchez, il est sûrement en train de parler à une côte de bœuf.',
+        '"Le Dieu de la côte de bœuf" Maître de la découpe, il murmure aux oreilles des belles pièces pour leur promettre une cuisson parfaite.',
       devise: '"Travailler avec passion, partager avec plaisir et profiter sans modération !"',
     },
   ];
